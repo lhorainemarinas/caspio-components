@@ -120,9 +120,9 @@ jQuery(function() {
 		speed: 300,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		appendArrows: $('.reviews-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="fa fa-angle-left"></span></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="fa fa-angle-right"></span></button>',
+		appendArrows: $('.slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
 		responsive: [
 				{
 				  breakpoint: 1201,
