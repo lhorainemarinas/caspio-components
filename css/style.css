@@ -873,9 +873,41 @@ body.scrollable {
 	}
 }
 
+/* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
+.reviews-arrows {
+
+}
+
 /* ----- TESTIMONIAL (PC: 3-COLUMN SP: SLIDER) ----- */
 .reviews-style1-wrap .slick-list .slick-track .slick-slide > div {
 	margin: 0 15px;
+}
+
+.reviews-style1-container {
+	position: relative;
+}
+
+.reviews-style1-container .reviews-arrows button {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background: transparent;
+	font-size: 50px;
+	border: 0;
+	box-shadow: 0;
+	-webkit-box-shadow: 0;
+	color: #484848;
+}
+
+.reviews-style1-container .reviews-arrows button.slick-prev {
+	left: -30px;
+}
+
+.reviews-style1-container .reviews-arrows button.slick-next {
+	right: -30px;
 }
 
 .review-style1 {
