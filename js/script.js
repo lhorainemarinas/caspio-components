@@ -5,8 +5,10 @@ jQuery(function() {
 		docHeight = $document.innerHeight(),
 		winWidth = $window.innerWidth(),
 		winHeight = $window.innerHeight(),
+		container = jQuery(".container").innerWidth(),
 		scrolled = jQuery(window).scrollTop(),
-		$body = jQuery("body");
+		$body = jQuery("body"),
+		cpad = winWidth-container;
 
 	/**
 	* --------------------------------------------------------------------------
@@ -38,7 +40,10 @@ jQuery(function() {
 	function updateValueOnResize() {
 		winWidth = $window.innerWidth();
 		winHeight = $window.innerHeight();
+		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
+		cpad = winWidth-container;
+		console.log(cpad)
 	}
 
 	function updateStyleOnResize() {
@@ -120,7 +125,7 @@ jQuery(function() {
 		speed: 300,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		appendArrows: $('.slick-arrows'),
+		appendArrows: $('.reviews-style1-container .slick-arrows'),
 		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
 		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
 		responsive: [
@@ -165,6 +170,53 @@ jQuery(function() {
 		}
 	}
 
+	/*==============================
+	  BLOG CENTER MODE SLICK SLIDER
+	================================*/
+	$('.blog-style1-wrap').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: cpad,
+		appendArrows: $('.blog-style1-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		responsive: [
+				{
+				  breakpoint: 1201,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 1171,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 992,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				  }
+				},
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				  }
+				}
+			]
+		});
+
+
 
 
 	/**
@@ -173,5 +225,4 @@ jQuery(function() {
 	* --------------------------------------------------------------------------
 	*/
 	auto_pantay();
-	
 });

@@ -234,6 +234,7 @@ section.p80 {
 }
 section.with-slider {
 	overflow: hidden;
+	position: relative;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -915,8 +916,24 @@ body.scrollable {
 	right: -40px;
 }
 
+.center-slider .slick-arrows button.slick-prev {
+	left: 0;
+}
+
+.center-slider .slick-arrows button.slick-next {
+	right: 0;
+}
+
 .slick-list {
 	margin-bottom: 20px;
+}
+
+.center-slider .slick-list .slick-slide {
+	opacity: 0.4;
+}
+
+.center-slider .slick-list .slick-slide.slick-active {
+	opacity: 1;
 }
 
 .slick-dots {
@@ -1202,6 +1219,24 @@ body.scrollable {
 	}
 }
 
+
+
+/* ----- BLOG SLIDER (PC: 3-COLUMN CENTER MODE SP: SLIDER) ----- */
+.blog-style1-container {
+	position: relative;
+}
+
+.blog-style1-wrap .blog-style1 {
+	border:  1px solid #e5e5e5;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-img {
+
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-img img {
+	width: 100%;
+}
 
 /* ----- SHORTCUT CLASSES ----- */
 .m0 {margin: 0;}
