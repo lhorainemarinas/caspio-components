@@ -930,6 +930,11 @@ body.scrollable {
 
 .center-slider .slick-list .slick-slide {
 	opacity: 0.4;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .center-slider .slick-list .slick-slide.slick-active {
@@ -1227,7 +1232,16 @@ body.scrollable {
 }
 
 .blog-style1-wrap .blog-style1 {
-	border:  1px solid #e5e5e5;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.blog-style1-wrap .blog-style1:hover {
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 }
 
 .blog-style1-wrap .blog-style1 .blog-style1-img {
@@ -1236,6 +1250,86 @@ body.scrollable {
 
 .blog-style1-wrap .blog-style1 .blog-style1-img img {
 	width: 100%;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content {
+	border:  1px solid #e5e5e5;
+	border-top: 0;
+	border-bottom: 0;
+	padding: 15px;
+	background: #fff;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .blog-style1-content-top {
+	margin-bottom: 8px;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark {
+	display: table;
+	width: 100%;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark > div {
+	display: table-cell;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-title a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: #484848;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-btns {
+	width: 20%;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-btns {
+	text-align: right;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-btns a {
+	display: inline-block;
+	color: #484848;
+	margin-right: 10px;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-btns a:last-child {
+	margin-right: 0;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-btns a:hover,
+.blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark .blog-style1-title a:hover {
+	color: #2d8fb1;
+}
+
+.blog-style1-wrap .slick-list .slick-track .slick-slide > div {
+	margin: 0 15px;
+}
+
+.blog-style1-wrap .blog-style1 > a.btn {
+	display: block;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	text-transform: uppercase;
+	background: #f7f7f7;
+	color: #007eaa;
+	margin: 0;
+	padding: 10px 8px;
+}
+
+.blog-style1-wrap .blog-style1 > a.btn:after {
+	content: '\f105';
+	font-family: 'FontAwesome';
+	color: #007eaa;
+	margin-left: 10px;
+}
+
+.blog-style1-wrap .blog-style1 > a.btn:hover {
+	border-color: transparent;
 }
 
 /* ----- SHORTCUT CLASSES ----- */

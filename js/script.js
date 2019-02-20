@@ -8,7 +8,7 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth(),
 		scrolled = jQuery(window).scrollTop(),
 		$body = jQuery("body"),
-		cpad = winWidth-container;
+		cpad = (winWidth-container)/2 + 'px';
 
 	/**
 	* --------------------------------------------------------------------------
@@ -42,9 +42,9 @@ jQuery(function() {
 		winHeight = $window.innerHeight();
 		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
-		cpad = winWidth-container;
-		console.log(cpad)
+		cpad = (winWidth-container)/2 + 'px';
 	}
+		console.log(cpad)
 
 	function updateStyleOnResize() {
 		auto_pantay();
@@ -190,6 +190,7 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
+					centerPadding: cpad
 				  }
 				},
 				{
@@ -197,20 +198,23 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
+					centerPadding: cpad
 				  }
 				},
 				{
 				  breakpoint: 992,
 				  settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					centerPadding: cpad
 				  }
 				},
 				{
 				  breakpoint: 768,
 				  settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					centerPadding: cpad
 				  }
 				}
 			]
