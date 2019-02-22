@@ -164,9 +164,14 @@ jQuery(function() {
 	  TESTIMONIAL 3 COLUMN HEIGHT OF THE QUOTE
 	===========================================*/
 	function auto_pantay() {
-		var qHeight = $('.review-style1 .review-style1-quote p').length;
+		var qHeight = $('.review-style1 .review-style1-quote p').length,
+			blogTitleHeight = $('.blog-style1-content').length,
+			blogParHeight = $('.blog-style1-content > p').length;
 		if(qHeight >= 1){
 			new ResponsiveAutoHeight('.review-style1 .review-style1-quote p')
+		}
+		if(blogTitleHeight >= 1) {
+			new ResponsiveAutoHeight('.blog-style1-content')
 		}
 	}
 
@@ -190,15 +195,17 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
-					centerPadding: cpad
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				},
 				{
-				  breakpoint: 1171,
+				  breakpoint: 1129,
 				  settings: {
-					slidesToShow: 3,
+					slidesToShow: 2,
 					slidesToScroll: 1,
-					centerPadding: cpad
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				},
 				{
@@ -206,7 +213,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
-					centerPadding: cpad
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				},
 				{
@@ -214,7 +222,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					centerPadding: cpad
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				}
 			]
