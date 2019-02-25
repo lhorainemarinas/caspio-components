@@ -260,25 +260,40 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 600;
 }
 
-h1 {
-	font-size: 40px;
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h3 {font-size: 25px;}
+h4 {font-size: 20px;}
+h5 {font-size: 17px;}
+
+@media (max-width:1170px) {
+	h1 {font-size: 38px;}
+	h2 {font-size: 30px;}
+	h3 {font-size: 23px;}
+	h4 {font-size: 18px;}
+	h5 {font-size: 15px;}
 }
 
-h2 {
-	font-size: 32px;
+@media (max-width:970px) {
+	h1 {font-size: 36px;}
+	h2 {font-size: 28px;}
+	h3 {font-size: 21px;}
+	h4 {font-size: 16px;}
+	h5 {font-size: 15px;}
 }
 
-h3 {
-	font-size: 25px;
+@media (max-width:720px) {
+	h1 {font-size: 34px;}
+	h2 {font-size: 26px;}
+	h3 {font-size: 20px;}
 }
 
-h4 {
-	font-size: 20px;
+@media (max-width:540px) {
+	h1 {font-size: 32px;}
+	h2 {font-size: 24px;}
+	h3 {font-size: 18px;}
 }
 
-h5 {
-	font-size: 17px;
-}
 
 p {
 	padding: 0;
@@ -967,7 +982,38 @@ body.scrollable {
 
 .numlist-style1 li span:last-child {
 	text-transform: uppercase;
+}
 
+@media (max-width:991px) {
+	.numlist-style1 {
+		display: block;
+	}
+	.numlist-style1 li {
+		display: inline-block;
+		width: 160px;
+		margin: 0 20px 20px 0;
+	}
+}
+@media (max-width:767px) {
+	.numlist-style1 li {
+		width: 140px;
+	}
+}
+@media (max-width: 640px) {
+	.numlist-style1 li:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+@media (max-width:464px) {
+	.numlist-style1 li:nth-child(3n) {
+		margin-right: 20px;
+	}
+	.numlist-style1 li:nth-child(2n) {
+		margin-right: 0;
+	}
+	.logo-long-line h2 {
+		font-size: 20px;
+	}
 }
 
 /* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
@@ -1181,16 +1227,22 @@ body.scrollable {
 	}
 }
 @media (max-width: 453px) {
-	.slick-arrows button {
+	.slick-arrows button,
+	.center-slider .slick-arrows button {
 		top: auto;
-		bottom: -20px;
-		font-size: 25px;
+		bottom: -15px;
+		font-size: 20px;
 	}
+	.center-slider .slick-arrows button.slick-prev,
 	.slick-arrows button.slick-prev {
 		left: 15%;
 	}
+	.center-slider .slick-arrows button.slick-next,
 	.slick-arrows button.slick-next {
 		right: 15%;
+	}
+	.center-slider .slick-arrows button  {
+		bottom: 0;
 	}
 }
 @media (max-width: 359px) {
@@ -1551,7 +1603,7 @@ body.scrollable {
 	content: '';
 	position: absolute;
 	top: 50%;
-	height: 0.5px;
+	height: 0.8px;
 	width: 20vw;
 	background: #fff;
 	-webkit-transform: translateY(-50%);

@@ -26,12 +26,10 @@ jQuery(function() {
 
 	$window.on('load', function(){
 		auto_pantay();
-		centerPadding();
 	});
 
 	$document.on('ready', function () {
 	});
-		console.log('cpad: ' + cpad)
 
 	var updateOnResize = debounce(function() {
 		updateValueOnResize();
@@ -44,12 +42,11 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
 		cpad = (winWidth-container)/2 + 'px';
-		console.log('cpad: ' + cpad)
+		console.log(winWidth)
 	}
 
 	function updateStyleOnResize() {
 		auto_pantay();
-		centerPadding();
 	}
 
 	function debounce(func, wait, immediate) {
@@ -230,22 +227,6 @@ jQuery(function() {
 				}
 			]
 		});
-
-	/*==============================
-	  CENTER PADDING
-	================================*/
-
-	function centerPadding() {
-		if (winWidth <= 1128) {
-			$('.center-slider .slick-list').css({
-				'padding-left':cpad,
-				'padding-right':cpad
-			});
-			console.log('lake')
-		} else if(winWidth <= 992) {
-			console.log('liit')
-		}
-	}
 
 	/**
 	* --------------------------------------------------------------------------
