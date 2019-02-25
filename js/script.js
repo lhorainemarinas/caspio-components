@@ -187,7 +187,7 @@ jQuery(function() {
 		centerMode: true,
 		centerPadding: cpad,
 		appendArrows: $('.blog-style1-container .slick-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
 		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
 		responsive: [
 				{
