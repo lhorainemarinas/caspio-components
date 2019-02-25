@@ -25,7 +25,8 @@ jQuery(function() {
 	});
 
 	$window.on('load', function(){
-		
+		auto_pantay();
+		centerPadding();
 	});
 
 	$document.on('ready', function () {
@@ -44,10 +45,11 @@ jQuery(function() {
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
 		cpad = (winWidth-container)/2 + 'px';
 	}
-		console.log(cpad)
 
 	function updateStyleOnResize() {
 		auto_pantay();
+		centerPadding();
+		console.log('cpad: ' + cpad)
 	}
 
 	function debounce(func, wait, immediate) {
@@ -205,7 +207,7 @@ jQuery(function() {
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					centerPadding: cpad,
-					centerMode: true,
+					centerMode: false,
 				  }
 				},
 				{
@@ -214,7 +216,7 @@ jQuery(function() {
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					centerPadding: cpad,
-					centerMode: true,
+					centerMode: false,
 				  }
 				},
 				{
@@ -229,13 +231,26 @@ jQuery(function() {
 			]
 		});
 
+	/*==============================
+	  CENTER PADDING
+	================================*/
 
-
+	function centerPadding() {
+		if (winWidth <= 1128) {
+			$('.center-slider .slick-list').css({
+				'padding-left':cpad,
+				'padding-right':cpad
+			});
+			console.log('lake')
+		} else if(winWidth <= 992) {
+			console.log('liit')
+		}
+	}
 
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	auto_pantay();
+	
 });

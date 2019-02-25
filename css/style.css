@@ -279,6 +279,22 @@ h4 {
 p {
 	padding: 0;
 	margin: 0 0 32px;
+	line-height: 1.6;
+}
+
+p.w960 {
+	max-width: 960px;
+	margin: 0 auto 32px;
+}
+
+p.w920 {
+	max-width: 920px;
+	margin: 0 auto 32px;
+}
+
+p.w900 {
+	max-width: 900px;
+	margin: 0 auto 32px;
 }
 
 section p:last-child {
@@ -291,6 +307,20 @@ section p:last-child {
 	}
 	p {
 		margin-bottom: 24px;
+	}
+	p.w960 {
+		max-width: 100%;
+		margin: 0 auto 24px;
+	}
+
+	p.w920 {
+		max-width: 100%;
+		margin: 0 auto 24px;
+	}
+
+	p.w900 {
+		max-width: 100%;
+		margin: 0 auto 24px;
 	}
 }
 @media (max-width:768px) {
@@ -958,6 +988,62 @@ body.scrollable {
 	opacity: 1;
 }
 
+.center-slider .slick-arrows {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+.center-slider .slick-arrows button {
+	-webkit-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+	top: 0;
+	bottom: 0;
+	width: 8%;
+	text-align: right;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.center-slider .slick-arrows button:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(../img/assets/slick-centermode-arrow-bg.png);
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.center-slider .slick-arrows button:hover:before {
+	opacity: 1;
+}
+
+.center-slider .slick-arrows button.slick-prev {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	background-position: left auto;
+}
+
 .slick-dots {
 	margin: 0;
 	padding: 0;
@@ -1024,6 +1110,12 @@ body.scrollable {
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
+}
+
+@media (max-width: 1129px) {
+	.center-slider .slick-list {
+		padding: 0 30px;
+	}
 }
 
 @media (max-width: 602px) {
@@ -1295,6 +1387,24 @@ body.scrollable {
 	margin-bottom: 8px;
 }
 
+.blog-style1-wrap .blog-style1 .blog-style1-content .blog-style1-content-top .blog-style1-title a {
+	font-size: 21px;
+	font-weight: 600;
+	text-transform: none;
+	outline: none;
+	text-decoration: none;
+	color: #484848;
+}
+
+.blog-style1-wrap .blog-style1:hover .blog-style1-content .blog-style1-content-top .blog-style1-title a {
+	color: #007eaa;
+}
+
+.blog-style1-wrap .blog-style1 .blog-style1-content .blog-style1-content-top .blog-style1-title a:hover {
+	outline: none;
+	text-decoration: none;
+}
+
 .blog-style1-wrap .blog-style1 .blog-style1-content .share-bookmark {
 	display: table;
 	width: 100%;
@@ -1364,10 +1474,19 @@ body.scrollable {
 	font-family: 'FontAwesome';
 	color: #007eaa;
 	margin-left: 10px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .blog-style1-wrap .blog-style1 > a.btn:hover {
 	border-color: transparent;
+}
+
+.blog-style1-wrap .blog-style1:hover > a.btn:after {
+	color: #fff;
 }
 
 .blog-style1-wrap .blog-style1:hover a.btn {
@@ -1375,65 +1494,7 @@ body.scrollable {
 	color: #fff;
 }
 
-.center-slider .slick-arrows {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-}
 
-.center-slider .slick-arrows button {
-	-webkit-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
-	transform: none;
-	top: 0;
-	bottom: 0;
-	width: 8%;
-	text-align: right;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-.center-slider .slick-arrows button:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-image: url(../img/assets/slick-centermode-arrow-bg.png);
-	background-size: 100% auto;
-	background-repeat: repeat-y;
-	z-index: -1;
-	opacity: 0;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-.center-slider .slick-arrows button:hover:before {
-	opacity: 1;
-}
-
-.center-slider .slick-arrows button.slick-prev {
-	-webkit-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-	transform: rotate(180deg);
-	background-position: left auto;
-}
-
-.center-slider .slick-arrows button.slick-prev span {
-
-}
 /* ----- SHORTCUT CLASSES ----- */
 .m0 {margin: 0;}
 .p0 {padding: 0;}
