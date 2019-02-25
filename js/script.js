@@ -30,8 +30,8 @@ jQuery(function() {
 	});
 
 	$document.on('ready', function () {
-		
 	});
+		console.log('cpad: ' + cpad)
 
 	var updateOnResize = debounce(function() {
 		updateValueOnResize();
@@ -44,12 +44,12 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
 		cpad = (winWidth-container)/2 + 'px';
+		console.log('cpad: ' + cpad)
 	}
 
 	function updateStyleOnResize() {
 		auto_pantay();
 		centerPadding();
-		console.log('cpad: ' + cpad)
 	}
 
 	function debounce(func, wait, immediate) {

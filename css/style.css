@@ -257,11 +257,11 @@ section.image-bg {
 h1,h2,h3,h4,h5,h6 {
 	margin-top: 0;
 	margin-bottom: 32px;
+	font-weight: 600;
 }
 
 h1 {
 	font-size: 40px;
-	font-weight: 600;
 }
 
 h2 {
@@ -274,6 +274,10 @@ h3 {
 
 h4 {
 	font-size: 20px;
+}
+
+h5 {
+	font-size: 17px;
 }
 
 p {
@@ -924,6 +928,66 @@ body.scrollable {
 	}
 }
 
+/* ----- NUMBER LIST STYLE 1 ----- */
+
+.numlist-style1 {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: table;
+	width: 100%;
+}
+
+.numlist-style1 li {
+	display: inline-block;
+	color: #fff;
+	background: #015883;
+	border-top: 2px solid #85c3d3;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+.numlist-style1 li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: #85c3d3;
+	z-index: 0;
+	height: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.numlist-style1 li:hover:before {
+	bottom: 0;
+	height: 100%;
+}
+
+.numlist-style1 li span {
+	display: block;
+	z-index: 1;
+	position: relative;
+}
+
+.numlist-style1 li span.numscroller {
+	font-size: 40px;
+	font-weight: 900;
+}
+
+.numlist-style1 li span:last-child {
+	text-transform: uppercase;
+
+}
+
 /* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
 .slick-arrows button {
 	position: absolute;
@@ -1494,7 +1558,52 @@ body.scrollable {
 	color: #fff;
 }
 
+.logo-long-line  h2{
+	color: #fff;
+	display: inline-block;
+	position: relative;
+}
+
+.logo-long-line  h2:before,
+.logo-long-line  h2:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 0.5px;
+	width: 20vw;
+	background: #fff;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.logo-long-line  h2:before {
+	left: -20vw;
+}
 
 /* ----- SHORTCUT CLASSES ----- */
 .m0 {margin: 0;}
 .p0 {padding: 0;}
+
+.op08 {opacity: 0.8;}
+.op07 {opacity: 0.7;}
+.op06 {opacity: 0.6;}
+.op05 {opacity: 0.5;}
+.op04 {opacity: 0.4;}
+.op03 {opacity: 0.3;}
+.op02 {opacity: 0.2;}
+.op01 {opacity: 0.1;}
+
+.font-white {color: #fff;}
+.font-black {color: #484848;}
+.font-darkestblue {color: #005883;}
+.font-darkblue {color: #027faa;}
+.font-blue {color: #1196ba;}
+.font-lightblue {color: #3fcaeb;}
+.font-orange {color: #ff7510;}
+.font-lightorange {color: #ff9750;}
+.font-lime {color: #ff9750;}
+.font-lightlime {color: #96d42b;}
+.font-darkgray {color: #20282b;}
+.font-lightgray {color: #747d82;}

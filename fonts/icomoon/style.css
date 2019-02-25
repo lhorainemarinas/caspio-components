@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?rqvi4v');
-  src:  url('fonts/icomoon.eot?rqvi4v#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?rqvi4v') format('truetype'),
-    url('fonts/icomoon.woff?rqvi4v') format('woff'),
-    url('fonts/icomoon.svg?rqvi4v#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?it8484');
+  src:  url('fonts/icomoon.eot?it8484#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?it8484') format('truetype'),
+    url('fonts/icomoon.woff?it8484') format('woff'),
+    url('fonts/icomoon.svg?it8484#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -468,6 +468,9 @@
 }
 .icon-forrester:before {
   content: "\e91b";
+}
+.icon-forrester-logo:before {
+  content: "\eae7";
 }
 .icon-bayer:before {
   content: "\e91c";
