@@ -118,7 +118,7 @@ jQuery(function() {
 	/*==============================
 	  TESTIMONIAL 3 COLUMN SLIDER
 	================================*/
-	$('.reviews-style1-wrap').slick({
+	$('.reviews-style1-container .reviews-style1-wrap').slick({
 		dots: true,
 		infinite: false,
 		speed: 300,
@@ -159,6 +159,20 @@ jQuery(function() {
 			]
 		});
 
+	/*==============================
+	  TESTIMONIAL 1 COLUMN SLIDER
+	================================*/
+	$('.reviews-style2-container .reviews-style2-wrap').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		appendArrows: $('.reviews-style2-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		});
+
 	/*=========================================
 	  TESTIMONIAL 3 COLUMN HEIGHT OF THE QUOTE
 	===========================================*/
@@ -174,10 +188,10 @@ jQuery(function() {
 		}
 	}
 
-	/*==============================
-	  BLOG CENTER MODE SLICK SLIDER
-	================================*/
-	$('.blog-style1-wrap').slick({
+	/*======================================
+	  BLOG CENTER MODE STYLE 1 SLICK SLIDER
+	========================================*/
+	$('.blog-style1-container .blog-style1-wrap').slick({
 		dots: true,
 		infinite: true,
 		speed: 300,
@@ -223,6 +237,52 @@ jQuery(function() {
 					slidesToScroll: 1,
 					centerPadding: cpad,
 					centerMode: true,
+				  }
+				}
+			]
+		});
+
+	/*======================================
+	  BLOG CENTER MODE STYLE 2 SLICK SLIDER
+	========================================*/
+	$('.blog-style2-container .blog-style1-wrap').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: cpad,
+		appendArrows: $('.blog-style2-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		responsive: [
+				{
+				  breakpoint: 1201,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 1129,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 992,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
 				  }
 				}
 			]
