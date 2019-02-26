@@ -1825,6 +1825,7 @@ body.scrollable {
 }
 
 /* ----- ICONS STRUCTURE ----- */
+
 .icon-listing {
 	margin: 0;
 	padding: 0;
@@ -1833,15 +1834,25 @@ body.scrollable {
 .icon-listing li {
 	display: inline-block;
 	text-align: center;
-	width: 10%;
+	width: 23%;
+	margin: 0 15px 15px 0;
+}
+.icon-listing li:nth-child(4n){
+	margin-right: 0;
 }
 .icon-listing li span,
 .icon-listing li input {
 	display: block;
 }
 .icon-listing li span {
-	font-size: 32px;
+	font-size: 40px;
 	margin-bottom: 20px;
+}
+.icon-listing li.logo span {
+	font-size: 25px;
+}
+.icon-listing li.logo2 span {
+	font-size: 80%;
 }
 .icon-listing li input {
 	background: transparent;
