@@ -198,6 +198,50 @@ section:nth-child(even) {
 	}
 }
 
+/* ----- MEGAMENNU ----- */
+.navbar {
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	z-index: 9;
+	margin: 0;
+}
+.nav-wrap {
+	width: 100%;
+	display: table;
+}
+.nav-wrap > div {
+	display: table-cell;
+	vertical-align: middle;
+	float: none;
+}
+.navbar-nav > li,
+.navbar-topnav > li {
+	display: inline-block;
+}
+.navbar-nav > li > a {
+	display: inline-block;
+	cursor: pointer;
+	color: #484848;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 18px 15px;
+	font-size: 14px;
+}
+.navbar-topnav > li > a {
+	margin-bottom: 0;
+}
+.caspio-logo,
+.caspio-logo:hover,
+.caspio-logo:focus,
+.caspio-logo:active {
+	text-decoration: none;
+}
+.caspio-logo span {
+	font-size: 40px;
+}
+
+
 /* ----- GENERAL STYLES ----- */
 
 .ease {
@@ -1878,14 +1922,6 @@ body.scrollable {
 	background: rgba(0,0,0,0.1);
 }
 
-/* ----- MEGAMENNU ----- */
-.navbar {
-	background: #fff;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-	z-index: 9;
-	margin: 0;
-}
 
 /* ----- HELPERS CLASSES ----- */
 .m0 {margin: 0;}
