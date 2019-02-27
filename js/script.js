@@ -179,12 +179,16 @@ jQuery(function() {
 	function auto_pantay() {
 		var qHeight = $('.review-style1 .review-style1-quote p').length,
 			blogTitleHeight = $('.blog-style1-content').length,
-			blogParHeight = $('.blog-style1-content > p').length;
+			blogParHeight = $('.blog-style1-content > p').length,
+			rsp = $('.review-style1-person').length;
 		if(qHeight >= 1){
 			new ResponsiveAutoHeight('.review-style1 .review-style1-quote p')
 		}
 		if(blogTitleHeight >= 1) {
 			new ResponsiveAutoHeight('.blog-style1-content')
+		}
+		if(rsp >= 1) {
+			new ResponsiveAutoHeight('.review-style1-person')
 		}
 	}
 
@@ -262,6 +266,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				},
 				{
@@ -269,6 +275,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
 				  }
 				},
 				{
@@ -276,6 +284,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
 				  }
 				},
 				{
@@ -283,6 +293,8 @@ jQuery(function() {
 				  settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
 				  }
 				}
 			]

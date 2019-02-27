@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lhfi1j');
-  src:  url('fonts/icomoon.eot?lhfi1j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?lhfi1j') format('truetype'),
-    url('fonts/icomoon.woff?lhfi1j') format('woff'),
-    url('fonts/icomoon.svg?lhfi1j#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4tjp2y');
+  src:  url('fonts/icomoon.eot?4tjp2y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4tjp2y') format('truetype'),
+    url('fonts/icomoon.woff?4tjp2y') format('woff'),
+    url('fonts/icomoon.svg?4tjp2y#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,6 +35,9 @@
 }
 .icon-right-arrow:before {
   content: "\e923";
+}
+.icon-app1:before {
+  content: "\e905";
 }
 .icon-calculator-check:before {
   content: "\e901";
@@ -318,13 +321,96 @@
   color: rgb(63, 202, 234);
 }
 .icon-team-leader:before {
-  content: "\e905";
+  content: "\eaf6";
+}
+.icon-team-leader-colored .path1:before {
+  content: "\eaf7";
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path2:before {
+  content: "\eaf8";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path3:before {
+  content: "\eaf9";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path4:before {
+  content: "\eafa";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path5:before {
+  content: "\eafb";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path6:before {
+  content: "\eafc";
+  margin-left: -1.20703125em;
+  color: rgb(63, 202, 234);
+}
+.icon-team-leader-colored .path7:before {
+  content: "\eafd";
+  margin-left: -1.20703125em;
+  color: rgb(63, 202, 234);
+}
+.icon-team-leader-colored .path8:before {
+  content: "\eafe";
+  margin-left: -1.20703125em;
+  color: rgb(63, 202, 234);
+}
+.icon-team-leader-colored .path9:before {
+  content: "\eaff";
+  margin-left: -1.20703125em;
+  color: rgb(63, 202, 234);
+}
+.icon-team-leader-colored .path10:before {
+  content: "\eb00";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path11:before {
+  content: "\eb01";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-leader-colored .path12:before {
+  content: "\eb02";
+  margin-left: -1.20703125em;
+  color: rgb(17, 150, 186);
 }
 .icon-pc-code:before {
   content: "\e906";
 }
 .icon-team-world:before {
   content: "\e907";
+}
+.icon-team-world-colored .path1:before {
+  content: "\eb03";
+  color: rgb(17, 150, 186);
+}
+.icon-team-world-colored .path2:before {
+  content: "\eb04";
+  margin-left: -0.9423828125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-world-colored .path3:before {
+  content: "\eb05";
+  margin-left: -0.9423828125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-world-colored .path4:before {
+  content: "\eb06";
+  margin-left: -0.9423828125em;
+  color: rgb(17, 150, 186);
+}
+.icon-team-world-colored .path5:before {
+  content: "\eb07";
+  margin-left: -0.9423828125em;
+  color: rgb(63, 202, 234);
 }
 .icon-window-infinite:before {
   content: "\e908";
@@ -421,13 +507,75 @@
   margin-left: -0.8359375em;
   color: rgb(76, 200, 229);
 }
+.icon-caspio-logo:before {
+  content: "\eae9";
+}
+.icon-caspio_logo_colored .path1:before {
+  content: "\eaea";
+  color: rgb(237, 111, 65);
+}
+.icon-caspio_logo_colored .path2:before {
+  content: "\eaeb";
+  margin-left: -3.185546875em;
+  color: rgb(178, 208, 225);
+}
+.icon-caspio_logo_colored .path3:before {
+  content: "\eaec";
+  margin-left: -3.185546875em;
+  color: rgb(114, 170, 201);
+}
+.icon-caspio_logo_colored .path4:before {
+  content: "\eaed";
+  margin-left: -3.185546875em;
+  color: rgb(114, 170, 201);
+}
+.icon-caspio_logo_colored .path5:before {
+  content: "\eaee";
+  margin-left: -3.185546875em;
+  color: rgb(51, 131, 177);
+}
+.icon-caspio_logo_colored .path6:before {
+  content: "\eaef";
+  margin-left: -3.185546875em;
+  color: rgb(0, 100, 158);
+}
+.icon-caspio_logo_colored .path7:before {
+  content: "\eaf0";
+  margin-left: -3.185546875em;
+  color: rgb(51, 131, 177);
+}
+.icon-caspio_logo_colored .path8:before {
+  content: "\eaf1";
+  margin-left: -3.185546875em;
+  color: rgb(23, 68, 120);
+}
+.icon-caspio_logo_colored .path9:before {
+  content: "\eaf2";
+  margin-left: -3.185546875em;
+  color: rgb(23, 68, 120);
+}
+.icon-caspio_logo_colored .path10:before {
+  content: "\eaf3";
+  margin-left: -3.185546875em;
+  color: rgb(23, 68, 120);
+}
+.icon-caspio_logo_colored .path11:before {
+  content: "\eaf4";
+  margin-left: -3.185546875em;
+  color: rgb(23, 68, 120);
+}
+.icon-caspio_logo_colored .path12:before {
+  content: "\eaf5";
+  margin-left: -3.185546875em;
+  color: rgb(23, 68, 120);
+}
 .icon-lenovo:before {
   content: "\e90c";
 }
 .icon-yelp:before {
   content: "\e90d";
 }
-.icon-bill-melinda:before {
+.icon-ucbill-melinda:before {
   content: "\e90e";
 }
 .icon-box-logo:before {

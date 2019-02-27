@@ -1460,7 +1460,7 @@ body.scrollable {
 	width: 80px;
 	height: 80px;
 	border: 2px solid #1196ba;
-	top: 7px;
+	top: 9px;
 	left: 4px;
 	-webkit-transform: rotate(15deg);
 	-ms-transform: rotate(15deg);
@@ -1484,7 +1484,7 @@ body.scrollable {
 
 .review-style1:hover .review-style1-person .review-style1-img:after,
 .review-style2:hover .review-style2-person .review-style2-img:after {
-	top: 0;
+	top: 4px;
 	left: 0;
 }
 
@@ -1529,6 +1529,12 @@ body.scrollable {
 	border-color: transparent;
 }
 
+@media (max-width:1199px) {
+	.review-style1 .review-style1-person .review-style1-img:after,
+	.review-style2 .review-style2-person .review-style2-img:after {
+		top: 11px;
+	}
+}
 @media (max-width:1190px) {
 	.review-style2 .review-style2-person {
 		width: 22%;
@@ -1622,6 +1628,14 @@ body.scrollable {
 	}
 	.review-style2-content {
 		padding-top: 0;
+	}
+	.review-style1 .review-style1-person .review-style1-img:after,
+	.review-style2 .review-style2-person .review-style2-img:after {
+		top: 7px;
+	}
+	.review-style1:hover .review-style1-person .review-style1-img:after,
+	.review-style2:hover .review-style2-person .review-style2-img:after {
+		top: 0;
 	}
 }
 @media (max-width: 602px) {
@@ -1840,7 +1854,7 @@ body.scrollable {
 .icon-listing li:nth-child(4n){
 	margin-right: 0;
 }
-.icon-listing li span,
+.icon-listing li > span,
 .icon-listing li input {
 	display: block;
 }
@@ -1862,6 +1876,15 @@ body.scrollable {
 	width: 100%;
 	padding: 7px 5px;
 	background: rgba(0,0,0,0.1);
+}
+
+/* ----- MEGAMENNU ----- */
+.navbar {
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	z-index: 9;
+	margin: 0;
 }
 
 /* ----- HELPERS CLASSES ----- */
