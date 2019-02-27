@@ -8,7 +8,10 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth(),
 		scrolled = jQuery(window).scrollTop(),
 		$body = jQuery("body"),
-		cpad = (winWidth-container)/2 + 'px';
+		cpad = (winWidth-container)/2 + 'px',
+		navHeight = jQuery('nav').outerHeight(true),
+		$slider = jQuery('.menu-slider'),
+		navWidth = jQuery('.navbar-nav > li').innerWidth();
 
 	/**
 	* --------------------------------------------------------------------------
@@ -26,6 +29,8 @@ jQuery(function() {
 
 	$window.on('load', function(){
 		auto_pantay();
+		topPadding();
+		navSlide();
 	});
 
 	$document.on('ready', function () {
@@ -42,11 +47,14 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
 		cpad = (winWidth-container)/2 + 'px';
-		console.log(winWidth)
+		navHeight = jQuery('nav').outerHeight(true);
+		navWidth = jQuery('.navbar-nav > li').innerWidth();
 	}
 
 	function updateStyleOnResize() {
 		auto_pantay();
+		topPadding();
+		navSlide();
 	}
 
 	function debounce(func, wait, immediate) {
@@ -86,9 +94,6 @@ jQuery(function() {
 		// e.preventDefault();
 	});
 
-
-
-
 	/*==============================
 	  OVERRIDE MODAL
 	================================*/
@@ -102,7 +107,6 @@ jQuery(function() {
 	$("body").on("hidden.bs.modal", ".modal", function() {
 		$("body").removeClass("scrollable")
 	});
-
 
 	/*==============================
 	  WISTIA VIDEO
@@ -300,6 +304,36 @@ jQuery(function() {
 			]
 		});
 
+	/*======================================
+	  BODY TOP SPACING FOR THE NAV
+	========================================*/
+	function topPadding() {
+		jQuery('body').css('margin-top',navHeight);
+	}
+
+	/*======================================
+	  SLIDING ACTIVE LINE ON NAV
+	========================================*/
+	$slider.css('width',navWidth);
+	function navSlide() {
+		var $isActive = $('.navbar-nav > li.isactive'),
+			isX = $isActive.position().left,
+			isW = $isActive.innerWidth();
+
+		$slider.css('width',navWidth);
+		$(".navbar-nav > li").each(function(){
+			var x = $(this).position().left,
+				w = $(this).innerWidth();
+			$(this).on({
+				mouseenter: function(){
+					$slider.css({'left': x, 'width': w});
+				},
+				mouseleave: function(){
+					$slider.css({'left': isX, 'width': isW});
+				}
+			});
+		});
+	}
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
