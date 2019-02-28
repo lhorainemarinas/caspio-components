@@ -275,9 +275,6 @@ section:nth-child(even) {
 	padding: 0;
 	height: 0;
 	overflow: hidden;
-	background: #fff url("../img/subnav-bg-min.jpg") center top / cover;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
@@ -287,9 +284,6 @@ section:nth-child(even) {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-}
-.megamenu.open {
-	height: 100%;
 }
 .megamenu .submenu {
 	width: 100%;
@@ -301,11 +295,21 @@ section:nth-child(even) {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	background: #fff url("../img/subnav-bg-min.jpg") center top / cover;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 }
+.megamenu.open,
 .megamenu.open .submenu.active {
 	height: 100%;
 }
-
+.submenu ul {
+	margin: 0;
+	padding: 0;
+}
+.submenu .row div[class^="col-"] > ul > li {
+	display: inline-block;
+}
 
 /* ----- GENERAL STYLES ----- */
 

@@ -349,16 +349,23 @@ jQuery(function() {
 		});
 		$(".navbar-nav > li").each(function(){
 			$(this).on({
-				mouseenter: function(){
+				mouseenter: function(e){
 					$(".megamenu").addClass("open");
 					var _li = $(this).attr("data-menu")
 					$(".megamenu .submenu").each(function(){
 						if($(this).attr("data-menu") == _li) {
 							$(this).addClass("active").siblings().removeClass("active");
+							$(this).on("mouseenter", function(e){
+								e.preventDefault();
+								e.stopPropagation();
+								$(this).addClass("active")
+							});
 						}
 					});
 				},
-				mouseleave: function(){
+				mouseleave: function(e){
+					e.preventDefault();
+					e.stopPropagation();
 					$(".megamenu").removeClass("open");
 					$(".megamenu .submenu.active").removeClass("active");
 				}
