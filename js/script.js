@@ -31,6 +31,7 @@ jQuery(function() {
 		auto_pantay();
 		topPadding();
 		navSlide();
+		megamenu();
 	});
 
 	$document.on('ready', function () {
@@ -308,7 +309,8 @@ jQuery(function() {
 	  BODY TOP SPACING FOR THE NAV
 	========================================*/
 	function topPadding() {
-		jQuery('body').css('margin-top',navHeight);
+		$("body").css('margin-top', navHeight);
+		$(".megamenu").css('top', navHeight);
 	}
 
 	/*======================================
@@ -334,6 +336,36 @@ jQuery(function() {
 			});
 		});
 	}
+
+	/*========================
+	  MEGAMENU
+	==========================*/
+	function megamenu() {
+		$(".navbar-nav > li").each(function(index){
+			$(this).attr("data-menu", index + 1);
+		});
+		$(".megamenu .submenu").each(function(index){
+			$(this).attr("data-menu", index + 1);
+		});
+		$(".navbar-nav > li").each(function(){
+			$(this).on({
+				mouseenter: function(){
+					$(".megamenu").addClass("open");
+					var _li = $(this).attr("data-menu")
+					$(".megamenu .submenu").each(function(){
+						if($(this).attr("data-menu") == _li) {
+							$(this).addClass("active").siblings().removeClass("active");
+						}
+					});
+				},
+				mouseleave: function(){
+					$(".megamenu").removeClass("open");
+					$(".megamenu .submenu.active").removeClass("active");
+				}
+			});
+		});
+	}
+
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
