@@ -264,7 +264,7 @@ section:nth-child(even) {
 .menu-header_menu-container:hover .menu-slider {
 	opacity: 1;
 }
-.megamenu {
+.submenu {
 	max-width: 1170px;
 	max-height: 350px;
 	margin: 0 auto;
@@ -284,23 +284,14 @@ section:nth-child(even) {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-}
-.megamenu .submenu {
-	width: 100%;
-	height: 0;
-	overflow: hidden;
-	position: absolute;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
 	background: #fff url("../img/subnav-bg-min.jpg") center top / cover;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 }
-.megamenu.open,
-.megamenu.open .submenu.active {
+.navbar-nav > li:hover .submenu {
+	height: 100%;
+}
+.submenu.open {
 	height: 100%;
 }
 .submenu ul {
@@ -309,6 +300,70 @@ section:nth-child(even) {
 }
 .submenu .row div[class^="col-"] > ul > li {
 	display: inline-block;
+}
+.submenu-left {
+	padding: 28px;
+	
+}
+.submenu-left ul {
+	list-style: none;
+	margin: 0;
+}
+.submenu-left ul ul li {
+	border-bottom: 1px solid #f2f2f3;
+	width: 90%;
+}
+.submenu-left ul ul li:last-child {
+	border-bottom: 0;
+}
+.submenu-left ul ul li a {
+	display: block;
+	font-size:  16px;
+	color: #484848;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.submenu-left ul ul li a:hover {
+	text-decoration: none;
+}
+.submenu-left ul ul li:hover a {
+	color: #ff7510;
+}
+.submenu-left > ul > li > p {
+	font-size: 21px;
+	font-weight: bold;
+	color: #20282b;
+	margin-bottom: 15px;
+}
+.submenu-right {
+	background: #f1f1f1;
+	padding: 28px 15px;
+}
+.submenu-right .featured-wrapper > p{
+	color: #015883;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 800;
+	margin-bottom: 5px;
+}
+.submenu-right .featured-wrapper .featured-item img {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.submenu-right .featured-wrapper .featured-item p.featured-item-title {
+	font-weight: 600;
+	line-height: 1.2;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.submenu-right .featured-wrapper .featured-item p.featured-item-desc {
+	line-height: 1.2;
+	color: #888;
+	margin-bottom: 10px;
 }
 
 /* ----- GENERAL STYLES ----- */

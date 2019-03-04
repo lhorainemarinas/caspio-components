@@ -310,7 +310,7 @@ jQuery(function() {
 	========================================*/
 	function topPadding() {
 		$("body").css('margin-top', navHeight);
-		$(".megamenu").css('top', navHeight);
+		$(".submenu").css('top', navHeight);
 	}
 
 	/*======================================
@@ -341,36 +341,36 @@ jQuery(function() {
 	  MEGAMENU
 	==========================*/
 	function megamenu() {
-		$(".navbar-nav > li").each(function(index){
-			$(this).attr("data-menu", index + 1);
-		});
-		$(".megamenu .submenu").each(function(index){
-			$(this).attr("data-menu", index + 1);
-		});
-		$(".navbar-nav > li").each(function(){
-			$(this).on({
-				mouseenter: function(e){
-					$(".megamenu").addClass("open");
-					var _li = $(this).attr("data-menu")
-					$(".megamenu .submenu").each(function(){
-						if($(this).attr("data-menu") == _li) {
-							$(this).addClass("active").siblings().removeClass("active");
-							$(this).on("mouseenter", function(e){
-								e.preventDefault();
-								e.stopPropagation();
-								$(this).addClass("active")
-							});
-						}
-					});
-				},
-				mouseleave: function(e){
-					e.preventDefault();
-					e.stopPropagation();
-					$(".megamenu").removeClass("open");
-					$(".megamenu .submenu.active").removeClass("active");
-				}
-			});
-		});
+		// $(".navbar-nav > li").each(function(index){
+		// 	$(this).attr("data-menu", index + 1);
+		// });
+		// $(".megamenu .submenu").each(function(index){
+		// 	$(this).attr("data-menu", index + 1);
+		// });
+		// $(".navbar-nav > li").each(function(){
+		// 	$(this).on({
+		// 		mouseenter: function(e){
+		// 			$(".megamenu").addClass("open");
+		// 			var _li = $(this).attr("data-menu")
+		// 			$(".megamenu .submenu").each(function(){
+		// 				if($(this).attr("data-menu") == _li) {
+		// 					$(this).addClass("active").siblings().removeClass("active");
+		// 					$(this).on("mouseenter", function(e){
+		// 						e.preventDefault();
+		// 						e.stopPropagation();
+		// 						$(this).addClass("active")
+		// 					});
+		// 				}
+		// 			});
+		// 		},
+		// 		mouseleave: function(e){
+		// 			e.preventDefault();
+		// 			e.stopPropagation();
+		// 			$(".megamenu").removeClass("open");
+		// 			$(".megamenu .submenu.active").removeClass("active");
+		// 		}
+		// 	});
+		// });
 	}
 
 	/**
