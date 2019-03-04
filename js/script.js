@@ -29,9 +29,9 @@ jQuery(function() {
 
 	$window.on('load', function(){
 		auto_pantay();
-		topPadding();
 		navSlide();
 		megamenu();
+		topPadding(); //this must be below megamenu()
 	});
 
 	$document.on('ready', function () {
@@ -54,8 +54,9 @@ jQuery(function() {
 
 	function updateStyleOnResize() {
 		auto_pantay();
-		topPadding();
 		navSlide();
+		megamenu();
+		topPadding(); //this must be below megamenu()
 	}
 
 	function debounce(func, wait, immediate) {
@@ -179,13 +180,14 @@ jQuery(function() {
 		});
 
 	/*=========================================
-	  TESTIMONIAL 3 COLUMN HEIGHT OF THE QUOTE
+	  AUTO HEIGHT FOR DIFFERENT ELEMENTS
 	===========================================*/
 	function auto_pantay() {
 		var qHeight = $('.review-style1 .review-style1-quote p').length,
 			blogTitleHeight = $('.blog-style1-content').length,
 			blogParHeight = $('.blog-style1-content > p').length,
-			rsp = $('.review-style1-person').length;
+			rsp = $('.review-style1-person').length,
+			nav_feat = $('.submenu-right').length;
 		if(qHeight >= 1){
 			new ResponsiveAutoHeight('.review-style1 .review-style1-quote p')
 		}
@@ -194,6 +196,9 @@ jQuery(function() {
 		}
 		if(rsp >= 1) {
 			new ResponsiveAutoHeight('.review-style1-person')
+		}
+		if(nav_feat >= 1) {
+			new ResponsiveAutoHeight('.submenu-right')
 		}
 	}
 
@@ -309,8 +314,16 @@ jQuery(function() {
 	  BODY TOP SPACING FOR THE NAV
 	========================================*/
 	function topPadding() {
-		$("body").css('margin-top', navHeight);
-		$(".submenu").css('top', navHeight);
+		if(winWidth >= 992) {
+			$(".submenu").css('top', navHeight);
+			$("body").css('padding-top', navHeight);
+			console.log("laki")
+		} else if(winWidth <= 991) {
+			$(".st-pusher").css('padding-top', 0);
+			$(".st-pusher").css('padding-top', navHeight);
+			$(".submenu").css('top', 'auto');
+			console.log("liit")
+		}
 	}
 
 	/*======================================
@@ -341,37 +354,48 @@ jQuery(function() {
 	  MEGAMENU
 	==========================*/
 	function megamenu() {
-		// $(".navbar-nav > li").each(function(index){
-		// 	$(this).attr("data-menu", index + 1);
-		// });
-		// $(".megamenu .submenu").each(function(index){
-		// 	$(this).attr("data-menu", index + 1);
-		// });
-		// $(".navbar-nav > li").each(function(){
-		// 	$(this).on({
-		// 		mouseenter: function(e){
-		// 			$(".megamenu").addClass("open");
-		// 			var _li = $(this).attr("data-menu")
-		// 			$(".megamenu .submenu").each(function(){
-		// 				if($(this).attr("data-menu") == _li) {
-		// 					$(this).addClass("active").siblings().removeClass("active");
-		// 					$(this).on("mouseenter", function(e){
-		// 						e.preventDefault();
-		// 						e.stopPropagation();
-		// 						$(this).addClass("active")
-		// 					});
-		// 				}
-		// 			});
-		// 		},
-		// 		mouseleave: function(e){
-		// 			e.preventDefault();
-		// 			e.stopPropagation();
-		// 			$(".megamenu").removeClass("open");
-		// 			$(".megamenu .submenu.active").removeClass("active");
-		// 		}
-		// 	});
-		// });
+		var varTime = 0,
+			currentLi = '',
+			mainNav = $("#navbar .nav.navbar-nav"),
+			btnBack = $(".submenu-back"),
+			menu_overlay = '<div class="menu-overlay"></div>',
+			have_overlay = $("nav").children(".menu-overlay").length,
+			bodyWrapped = $("body > .st-container").length;
+
+		$('#navbar .nav.navbar-nav li:has(ul)').addClass('has-child');
+
+		if(winWidth >= 992){
+			$(".menu-overlay").remove();
+			if(bodyWrapped >= 1) {
+				// $("body > *").unwrap();
+				$(".st-container").replaceWith(function () { return $(this).html(); });
+			}
+		} else if(winWidth <= 991){
+			if(bodyWrapped != 1) {
+				$("body > *").wrapAll("<div class='st-container'><div class='st-pusher'></div></div>");
+			}
+			if (have_overlay == 0) {
+				$("nav").prepend(menu_overlay);
+			} else {
+				$(".menu-overlay").remove();
+			}
+		}
+		
+
+		$(".navbar-toggle").on("click", function(e){
+			var menuOverlay = $(".menu-overlay");
+			e.preventDefault();
+			menuOverlay.fadeIn();
+			$(".st-container").addClass("open");
+		});
+
+		$(".menu-overlay").on("click", function(e){
+			e.preventDefault();
+			$(".st-container").removeClass("open");
+			$(".menu-overlay").fadeOut();
+		});
 	}
+
 
 	/**
 	* --------------------------------------------------------------------------
