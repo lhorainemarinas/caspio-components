@@ -358,6 +358,7 @@ jQuery(function() {
 			currentLi = '',
 			mainNav = $("#navbar .nav.navbar-nav"),
 			btnBack = $(".submenu-back"),
+			findMenu = $(".nav-wrap").children("#navbar").length,
 			menu_overlay = '<div class="menu-overlay"></div>',
 			have_overlay = $("nav").children(".menu-overlay").length,
 			bodyWrapped = $("body > .st-container").length;
@@ -373,6 +374,11 @@ jQuery(function() {
 		} else if(winWidth <= 991){
 			if(bodyWrapped != 1) {
 				$("body > *").wrapAll("<div class='st-container'><div class='st-pusher'></div></div>");
+			}
+			if(findMenu >=1) {
+				$("#navbar").prependTo(".st-pusher");
+			} else {
+				// console.log("mali")
 			}
 			if (have_overlay == 0) {
 				$("nav").prepend(menu_overlay);
