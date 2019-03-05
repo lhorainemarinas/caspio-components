@@ -392,12 +392,12 @@ jQuery(function() {
 			var menuOverlay = $(".menu-overlay");
 			e.preventDefault();
 			menuOverlay.fadeIn();
-			$(".st-container").addClass("open");
+			$(".st-container, body").addClass("open");
 		});
 
 		$(".menu-overlay").on("click", function(e){
 			e.preventDefault();
-			$(".st-container").removeClass("open");
+			$(".st-container, body").removeClass("open");
 			$(".menu-overlay").fadeOut();
 		});
 	}
