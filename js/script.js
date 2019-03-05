@@ -319,10 +319,9 @@ jQuery(function() {
 			$("body").css('padding-top', navHeight);
 			console.log("laki")
 		} else if(winWidth <= 991) {
-			$(".st-pusher").css('padding-top', 0);
+			$(".st-pusher, body").css('padding-top', 0);
 			$(".st-pusher").css('padding-top', navHeight);
 			$(".submenu").css('top', 'auto');
-			console.log("liit")
 		}
 	}
 
@@ -359,6 +358,7 @@ jQuery(function() {
 			mainNav = $("#navbar .nav.navbar-nav"),
 			btnBack = $(".submenu-back"),
 			findMenu = $(".nav-wrap").children("#navbar").length,
+			bodyMenu = $("body").children("#navbar").length,
 			menu_overlay = '<div class="menu-overlay"></div>',
 			have_overlay = $("nav").children(".menu-overlay").length,
 			bodyWrapped = $("body > .st-container").length;
@@ -369,16 +369,18 @@ jQuery(function() {
 			$(".menu-overlay").remove();
 			if(bodyWrapped >= 1) {
 				// $("body > *").unwrap();
+				$(".st-pusher").replaceWith(function () { return $(this).html(); });
 				$(".st-container").replaceWith(function () { return $(this).html(); });
 			}
+			if(bodyMenu >=1) {
+				// $("#navbar").insertBefore(".navbar-header");
+			} 
 		} else if(winWidth <= 991){
 			if(bodyWrapped != 1) {
 				$("body > *").wrapAll("<div class='st-container'><div class='st-pusher'></div></div>");
 			}
 			if(findMenu >=1) {
 				$("#navbar").prependTo(".st-pusher");
-			} else {
-				// console.log("mali")
 			}
 			if (have_overlay == 0) {
 				$("nav").prepend(menu_overlay);
