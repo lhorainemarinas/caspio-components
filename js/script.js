@@ -19,7 +19,7 @@ jQuery(function() {
 	* --------------------------------------------------------------------------
 	*/
 
-	$window.on('resize', function(){
+	$window.on('resize', createSlick , function(){
 		updateOnResize();
 	});
 
@@ -28,6 +28,7 @@ jQuery(function() {
 	});
 
 	$window.on('load', function(){
+		createSlick();
 		auto_pantay();
 		navSlide();
 		megamenu();
@@ -120,64 +121,7 @@ jQuery(function() {
 		autoPlay: true
 	  });
 	};
-
-	/*==============================
-	  TESTIMONIAL 3 COLUMN SLIDER
-	================================*/
-	$('.reviews-style1-container .reviews-style1-wrap').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		appendArrows: $('.reviews-style1-container .slick-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-		responsive: [
-				{
-				  breakpoint: 1201,
-				  settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-				  }
-				},
-				{
-				  breakpoint: 1171,
-				  settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-				  }
-				},
-				{
-				  breakpoint: 992,
-				  settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1
-				  }
-				},
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				  }
-				}
-			]
-		});
-
-	/*==============================
-	  TESTIMONIAL 1 COLUMN SLIDER
-	================================*/
-	$('.reviews-style2-container .reviews-style2-wrap').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		appendArrows: $('.reviews-style2-container .slick-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-		});
+	
 
 	/*=========================================
 	  AUTO HEIGHT FOR DIFFERENT ELEMENTS
@@ -202,113 +146,173 @@ jQuery(function() {
 		}
 	}
 
-	/*======================================
-	  BLOG CENTER MODE STYLE 1 SLICK SLIDER
-	========================================*/
-	$('.blog-style1-container .blog-style1-wrap').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: cpad,
-		appendArrows: $('.blog-style1-container .slick-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-		responsive: [
-				{
-				  breakpoint: 1201,
-				  settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: true,
-				  }
-				},
-				{
-				  breakpoint: 1129,
-				  settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: false,
-				  }
-				},
-				{
-				  breakpoint: 992,
-				  settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: false,
-				  }
-				},
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: true,
-				  }
-				}
-			]
-		});
+	function createSlick() {
+		/*==============================
+		  TESTIMONIAL 3 COLUMN SLIDER
+		================================*/
+		$('.reviews-style1-container .reviews-style1-wrap').not('.slick-initialized').slick({
+			dots: true,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			appendArrows: $('.reviews-style1-container .slick-arrows'),
+			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+			responsive: [
+					{
+					  breakpoint: 1201,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					  }
+					},
+					{
+					  breakpoint: 1171,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					  }
+					},
+					{
+					  breakpoint: 992,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					  }
+					}
+				]
+			});
 
-	/*======================================
-	  BLOG CENTER MODE STYLE 2 SLICK SLIDER
-	========================================*/
-	$('.blog-style2-container .blog-style1-wrap').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: cpad,
-		appendArrows: $('.blog-style2-container .slick-arrows'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-		responsive: [
-				{
-				  breakpoint: 1201,
-				  settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: true,
-				  }
-				},
-				{
-				  breakpoint: 1129,
-				  settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: false,
-				  }
-				},
-				{
-				  breakpoint: 992,
-				  settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: false,
-				  }
-				},
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					centerPadding: cpad,
-					centerMode: true,
-				  }
-				}
-			]
-		});
+		/*==============================
+		  TESTIMONIAL 1 COLUMN SLIDER
+		================================*/
+		$('.reviews-style2-container .reviews-style2-wrap').not('.slick-initialized').slick({
+			dots: true,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			appendArrows: $('.reviews-style2-container .slick-arrows'),
+			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+			});
+
+		/*======================================
+		  BLOG CENTER MODE STYLE 1 SLICK SLIDER
+		========================================*/
+		$('.blog-style1-container .blog-style1-wrap').not('.slick-initialized').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			centerMode: true,
+			centerPadding: cpad,
+			appendArrows: $('.blog-style1-container .slick-arrows'),
+			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
+			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+			responsive: [
+					{
+					  breakpoint: 1201,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: true,
+					  }
+					},
+					{
+					  breakpoint: 1129,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: false,
+					  }
+					},
+					{
+					  breakpoint: 992,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: false,
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: true,
+					  }
+					}
+				]
+			});
+
+		/*======================================
+		  BLOG CENTER MODE STYLE 2 SLICK SLIDER
+		========================================*/
+		$('.blog-style2-container .blog-style1-wrap').not('.slick-initialized').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			centerMode: true,
+			centerPadding: cpad,
+			appendArrows: $('.blog-style2-container .slick-arrows'),
+			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
+			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+			responsive: [
+					{
+					  breakpoint: 1201,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: true,
+					  }
+					},
+					{
+					  breakpoint: 1129,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: false,
+					  }
+					},
+					{
+					  breakpoint: 992,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: false,
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						centerPadding: cpad,
+						centerMode: true,
+					  }
+					}
+				]
+			});
+	}
 
 	/*======================================
 	  BODY TOP SPACING FOR THE NAV
@@ -317,7 +321,6 @@ jQuery(function() {
 		if(winWidth >= 992) {
 			$(".submenu").css('top', navHeight);
 			$("body").css('padding-top', navHeight);
-			console.log("laki")
 		} else if(winWidth <= 991) {
 			$(".st-pusher, body").css('padding-top', 0);
 			$(".st-pusher").css('padding-top', navHeight);
@@ -373,7 +376,7 @@ jQuery(function() {
 				$(".st-container").replaceWith(function () { return $(this).html(); });
 			}
 			if(bodyMenu >=1) {
-				// $("#navbar").insertBefore(".navbar-header");
+				$("#navbar").insertBefore("#right_side_menu");
 			} 
 		} else if(winWidth <= 991){
 			if(bodyWrapped != 1) {
