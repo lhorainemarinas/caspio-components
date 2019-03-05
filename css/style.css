@@ -1190,6 +1190,7 @@ section p:last-child {
 		box-shadow: none;
 		-webkit-box-shadow: none;
 		left: 0;
+		position: static;
 	}
 	.submenu .row div[class^="col-"] > ul > li.has-child  {
 		height: auto;

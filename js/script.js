@@ -393,17 +393,17 @@ jQuery(function() {
 				$(".menu-overlay").remove();
 			}
 			mainNavLi.click(function(e){
-				console.log(1);
 				var _this = $(this);
-				_this.closest('li').addClass('open').siblings().removeClass('open');
+				_this.closest('li').addClass('open active').siblings().removeClass('open');
 			});
 			btnBack.click(function (e) {
 				// e.preventDefault();
-				var p = mainNav.find('.open').removeClass('open').closest('.open');
+				var p = mainNav.find('li.active').removeClass('open active').closest('.open');
+				
 				if (p.closest(mainNav).length) {
-					p.addClass('open')
+					p.addClass('active')
 				} else {
-					btnBack.removeClass('open');
+					btnBack.removeClass('active');
 				}
 			});
 		}
