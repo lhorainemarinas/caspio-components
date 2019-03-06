@@ -401,12 +401,12 @@ jQuery(function() {
 						btnBack.removeClass('active');
 					}
 				}
-				_this.closest("li")
+					_this.closest('li.active')
+						.removeClass('active');
+					_this.closest("li")
 						.addClass('open active')
 						.siblings()
-						.removeClass('open')
-						.closest('li.active')
-						.removeClass('active');
+						.removeClass('open');
 				// _this.closest("li")
 				// 		.addClass('open active')
 				// 		.siblings()
