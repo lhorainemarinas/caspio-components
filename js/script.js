@@ -378,7 +378,7 @@ jQuery(function() {
 				$(".st-container").replaceWith(function () { return $(this).html(); });
 			}
 			if(bodyMenu >=1) {
-				$("#navbar").insertBefore("#right_side_menu");
+				$("#navbar").insertBefore(".menu-icons");
 			} 
 		} else if(winWidth <= 991){
 			if(bodyWrapped != 1) {
@@ -405,8 +405,14 @@ jQuery(function() {
 						.addClass('open active')
 						.siblings()
 						.removeClass('open')
-						.parents("#navbar li.open.active")
-						.removeClass("active");
+						.closest('li.active')
+						.removeClass('active');
+				// _this.closest("li")
+				// 		.addClass('open active')
+				// 		.siblings()
+				// 		.removeClass('open')
+				// 		.parents("#navbar li.open.active")
+				// 		.removeClass("active");
 
 			});
 			btnBack.click(function (e) {

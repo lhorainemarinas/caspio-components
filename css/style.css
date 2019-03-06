@@ -966,6 +966,12 @@ section p:last-child {
 	line-height: 0;
 	cursor: pointer;
 }
+.menu-icons a {
+	font-size: 15px;
+}
+#right_side_menu {
+	width: 180px;
+}
 
 @media (max-width: 1200px) {
 	.navbar-nav > li > a {
