@@ -1114,6 +1114,7 @@ section p:last-child {
 		display: block;
 		float: none;
 		position: static;
+		z-index: 1;
 	}
 	.navbar-nav > li:hover > a,
 	.submenu .row div[class^="col-"] > ul > li.has-child:hover > p,
@@ -1169,6 +1170,7 @@ section p:last-child {
 		-ms-transform: none;
 		-o-transform: none;
 		transform: none;
+		z-index: 2;
 		-webkit-transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
 		-ms-transition: all 0.3s ease-in-out;

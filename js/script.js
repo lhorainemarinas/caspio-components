@@ -394,7 +394,14 @@ jQuery(function() {
 			}
 			mainNavLi.click(function(e){
 				var _this = $(this);
-				_this.closest('li').addClass('open active').siblings().removeClass('open');
+				// console.log(_this.outerHTML)
+				_this.closest("li")
+						.addClass('open active')
+						.siblings()
+						.removeClass('open')
+						.parents("#navbar li.open.active")
+						.removeClass("active");
+
 			});
 			btnBack.click(function (e) {
 				// e.preventDefault();
