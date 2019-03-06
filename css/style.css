@@ -782,6 +782,9 @@ section p:last-child {
 	margin-bottom: 0;
 	text-transform: uppercase;
 }
+.navbar-topnav > li:last-child > a.btn {
+	margin-right: 0;
+}
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
 	background-color: transparent;
@@ -939,11 +942,15 @@ section p:last-child {
 	z-index: 1;
 }
 .submenu-back {
+	display: none;
 	float: left;
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 16px;
 	padding: 5px;
+}
+.submenu-back.active {
+	display: block;
 }
 .submenu-back:before {
 	content:'\f177';
@@ -958,7 +965,6 @@ section p:last-child {
 	margin: 0;
 	line-height: 0;
 	cursor: pointer;
-	display: inline-block;
 }
 
 @media (max-width: 1200px) {
@@ -1390,8 +1396,17 @@ body.scrollable {
 		margin-bottom: 30px;
 	}
 }
-
+@media (max-width:576px) {
+	.list-style1 {
+		text-align: center;
+	}
+	.list-style1 ul {
+		display: inline-block;
+		text-align: left;
+	}
+}
 @media (max-width: 540px) {
+	.list-style1 ul
 	.list-style1 ul li {
 		margin-bottom: 5px;
 	}

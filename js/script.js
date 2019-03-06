@@ -392,9 +392,15 @@ jQuery(function() {
 			} else {
 				$(".menu-overlay").remove();
 			}
-			mainNavLi.click(function(e){
+			mainNavLi.on("click",function(e){
 				var _this = $(this);
-				// console.log(_this.outerHTML)
+				if ($(this).siblings('.submenu').length) {
+					if (mainNav.length) {
+						btnBack.addClass('active');
+					} else {
+						btnBack.removeClass('active');
+					}
+				}
 				_this.closest("li")
 						.addClass('open active')
 						.siblings()
@@ -423,9 +429,11 @@ jQuery(function() {
 			$(".st-container, body").addClass("open");
 		});
 
-		$(".menu-overlay").on("click", function(e){
+		$(".menu-overlay, .menu-close").on("click", function(e){
 			e.preventDefault();
 			$(".st-container, body").removeClass("open");
+			btnBack.removeClass('active');
+			mainNav.find('.open').removeClass('open');
 			$(".menu-overlay").fadeOut();
 		});
 	}
