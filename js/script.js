@@ -19,7 +19,7 @@ jQuery(function() {
 	* --------------------------------------------------------------------------
 	*/
 
-	$window.on('resize', createSlick , function(){
+	$window.on('resize', function(){
 		updateOnResize();
 	});
 
@@ -28,7 +28,6 @@ jQuery(function() {
 	});
 
 	$window.on('load', function(){
-		createSlick();
 		auto_pantay();
 		navSlide();
 		megamenu();
@@ -152,173 +151,171 @@ jQuery(function() {
 		}
 	}
 
-	function createSlick() {
-		/*==============================
+	/*==============================
 		  TESTIMONIAL 3 COLUMN SLIDER
 		================================*/
-		$('.reviews-style1-container .reviews-style1-wrap').not('.slick-initialized').slick({
-			dots: true,
-			infinite: false,
-			speed: 300,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			appendArrows: $('.reviews-style1-container .slick-arrows'),
-			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
-			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-			responsive: [
-					{
-					  breakpoint: 1201,
-					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-					  }
-					},
-					{
-					  breakpoint: 1171,
-					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-					  }
-					},
-					{
-					  breakpoint: 992,
-					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1
-					  }
-					},
-					{
-					  breakpoint: 768,
-					  settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					  }
-					}
-				]
-			});
+	$('.reviews-style1-container .reviews-style1-wrap').not('.slick-initialized').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		appendArrows: $('.reviews-style1-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 1171,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
 
-		/*==============================
-		  TESTIMONIAL 1 COLUMN SLIDER
-		================================*/
-		$('.reviews-style2-container .reviews-style2-wrap').not('.slick-initialized').slick({
-			dots: true,
-			infinite: false,
-			speed: 300,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			appendArrows: $('.reviews-style2-container .slick-arrows'),
-			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
-			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-			});
+	/*==============================
+		TESTIMONIAL 1 COLUMN SLIDER
+	================================*/
+	$('.reviews-style2-container .reviews-style2-wrap').not('.slick-initialized').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		appendArrows: $('.reviews-style2-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-left-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+	});
 
-		/*======================================
-		  BLOG CENTER MODE STYLE 1 SLICK SLIDER
-		========================================*/
-		$('.blog-style1-container .blog-style1-wrap').not('.slick-initialized').slick({
-			dots: true,
-			infinite: true,
-			speed: 300,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			centerMode: true,
-			centerPadding: cpad,
-			appendArrows: $('.blog-style1-container .slick-arrows'),
-			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
-			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-			responsive: [
-					{
-					  breakpoint: 1201,
-					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: true,
-					  }
-					},
-					{
-					  breakpoint: 1129,
-					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: false,
-					  }
-					},
-					{
-					  breakpoint: 992,
-					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: false,
-					  }
-					},
-					{
-					  breakpoint: 768,
-					  settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: true,
-					  }
-					}
-				]
-			});
+	/*======================================
+		BLOG CENTER MODE STYLE 1 SLICK SLIDER
+	========================================*/
+	$('.blog-style1-container .blog-style1-wrap').not('.slick-initialized').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: cpad,
+		appendArrows: $('.blog-style1-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
+				}
+			},
+			{
+				breakpoint: 1129,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
+				}
+			}
+		]
+	});
 
-		/*======================================
-		  BLOG CENTER MODE STYLE 2 SLICK SLIDER
-		========================================*/
-		$('.blog-style2-container .blog-style1-wrap').not('.slick-initialized').slick({
-			dots: true,
-			infinite: true,
-			speed: 300,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			centerMode: true,
-			centerPadding: cpad,
-			appendArrows: $('.blog-style2-container .slick-arrows'),
-			prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
-			nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
-			responsive: [
-					{
-					  breakpoint: 1201,
-					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: true,
-					  }
-					},
-					{
-					  breakpoint: 1129,
-					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: false,
-					  }
-					},
-					{
-					  breakpoint: 992,
-					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: false,
-					  }
-					},
-					{
-					  breakpoint: 768,
-					  settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						centerPadding: cpad,
-						centerMode: true,
-					  }
-					}
-				]
-			});
-	}
+	/*======================================
+		BLOG CENTER MODE STYLE 2 SLICK SLIDER
+	========================================*/
+	$('.blog-style2-container .blog-style1-wrap').not('.slick-initialized').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: cpad,
+		appendArrows: $('.blog-style2-container .slick-arrows'),
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span class="icon-right-arrow"></span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="icon-right-arrow"></span></button>',
+		responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
+				}
+			},
+			{
+				breakpoint: 1129,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: false,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerPadding: cpad,
+					centerMode: true,
+				}
+			}
+		]
+	});
 
 	/*======================================
 	  BODY TOP SPACING FOR THE NAV
@@ -394,13 +391,6 @@ jQuery(function() {
 			if(findMenu >=1) {
 				$("#navbar").prependTo(".st-pusher");
 			}
-			if (have_overlay == 0) {
-				// $body.addClass('open');
-				// $("nav").prepend(menu_overlay);
-			} else {
-				// $body.removeClass('open');
-				// $(".menu-overlay").remove();
-			}
 
 			mainNavLi.on("click",function(e){
 				var _this = $(this);
@@ -416,7 +406,6 @@ jQuery(function() {
 
 			});
 			btnBack.click(function (e) {
-				// e.preventDefault();
 				var p = mainNav.find('li.active').removeClass('open active').closest('.open');
 				
 				if (p.closest(mainNav).length) {
@@ -431,19 +420,15 @@ jQuery(function() {
 		$(".navbar-toggle").on("click", function(e){
 			var menuOverlay = $(".menu-overlay");
 			e.preventDefault();
-			// menuOverlay.fadeIn();
 			$(".st-container, body").addClass("open");
 		});
 
 		$('body').on("click", ".menu-overlay, .menu-close", function(e){
 			$(".search-box, .caspio-search-reveal").removeClass("active");
-			console.log(1)
 			e.preventDefault();
 			$(".st-container, body").removeClass("open");
 			btnBack.removeClass('active');
 			mainNav.find('.open').removeClass('open');
-			// $(".menu-overlay").fadeOut();
-
 			$body.removeClass('open-overlay');
 		});
 
