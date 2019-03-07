@@ -382,7 +382,7 @@ jQuery(function() {
 			}
 			$(".caspio-search-reveal").on("click", function(e){
 				e.preventDefault();
-				$("body").prepend(menu_overlay);
+				$("nav").prepend(menu_overlay);
 				$(".search-box, .caspio-search-reveal").addClass("active");
 			});
 		} else if(winWidth <= 991){
