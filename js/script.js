@@ -32,12 +32,6 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
-
-		if ( $('.st-pusher').length ) {
-			$('.st-pusher').prepend( '<div class="menu-overlay"></div>' );
-		} else {
-			$body.prepend( '<div class="menu-overlay"></div>' );
-		}
 	});
 
 	$document.on('ready', function () {
@@ -417,7 +411,6 @@ jQuery(function() {
 		
 
 		$(".navbar-toggle").on("click", function(e){
-			var menuOverlay = $(".menu-overlay");
 			e.preventDefault();
 			$(".wrap-all, #navbar, body, .navbar-fixed-top").addClass("open");
 		});
