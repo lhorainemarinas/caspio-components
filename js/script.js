@@ -33,6 +33,12 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
+
+		if ( $('.st-pusher').length ) {
+			$('.st-pusher').prepend( '<div class="menu-overlay"></div>' );
+		} else {
+			$body.prepend( '<div class="menu-overlay"></div>' );
+		}
 	});
 
 	$document.on('ready', function () {
@@ -58,7 +64,6 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
-		$(".menu-overlay").remove();
 	}
 
 	function debounce(func, wait, immediate) {
@@ -365,16 +370,15 @@ jQuery(function() {
 			btnBack = $(".submenu-back"),
 			findMenu = $(".nav-wrap").children("#navbar").length,
 			bodyMenu = $("body").children("#navbar").length,
-			menu_overlay = '<div class="menu-overlay"></div>',
 			have_overlay = $("nav").children(".menu-overlay").length,
-			body_overlay = $("body").children(".menu-overlay").length,
 			bodyWrapped = $("body > .st-container").length,
 			mainNavLi = $("#navbar ul li a, #navbar ul li p");
 
 		$('#navbar .nav.navbar-nav li:has(ul)').addClass('has-child');
 
 		if(winWidth >= 992){
-			$(".menu-overlay").remove();
+			$body.removeClass('open');
+
 			if(bodyWrapped >= 1) {
 				$(".st-pusher").replaceWith(function () { return $(this).html(); });
 				$(".st-container").replaceWith(function () { return $(this).html(); });
@@ -382,16 +386,8 @@ jQuery(function() {
 			if(bodyMenu >=1) {
 				$("#navbar").insertBefore(".menu-icons");
 			}
-			$(".caspio-search-reveal").on("click", function(e){
-				e.preventDefault();
-				if (body_overlay == 0) {
-					$("body").prepend(menu_overlay);
-				} else {
-					$(".menu-overlay").remove();
-				}
-				$(".search-box, .caspio-search-reveal").addClass("active");
-			});
 		} else if(winWidth <= 991){
+			$body.removeClass('open-overlay');
 			if(bodyWrapped != 1) {
 				$("body > *").wrapAll("<div class='st-container'><div class='st-pusher'></div></div>");
 			}
@@ -399,10 +395,13 @@ jQuery(function() {
 				$("#navbar").prependTo(".st-pusher");
 			}
 			if (have_overlay == 0) {
-				$("nav").prepend(menu_overlay);
+				// $body.addClass('open');
+				// $("nav").prepend(menu_overlay);
 			} else {
-				$(".menu-overlay").remove();
+				// $body.removeClass('open');
+				// $(".menu-overlay").remove();
 			}
+
 			mainNavLi.on("click",function(e){
 				var _this = $(this);
 				if ($(this).siblings('.submenu').length) {
@@ -432,7 +431,7 @@ jQuery(function() {
 		$(".navbar-toggle").on("click", function(e){
 			var menuOverlay = $(".menu-overlay");
 			e.preventDefault();
-			menuOverlay.fadeIn();
+			// menuOverlay.fadeIn();
 			$(".st-container, body").addClass("open");
 		});
 
@@ -443,12 +442,14 @@ jQuery(function() {
 			$(".st-container, body").removeClass("open");
 			btnBack.removeClass('active');
 			mainNav.find('.open').removeClass('open');
-			$(".menu-overlay").fadeOut();
+			// $(".menu-overlay").fadeOut();
+
+			$body.removeClass('open-overlay');
 		});
+
 		$(".caspio-search-reveal").on("click", function(e){
-			var menuOverlay = $(".menu-overlay");
 			e.preventDefault();
-			menuOverlay.fadeIn();
+			$body.addClass('open-overlay');
 		});
 	}
 

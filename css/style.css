@@ -942,6 +942,10 @@ section p:last-child {
 	display: none;
 	z-index: 1;
 }
+body.open .menu-overlay,
+body.open-overlay .menu-overlay {
+	display: block;
+}
 .submenu-back {
 	display: none;
 	float: left;
