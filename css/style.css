@@ -211,7 +211,7 @@ body {
 	font: 400 16px 'Lato', sans-serif;
 	color: #484848;
 	margin: 0;
-	background: #444;
+	background: #fff;
 }
 
 section {
@@ -754,11 +754,12 @@ section p:last-child {
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 	z-index: 9;
 	margin: 0;
-	-webkit-transition: transform 0.5s;
-	-moz-transition: transform 0.5s;
-	-ms-transition: transform 0.5s;
-	-o-transition: transform 0.5s;
-	transition: transform 0.5s;
+	width: 100vw;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .nav-wrap {
 	width: 100%;
@@ -946,6 +947,11 @@ section p:last-child {
 	background: rgba(0,0,0,0.5);
 	display: none;
 	z-index: 1;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
 body.open .menu-overlay,
 body.open-overlay .menu-overlay {
@@ -1024,7 +1030,7 @@ body.open-overlay .menu-overlay {
 	height: 8px;
 	background: #027faa;
 	position: absolute;
-	bottom: 1px;
+	bottom: 2px;
 	left: 35%;
 	-webkit-transform: rotate(45deg) translateY(-50%);
 	-ms-transform: rotate(45deg) translateY(-50%);
@@ -1148,17 +1154,16 @@ body.open-overlay .menu-overlay {
 	.navbar {
 		min-height: auto;
 	}
+	.navbar-fixed-top.open {
+		left: 300px;
+	}
 	.navbar-header{
 		text-align: center;
 	}
 	.menu-slider {
 		display: none;
 	}
-	body.open {
-		overflow: hidden;
-		height: 100%;
-	}
-	.st-container {
+	/* .st-container {
 		-webkit-perspective: 1000vh;
 		perspective: 1000vh;
 		-webkit-perspective-origin: 0% -410%;
@@ -1213,16 +1218,16 @@ body.open-overlay .menu-overlay {
 		-ms-transition: opacity 0.5s;
 		-o-transition: opacity 0.5s;
 		transition: opacity 0.5s;
-	}
+	} */
 	#navbar {
 		display: block;
 		position: fixed;
 		top: 0;
-		left: 0;
+		bottom: 0;
+		left: -400px;
 		z-index: 100;
-		visibility: hidden;
 		width: 300px;
-		height: 100vh;
+		height: 100%;
 		background: #fff;
 		overflow-x: hidden;
 		-webkit-transition: all 0.5s;
@@ -1230,14 +1235,31 @@ body.open-overlay .menu-overlay {
 		-ms-transition: all 0.5s;
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
-		-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+		/* -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
 		transform: translate3d(-100%, 0, 0) rotateY(-90deg);
 		-webkit-transform-origin: 100% 50%;
 		transform-origin: 100% 50%;
 		-webkit-transform-style: preserve-3d;
-		transform-style: preserve-3d;
+		transform-style: preserve-3d; */
 	}
-	#navbar::after {
+	#navbar.open {
+		left: 0;
+	}
+	.wrap-all {
+		-webkit-transition: transform 0.5s;
+		-moz-transition: transform 0.5s;
+		-ms-transition: transform 0.5s;
+		-o-transition: transform 0.5s;
+		transition: transform 0.5s;
+	}
+	.wrap-all.open {
+		-moz-transform: translateX(300px);
+		-webkit-transform: translateX(300px);
+		-o-transform: translateX(300px);
+		-ms-transform: translateX(300px);
+		transform: translateX(300px);
+	}
+	/* #navbar::after {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -1251,8 +1273,8 @@ body.open-overlay .menu-overlay {
 		-ms-transition: opacity 0.5s;
 		-o-transition: opacity 0.5s;
 		transition: opacity 0.5s;
-	}
-	.st-container.open #navbar::after {
+	} */
+	/* .st-container.open #navbar::after {
 		width: 0;
 		height: 0;
 		opacity: 0;
@@ -1273,7 +1295,7 @@ body.open-overlay .menu-overlay {
 		-moz-transform: translate3d(-100%, 0, 0) rotateY(0deg);
 		-webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
 		transform: translate3d(-100%, 0, 0) rotateY(0deg);
-	}
+	} */
 	.menu-header_menu-container {
 		display: block;
 	}
@@ -1285,13 +1307,6 @@ body.open-overlay .menu-overlay {
 	}
 	#right_side_menu {
 		width: 120px;
-	}
-	nav.navbar.open {
-		-moz-transform: translateX(300px);
-		-webkit-transform: translateX(300px);
-		-o-transform: translateX(300px);
-		-ms-transform: translateX(300px);
-		transform: translateX(300px);
 	}
 	.navbar-toggle {
 		display: table-cell;
@@ -2572,7 +2587,7 @@ body.scrollable {
 	margin-bottom: 20px;
 }
 .icon-listing li.logo span {
-	font-size: 25px;
+	font-size: 100%;
 }
 .icon-listing li.logo2 span {
 	font-size: 80%;
