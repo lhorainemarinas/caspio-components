@@ -1231,6 +1231,14 @@ section p:last-child {
 	}
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+	.st-container {
+		-webkit-perspective-origin: 0% -360%;
+		perspective-origin: 0% -360%;
+	}
+}
+
+
 
 /* ----- MODALS ----- */
 body.scrollable {
