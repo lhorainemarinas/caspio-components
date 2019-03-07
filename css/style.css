@@ -1005,7 +1005,7 @@ section p:last-child {
 }
 .caspio-search-reveal:hover:before,
 .caspio-search-reveal.active:before {
-	background: #20282b;
+	background: #747d82;
 }
 .phone-info:hover:after,
 .caspio-search-reveal:hover:after,
@@ -1027,7 +1027,7 @@ section p:last-child {
 	left: 1px;
 	bottom: auto;
 	top: 50%;
-	background: #20282b;
+	background: #747d82;
 	-webkit-transform: rotate(45deg) translateY(-50%);
 	-ms-transform: rotate(45deg) translateY(-50%);
 	-o-transform: rotate(45deg) translateY(-50%);
