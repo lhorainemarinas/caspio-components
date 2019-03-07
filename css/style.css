@@ -985,7 +985,7 @@ section p:last-child {
 }
 .phone-info:hover:before {
 	content: '';
-	background: #015883;
+	background: #027faa;
 	position: absolute;
 	top: 9px;
 	left: 2px;
@@ -999,7 +999,7 @@ section p:last-child {
 	content: '';
 	width: 8px;
 	height: 8px;
-	background: #015883;
+	background: #027faa;
 	position: absolute;
 	bottom: 1px;
 	left: 35%;
@@ -1013,7 +1013,7 @@ section p:last-child {
 }
 .phone-info .phone-info-box {
 	display: block;
-	background: #015883;
+	background: #027faa;
 	position: absolute;
 	top: 108%;
 	left: -170%;
