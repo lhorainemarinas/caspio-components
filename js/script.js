@@ -58,6 +58,7 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
+		$(".menu-overlay").remove();
 	}
 
 	function debounce(func, wait, immediate) {
