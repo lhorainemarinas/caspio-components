@@ -1067,7 +1067,7 @@ body.open-overlay .menu-overlay {
 	display: block;
 	background: #027faa;
 	position: absolute;
-	top: 108%;
+	top: 107%;
 	left: -170%;
 	z-index: 1;
 	width: 180px;
@@ -1102,7 +1102,7 @@ body.open-overlay .menu-overlay {
 .search-box {
 	position: absolute;
 	z-index: 2;
-	left: 0;
+	right: 0;
 	top: 50%;
 	width: 0;
 	overflow: hidden;
