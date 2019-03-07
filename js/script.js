@@ -450,6 +450,7 @@ jQuery(function() {
 		$(".caspio-search-reveal").on("click", function(e){
 			e.preventDefault();
 			$body.addClass('open-overlay');
+			$(".search-box, .caspio-search-reveal").addClass("active");
 		});
 	}
 
