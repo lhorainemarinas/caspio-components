@@ -407,12 +407,7 @@ jQuery(function() {
 						.addClass('open active')
 						.siblings()
 						.removeClass('open');
-				// _this.closest("li")
-				// 		.addClass('open active')
-				// 		.siblings()
-				// 		.removeClass('open')
-				// 		.parents("#navbar li.open.active")
-				// 		.removeClass("active");
+				// _this.closest("li").addClass('open active').siblings().removeClass('open').parents("#navbar li.open.active").removeClass("active");
 
 			});
 			btnBack.click(function (e) {

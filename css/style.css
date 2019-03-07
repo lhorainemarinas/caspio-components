@@ -769,7 +769,7 @@ section p:last-child {
 	display: inline-block;
 }
 .navbar-nav > li > a,
-.caspio-search-reveal {
+.menu-icons a {
 	display: inline-block;
 	cursor: pointer;
 	color: #484848;
@@ -966,11 +966,86 @@ section p:last-child {
 	line-height: 0;
 	cursor: pointer;
 }
+.menu-icons {
+	width: 95px;
+}
 .menu-icons a {
 	font-size: 15px;
 }
 #right_side_menu {
 	width: 180px;
+}
+.phone-info {
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.phone-info:hover:before {
+	content: '';
+	background: #015883;
+	position: absolute;
+	top: 9px;
+	left: 2px;
+	width: 90%;
+	height: 68%;
+	z-index: -1;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.phone-info:hover:after {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: #015883;
+	position: absolute;
+	bottom: 1px;
+	left: 35%;
+	-webkit-transform: rotate(45deg) translateY(-50%);
+	-ms-transform: rotate(45deg) translateY(-50%);
+	-o-transform: rotate(45deg) translateY(-50%);
+	transform: rotate(45deg) translateY(-50%);
+}
+.phone-info:hover {
+	color: #fff;
+}
+.phone-info .phone-info-box {
+	display: block;
+	background: #015883;
+	position: absolute;
+	top: 108%;
+	left: -170%;
+	z-index: 1;
+	width: 180px;
+	height: 0;
+	overflow: hidden;
+	text-align: left;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.phone-info:hover .phone-info-box {
+	height: 120%;
+	overflow: visible;
+}
+.phone-info .phone-info-box > span {
+	display: block;
+	margin: 10px 20px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 13px;
+}
+.phone-info .phone-info-box > span:last-child {
+	/* margin-bottom: 0; */
+}
+.phone-info .phone-info-box > span > span.fa {
+	margin-right: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -986,6 +1061,9 @@ section p:last-child {
 	}
 }
 @media (max-width: 991px) {
+	.phone-info {
+		display: none;
+	}
 	.navbar-toggle .icon-bar + .icon-bar {
 		margin-top: 5px;
 	}
