@@ -754,6 +754,11 @@ section p:last-child {
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
 	z-index: 9;
 	margin: 0;
+	-webkit-transition: transform 0.5s;
+	-moz-transition: transform 0.5s;
+	-ms-transition: transform 0.5s;
+	-o-transition: transform 0.5s;
+	transition: transform 0.5s;
 }
 .nav-wrap {
 	width: 100%;
@@ -1168,8 +1173,13 @@ body.open-overlay .menu-overlay {
 		z-index: 99;
 		height: 100%;
 		perspective: 1000px;
-		-webkit-transition: -webkit-transform 0.5s;
+		-webkit-transition: transform 0.5s;
+		-moz-transition: transform 0.5s;
+		-ms-transition: transform 0.5s;
+		-o-transition: transform 0.5s;
 		transition: transform 0.5s;
+		-ms-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
 		-webkit-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 	}
@@ -1177,6 +1187,8 @@ body.open-overlay .menu-overlay {
 		height: 100%;
 	}
 	.st-container.open .st-pusher {
+		-ms-transform: translate3d(300px, 0, 0);
+		-moz-transform: translate3d(300px, 0, 0);
 		-webkit-transform: translate3d(300px, 0, 0);
 		transform: translate3d(300px, 0, 0);
 	}
@@ -1197,6 +1209,9 @@ body.open-overlay .menu-overlay {
 		height: 100%;
 		opacity: 1;
 		-webkit-transition: opacity 0.5s;
+		-moz-transition: opacity 0.5s;
+		-ms-transition: opacity 0.5s;
+		-o-transition: opacity 0.5s;
 		transition: opacity 0.5s;
 	}
 	#navbar {
@@ -1211,6 +1226,9 @@ body.open-overlay .menu-overlay {
 		background: #fff;
 		overflow-x: hidden;
 		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
 		transition: all 0.5s;
 		-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
 		transform: translate3d(-100%, 0, 0) rotateY(-90deg);
@@ -1229,19 +1247,30 @@ body.open-overlay .menu-overlay {
 		content: '';
 		opacity: 1;
 		-webkit-transition: opacity 0.5s;
+		-moz-transition: opacity 0.5s;
+		-ms-transition: opacity 0.5s;
+		-o-transition: opacity 0.5s;
 		transition: opacity 0.5s;
 	}
 	.st-container.open #navbar::after {
 		width: 0;
 		height: 0;
 		opacity: 0;
+		-ms-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+		-moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 		-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 		transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	}
 	.st-container.open #navbar {
 		visibility: visible;
-		-webkit-transition: -webkit-transform 0.5s;
+		-webkit-transition: transform 0.5s;
+		-moz-transition: transform 0.5s;
+		-ms-transition: transform 0.5s;
+		-o-transition: transform 0.5s;
 		transition: transform 0.5s;
+		-o-transform: translate3d(-100%, 0, 0) rotateY(0deg);
+		-ms-transform: translate3d(-100%, 0, 0) rotateY(0deg);
+		-moz-transform: translate3d(-100%, 0, 0) rotateY(0deg);
 		-webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
 		transform: translate3d(-100%, 0, 0) rotateY(0deg);
 	}
@@ -1256,6 +1285,13 @@ body.open-overlay .menu-overlay {
 	}
 	#right_side_menu {
 		width: 120px;
+	}
+	nav.navbar.open {
+		-moz-transform: translateX(300px);
+		-webkit-transform: translateX(300px);
+		-o-transform: translateX(300px);
+		-ms-transform: translateX(300px);
+		transform: translateX(300px);
 	}
 	.navbar-toggle {
 		display: table-cell;
