@@ -1433,6 +1433,61 @@ body.open-overlay .menu-overlay {
 		display: none;
 	}
 }
+@media (max-width: 767px) {
+	#right_side_menu {
+		width: 97px;
+	}
+	.nav-wrap > div.menu-icons {
+		display: none;
+	}
+	.search-box {
+		position: relative;
+		top: auto;
+		width: 100%;
+		-webkit-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+	.search-box form {
+		width: 80%;
+		display: inline-block;
+	}
+	.search-box input {
+		margin: 12px 0 12px 15px;
+	}
+	.search-box .caspio-search-reveal {
+		display: inline-block;
+		cursor: pointer;
+		color: #fff;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 10px 15px 12px;
+		font-size: 15px;
+		background: #747d82;
+		line-height: 0;
+	}
+	.search-box .caspio-search-reveal:before {
+		content: '';
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		left: -5px;
+		bottom: auto;
+		top: 50%;
+		background: #747d82;
+		-webkit-transform: rotate(45deg) translateY(-50%);
+		-ms-transform: rotate(45deg) translateY(-50%);
+		-o-transform: rotate(45deg) translateY(-50%);
+		transform: rotate(45deg) translateY(-50%);
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+}
 
 @supports (-webkit-overflow-scrolling: touch) {
 	.st-container {
