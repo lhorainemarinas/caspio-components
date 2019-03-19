@@ -14,6 +14,22 @@
 	margin-right: 15px;
 }
 
+
+@media (max-width: 1545px) {
+	.subpage-banner.pb200 {
+		padding-bottom: 150px;
+	}
+}
+@media (max-width: 1285px) {
+	section.help-diamond.ptb80 {
+		padding: 50px 0;
+		background-position: 90% center;
+	}
+	.subpage-banner.pb200 {
+		padding-bottom: 120px;
+	}
+}
+
 /* PLANS */
 section.plans-container {
 	margin: -10% 0 0;
@@ -243,6 +259,32 @@ section.compare-trigger {
 .advance-plan-features-wrap .plans-wrap > div:first-child .plan-price + p {
 	opacity: 1;
 }
+
+@media (max-width: 1199px) {
+	.plan-feature-col .plan-feature-wrap p {
+		font-size: 17px;
+		margin-left: 12px;	
+	}
+	.plan-feature-col .plan-feature-wrap ul {
+		height: 370px;	
+	}
+	.advance-plan-features-wrap .plans-wrap .plans-item .plan-radio label {
+		height: 48px;
+		
+	}
+	section.plans-container {
+		padding-bottom: 0;
+	}
+}
+@media (max-width:1100px) {
+	.plans-item .plan-price {
+		margin-bottom: 0;
+	}
+}
+
+
+/* HELP DIAMOND */
+
 section.help-diamond {
 	background-position: 85% center;
 	background-size: auto 100%;
@@ -258,6 +300,47 @@ section.help-diamond {
 .help-diamond p {
 	font-size: 22px;
 	line-height: 1.2;
+}
+
+@media (max-width: 1675px) {
+	section.help-diamond {
+		background-position: 95% center;
+	}
+}
+@media (max-width: 1675px) {
+	section.help-diamond.ptb80 {
+		padding: 60px 0;
+		background-position: 95% center;
+	}
+}
+@media (max-width: 1285px) {
+	.help-diamond h2 {
+		font-size: 32px;
+	}
+	.help-diamond p {
+		font-size: 20px;
+	}
+}
+@media (max-width: 1199px) {
+	section.help-diamond.ptb80 {
+		background-position: 98% center;
+	}
+}
+@media (max-width: 1189px) {
+	.help-diamond h2 {
+		font-size: 30px;
+	}
+	section.help-diamond.ptb80 {
+		padding: 50px 0;
+	}
+}
+@media (max-width:1060px) {
+	section.help-diamond.ptb80 {
+		background-position: 110% center;
+	}
+	.help-diamond a.btn-l {
+		font-size: 15px;
+	}
 }
 
 /* 4 COLUMN ICONS */
@@ -283,4 +366,10 @@ section.help-diamond {
 	color: #1196ba;
 	text-decoration: underline;
 	font-weight: 600;
+}
+
+@media (max-width: 1189px) {
+	.icon-grid-style1 h2 {
+		height: 38px;
+	}
 }
