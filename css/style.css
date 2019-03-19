@@ -346,7 +346,7 @@ section p:last-child {
 }
 @media (max-width:768px) {
 	body {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	p {
 		margin-bottom: 16px;
@@ -2778,3 +2778,13 @@ section.bg-lightgray, .bg-lightgray {background-color: #747d82;}
 .container-960 {width: 960px;margin:auto;}
 .container-900 {width: 900px;margin:auto;}
 .container-800 {width: 800px;margin:auto;}
+@media (max-width:992px) {
+	.container-960 {width: 720px;margin:auto;}
+	.container-900 {width: 720px;margin:auto;}
+	.container-800 {width: 720px;margin:auto;}
+}
+@media (max-width: 767px) {
+	.container-960 {width: 650px;}
+	.container-900 {width: 650px;}
+	.container-800 {width: 650px;}
+}
