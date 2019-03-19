@@ -73,6 +73,12 @@ section.plans-container {
 	text-align: center;
 	padding-top: 10px;
 	border: 1px solid #ebebeb;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .plans-item > *:not(a) {
 	padding: 0 15px;
@@ -159,12 +165,33 @@ section.plans-container {
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.plans-item.active {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	position: relative;
+	z-index: 1;
+}
+.plans-item.active a{
+	background: #ff7510;
 }
 
 
 /* PLAN FEATURES */
 section.plan-features {
 	background-color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .plan-feature-col {
 	padding: 0 7px;

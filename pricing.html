@@ -314,7 +314,7 @@
 	<section class="plans-container">
 		<div class="container-900">
 			<div class="plans-wrap">
-				<div class="plans-item">
+				<div href="#planFree" class="plans-item" data-toggle="tab" role="tab">
 					<div class="plan-price-name">
 						<div class="plan-radio">
 							<input class="radio" id="plan-free" name="plan-list" type="radio" value="plan-free">
@@ -330,7 +330,7 @@
 					</div>
 					<a href="" class="btn">get started</a>
 				</div>
-				<div class="plans-item">
+				<div href="#planExplore" class="plans-item" data-toggle="tab" role="tab">
 					<div class="plan-price-name">
 						<div class="plan-radio">
 							<input class="radio" id="plan-explore" name="plan-list" type="radio" value="plan-explore">
@@ -346,7 +346,7 @@
 					</div>
 					<a href="" class="btn">try it for free</a>
 				</div>
-				<div class="plans-item">
+				<div href="#planBuild" class="plans-item" data-toggle="tab" role="tab">
 					<div class="plan-price-name">
 						<div class="plan-radio">
 							<input class="radio" id="plan-build" name="plan-list" type="radio" value="plan-build">
@@ -362,7 +362,7 @@
 					</div>
 					<a href="" class="btn">try it for free</a>
 				</div>
-				<div class="plans-item">
+				<div href="#planGrow" class="plans-item active" data-toggle="tab" role="tab">
 					<div class="plan-price-name">
 						<div class="plan-radio">
 							<input class="radio" id="plan-grow" name="plan-list" type="radio" value="plan-grow" checked>
@@ -381,69 +381,260 @@
 			</div>
 		</div>
 	</section>
-	<section class="plan-features">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
-					<div class="plan-feature-wrap">
-						<p><span>platform capabilities</span></p>
-						<ul>
-							<li>1 Developer Seat</li>
-							<li>Unlimited Users</li>
-							<li>5 DataPages</li>
-							<li>2GB Database</li>
-							<li>Unmetered Data Transfer</li>
-							<li>1 Logins per Account</li>
-							<li>1,000 Notification Emails</li>
-							<li>7 Days Daily Backup Retention</li>
-							<li>SMS Notifications</li>
-							<li>FileStor CDN</li>
-							<li>Import Update</li>
-						</ul>
+	<div class="tab-content">
+		<section class="plan-features tab-pane active" role="tabpanel" class="" id="planGrow">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>platform capabilities</span></p>
+							<ul>
+								<li>1 Developer Seat</li>
+								<li>Unlimited Users</li>
+								<li>5 DataPages</li>
+								<li>2GB Database</li>
+								<li>Unmetered Data Transfer</li>
+								<li>1 Logins per Account</li>
+								<li>1,000 Notification Emails</li>
+								<li>7 Days Daily Backup Retention</li>
+								<li>SMS Notifications</li>
+								<li>FileStor CDN</li>
+								<li>Import Update</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-sm-12 col-xs-12 plan-feature-col">
-					<div class="plan-feature-wrap">
-						<p><span>application features</span></p>
-						<ul>
-							<li>Unlimited Users</li>
-							<li>Forms</li>
-							<li>Reports</li>
-							<li>Charts</li>
-							<li>Calendars</li>
-							<li>Localization</li>
-							<li>Custom Application Styling</li>
-							<li>Record-Level Security</li>
-							<li>Section 508 Compliance</li>
-							<li>Formulas and Calculations</li>
-							<li>PDF Reports</li>
-							<li>Pivot Table Reports</li>
-							<li>Triggered Actions</li>
-							<li>Scheduled Import/Export</li>
-							<li>Tasks</li>
-							<li>Distance Search</li>
-							<li>User Logs</li>
-							<li>Payment Integration</li>
-						</ul>
+					<div class="col-md-6 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>application features</span></p>
+							<ul>
+								<li>Unlimited Users</li>
+								<li>Forms</li>
+								<li>Reports</li>
+								<li>Charts</li>
+								<li>Calendars</li>
+								<li>Localization</li>
+								<li>Custom Application Styling</li>
+								<li>Record-Level Security</li>
+								<li>Section 508 Compliance</li>
+								<li>Formulas and Calculations</li>
+								<li>PDF Reports</li>
+								<li>Pivot Table Reports</li>
+								<li>Triggered Actions</li>
+								<li>Scheduled Import/Export</li>
+								<li>Tasks</li>
+								<li>Distance Search</li>
+								<li>User Logs</li>
+								<li>Payment Integration</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
-					<div class="plan-feature-wrap">
-						<p><span>training support</span></p>
-						<ul>
-							<li class="inactive">24/7 Support Tickets</li>
-							<li>24/7 Phone Support</li>
-							<li>24/7 Live Chat</li>
-							<li>Online Training</li>
-							<li>Community Forum</li>
-							<li>On-Demand Tutorials</li>
-							<li>Knowledge Center</li>
-						</ul>
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>training support</span></p>
+							<ul>
+								<li class="inactive">24/7 Support Tickets</li>
+								<li>24/7 Phone Support</li>
+								<li>24/7 Live Chat</li>
+								<li>Online Training</li>
+								<li>Community Forum</li>
+								<li>On-Demand Tutorials</li>
+								<li>Knowledge Center</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+		<section class="plan-features tab-pane" role="tabpanel" id="planBuild">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>platform capabilities</span></p>
+							<ul>
+								<li>1 Developer Seat</li>
+								<li>Unlimited Users</li>
+								<li>5 DataPages</li>
+								<li>2GB Database</li>
+								<li>Unmetered Data Transfer</li>
+								<li>1 Logins per Account</li>
+								<li>1,000 Notification Emails</li>
+								<li>7 Days Daily Backup Retention</li>
+								<li>SMS Notifications</li>
+								<li>FileStor CDN</li>
+								<li>Import Update</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>application features</span></p>
+							<ul>
+								<li>Unlimited Users</li>
+								<li>Forms</li>
+								<li>Reports</li>
+								<li>Charts</li>
+								<li>Calendars</li>
+								<li>Localization</li>
+								<li>Custom Application Styling</li>
+								<li>Record-Level Security</li>
+								<li>Section 508 Compliance</li>
+								<li>Formulas and Calculations</li>
+								<li>PDF Reports</li>
+								<li>Pivot Table Reports</li>
+								<li>Triggered Actions</li>
+								<li>Scheduled Import/Export</li>
+								<li>Tasks</li>
+								<li class="inactive">Distance Search</li>
+								<li class="inactive">User Logs</li>
+								<li class="inactive">Payment Integration</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>training support</span></p>
+							<ul>
+								<li class="inactive">24/7 Support Tickets</li>
+								<li>24/7 Phone Support</li>
+								<li>24/7 Live Chat</li>
+								<li>Online Training</li>
+								<li>Community Forum</li>
+								<li>On-Demand Tutorials</li>
+								<li>Knowledge Center</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="plan-features tab-pane" role="tabpanel" id="planExplore">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>platform capabilities</span></p>
+							<ul>
+								<li>1 Developer Seat</li>
+								<li>Unlimited Users</li>
+								<li>5 DataPages</li>
+								<li>2GB Database</li>
+								<li>Unmetered Data Transfer</li>
+								<li>1 Logins per Account</li>
+								<li>1,000 Notification Emails</li>
+								<li>7 Days Daily Backup Retention</li>
+								<li>SMS Notifications</li>
+								<li>FileStor CDN</li>
+								<li>Import Update</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>application features</span></p>
+							<ul>
+								<li>Unlimited Users</li>
+								<li>Forms</li>
+								<li>Reports</li>
+								<li>Charts</li>
+								<li>Calendars</li>
+								<li>Localization</li>
+								<li>Custom Application Styling</li>
+								<li>Record-Level Security</li>
+								<li>Section 508 Compliance</li>
+								<li>Formulas and Calculations</li>
+								<li>PDF Reports</li>
+								<li>Pivot Table Reports</li>
+								<li>Triggered Actions</li>
+								<li>Scheduled Import/Export</li>
+								<li>Tasks</li>
+								<li class="inactive">Distance Search</li>
+								<li class="inactive">User Logs</li>
+								<li class="inactive">Payment Integration</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>training support</span></p>
+							<ul>
+								<li class="inactive">24/7 Support Tickets</li>
+								<li class="inactive">24/7 Phone Support</li>
+								<li class="inactive">24/7 Live Chat</li>
+								<li class="inactive">Online Training</li>
+								<li class="inactive">Community Forum</li>
+								<li>On-Demand Tutorials</li>
+								<li>Knowledge Center</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="plan-features tab-pane" role="tabpanel" id="planFree">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>platform capabilities</span></p>
+							<ul>
+								<li>1 Developer Seat</li>
+								<li>Unlimited Users</li>
+								<li>5 DataPages</li>
+								<li>2GB Database</li>
+								<li>Unmetered Data Transfer</li>
+								<li>1 Logins per Account</li>
+								<li>1,000 Notification Emails</li>
+								<li>7 Days Daily Backup Retention</li>
+								<li>SMS Notifications</li>
+								<li>FileStor CDN</li>
+								<li>Import Update</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>application features</span></p>
+							<ul>
+								<li>Unlimited Users</li>
+								<li>Forms</li>
+								<li>Reports</li>
+								<li>Charts</li>
+								<li>Calendars</li>
+								<li>Localization</li>
+								<li>Custom Application Styling</li>
+								<li class="inactive">Record-Level Security</li>
+								<li class="inactive">Section 508 Compliance</li>
+								<li class="inactive">Formulas and Calculations</li>
+								<li class="inactive">PDF Reports</li>
+								<li class="inactive">Pivot Table Reports</li>
+								<li class="inactive">Triggered Actions</li>
+								<li class="inactive">Scheduled Import/Export</li>
+								<li class="inactive">Tasks</li>
+								<li class="inactive">Distance Search</li>
+								<li class="inactive">User Logs</li>
+								<li class="inactive">Payment Integration</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
+						<div class="plan-feature-wrap">
+							<p><span>training support</span></p>
+							<ul>
+								<li class="inactive">24/7 Support Tickets</li>
+								<li class="inactive">24/7 Phone Support</li>
+								<li class="inactive">24/7 Live Chat</li>
+								<li class="inactive">Online Training</li>
+								<li class="inactive">Community Forum</li>
+								<li>On-Demand Tutorials</li>
+								<li>Knowledge Center</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 	<section class="compare-trigger p0">
 		<div class="container">
 			<div class="row">
@@ -546,6 +737,7 @@
 		</div>
 	</section>
 
+
 	<link rel='dns-prefetch' href='//fast.wistia.net' />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -554,5 +746,12 @@
 	<!-- <script type="text/javascript" src="js/numscroll.js"></script> -->
 	<script type="text/javascript" src="js/autoheight.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script>
+		$('.plans-item').click(function() {
+			$(this).addClass("active").siblings().removeClass("active");
+			$('.plans-item .radio').prop("checked",false);
+			$('input',this).prop("checked",true);
+		});
+	</script>
 </body>
 </html>
