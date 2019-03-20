@@ -619,7 +619,7 @@ section.help-diamond {
 	font-size: 15px;
 	font-weight: 600;
 	color: #015883;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 }
 .compare-table-collapse:focus,
 .compare-table-collapse:hover,
@@ -653,9 +653,9 @@ section.help-diamond {
 	-o-transform: rotate(0);
 	transform: rotate(0);
 }
-.compare-table-collapse.collapsed {
-	margin-bottom: 10px;
-}
+/* .compare-table-collapse.collapsed {
+	margin-bottom: 0;
+} */
 .compare-table-mid {
 	border-bottom: 1px solid #eef2ff;
 	padding: 10px;
