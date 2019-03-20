@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kfigau');
-  src:  url('fonts/icomoon.eot?kfigau#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kfigau') format('truetype'),
-    url('fonts/icomoon.woff?kfigau') format('woff'),
-    url('fonts/icomoon.svg?kfigau#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?h622bj');
+  src:  url('fonts/icomoon.eot?h622bj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h622bj') format('truetype'),
+    url('fonts/icomoon.woff?h622bj') format('woff'),
+    url('fonts/icomoon.svg?h622bj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1468,6 +1468,9 @@
 }
 .icon-check-mark-button:before {
   content: "\e91e";
+}
+.icon-close-circle:before {
+  content: "\ebb7";
 }
 .icon-quote:before {
   content: "\e91f";
