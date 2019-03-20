@@ -653,12 +653,17 @@ section.help-diamond {
 	-o-transform: rotate(0);
 	transform: rotate(0);
 }
-/* .compare-table-collapse.collapsed {
-	margin-bottom: 0;
-} */
 .compare-table-mid {
 	border-bottom: 1px solid #eef2ff;
 	padding: 10px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.compare-table-mid:hover {
+	background: rgba(0,0,0,0.02);
 }
 .collapse > div:last-child {
 	border-bottom: 0;
