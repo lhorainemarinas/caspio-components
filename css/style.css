@@ -207,6 +207,10 @@ section:nth-child(even) {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+div[class^="icon-"],
+a[class^="icon-"] {
+	font-family: 'Lato', sans-serif !important;
+}
 body {
 	font: 400 16px 'Lato', sans-serif;
 	color: #484848;
