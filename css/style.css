@@ -280,25 +280,27 @@ h5 {font-size: 17px;}
 	h4 {font-size: 18px;}
 	h5 {font-size: 15px;}
 }
-
 @media (max-width:970px) {
-	h1 {font-size: 36px;}
-	h2 {font-size: 28px;}
-	h3 {font-size: 21px;}
-	h4 {font-size: 16px;}
-	h5 {font-size: 15px;}
+	h1 {font-size: 30px;margin-bottom: 20px;}
+	h2 {font-size: 20px;margin-bottom: 20px;}
+	h3 {font-size: 17px;margin-bottom: 20px;}
+	h4 {font-size: 14px;margin-bottom: 20px;}
+	h5 {font-size: 12px;margin-bottom: 20px;}
 }
-
 @media (max-width:720px) {
-	h1 {font-size: 34px;}
-	h2 {font-size: 26px;}
-	h3 {font-size: 20px;}
+	h1 {font-size: 28px;margin-bottom: 16px;}
+	h2 {font-size: 20px;margin-bottom: 16px;}
+	h3 {font-size: 14px;margin-bottom: 16px;}
 }
-
 @media (max-width:540px) {
-	h1 {font-size: 32px;}
-	h2 {font-size: 24px;}
-	h3 {font-size: 18px;}
+	h1 {font-size: 32px;margin-bottom: 10px;}
+	h2 {font-size: 24px;margin-bottom: 10px;}
+	h3 {font-size: 18px;margin-bottom: 10px;}
+}
+@media (max-width:495px) {
+	h1 {font-size: 25px;margin-bottom: 10px;}
+	h2 {font-size: 20px;margin-bottom: 10px;}
+	h3 {font-size: 15px;margin-bottom: 10px;}
 }
 
 
@@ -2702,9 +2704,76 @@ section.subpage-banner p {
 	font-size: 27px;
 	color: rgba(255,255,255,0.7);
 }
+
+@media (max-width:1600px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 85% 30%;
+	}
+}
+@media (max-width:1452px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 92% 30%;
+	}
+}
+@media (max-width:1374px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 98% 30%;
+	}
+}
+@media (max-width:1260px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 106% 30%;
+	}
+}
+@media (max-width:1199px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 100% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:1095px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 110% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:1010px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 120% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:991px) {
+	section.subpage-banner.b350 {
+		min-height: 280px;
+	}
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, center 30%;
+		background-size: 0 0, cover;
+		position: relative;
+	}
+	section.subpage-banner.right-diamond:before {
+		content: '';
+		background: rgba(0,0,0,0.3);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	section.subpage-banner.right-diamond.left-content {
+		text-align: center;
+	}
+}
 @media (max-width:970px) {
-	.subpage-banner {
+	section.subpage-banner,
+	section.subpage-banner.b350 {
 		min-height: 200px;
+	}
+}
+@media (max-width: 767px) {
+	section.subpage-banner p {
+		font-size: 22px;
 	}
 }
 @media (max-width:480px) {
@@ -2720,19 +2789,21 @@ section.subpage-banner p {
 .table {
 	width: 100%;
 	margin-bottom: 1rem;
-	color: #212529
+	color: #212529;
 }
 .table td,
 .table th {
 	padding: .75rem;
 	vertical-align: top;
-	border-top: 1px solid #dee2e6
+	border-top: 1px solid #dee2e6;
 }
 .table td a {
 	display: block;
+	text-decoration: none;
 }
 .table td ul {
 	list-style: none;
+	padding-left: 0;
 }
 .table thead th {
 	vertical-align: bottom;
@@ -2740,18 +2811,18 @@ section.subpage-banner p {
 	text-align: center;
 }
 .table tbody+tbody {
-	border-top: 2px solid #dee2e6
+	border-top: 2px solid #dee2e6;
 }
 .table-sm td,
 .table-sm th {
-	padding: .3rem
+	padding: .3rem;
 }
 .table-bordered {
-	border: 1px solid #dee2e6
+	border: 1px solid #dee2e6;
 }
 .table-bordered td,
 .table-bordered th {
-	border: 1px solid #dee2e6
+	border: 1px solid #dee2e6;
 }
 .table-bordered thead td,
 .table-bordered thead th {
@@ -2764,193 +2835,193 @@ section.subpage-banner p {
 	border: 0
 }
 .table-striped tbody tr:nth-of-type(odd) {
-	background-color: rgba(0,0,0,.05)
+	background-color: rgba(0,0,0,.05);
 }
 .table-hover tbody tr:hover {
 	color: #212529;
-	background-color: rgba(0,0,0,.075)
+	background-color: rgba(0,0,0,.075);
 }
 .table-primary,
 .table-primary>td,
 .table-primary>th {
-	background-color: #b8daff
+	background-color: #b8daff;
 }
 .table-primary tbody+tbody,
 .table-primary td,
 .table-primary th,
 .table-primary thead th {
-	border-color: #7abaff
+	border-color: #7abaff;
 }
 .table-hover .table-primary:hover {
 	background-color: #9fcdff
 }
 .table-hover .table-primary:hover>td,
 .table-hover .table-primary:hover>th {
-	background-color: #9fcdff
+	background-color: #9fcdff;
 }
 .table-secondary,
 .table-secondary>td,
 .table-secondary>th {
-	background-color: #d6d8db
+	background-color: #d6d8db;
 }
 .table-secondary tbody+tbody,
 .table-secondary td,
 .table-secondary th,
 .table-secondary thead th {
-	border-color: #b3b7bb
+	border-color: #b3b7bb;
 }
 .table-hover .table-secondary:hover {
-	background-color: #c8cbcf
+	background-color: #c8cbcf;
 }
 .table-hover .table-secondary:hover>td,
 .table-hover .table-secondary:hover>th {
-	background-color: #c8cbcf
+	background-color: #c8cbcf;
 }
 .table-success,
 .table-success>td,
 .table-success>th {
-	background-color: #c3e6cb
+	background-color: #c3e6cb;
 }
 .table-success tbody+tbody,
 .table-success td,
 .table-success th,
 .table-success thead th {
-	border-color: #8fd19e
+	border-color: #8fd19e;
 }
 .table-hover .table-success:hover {
-	background-color: #b1dfbb
+	background-color: #b1dfbb;
 }
 .table-hover .table-success:hover>td,
 .table-hover .table-success:hover>th {
-	background-color: #b1dfbb
+	background-color: #b1dfbb;
 }
 .table-info,
 .table-info>td,
 .table-info>th {
-	background-color: #bee5eb
+	background-color: #bee5eb;
 }
 .table-info tbody+tbody,
 .table-info td,
 .table-info th,
 .table-info thead th {
-	border-color: #86cfda
+	border-color: #86cfda;
 }
 .table-hover .table-info:hover {
-	background-color: #abdde5
+	background-color: #abdde5;
 }
 .table-hover .table-info:hover>td,
 .table-hover .table-info:hover>th {
-	background-color: #abdde5
+	background-color: #abdde5;
 }
 .table-warning,
 .table-warning>td,
 .table-warning>th {
-	background-color: #ffeeba
+	background-color: #ffeeba;
 }
 .table-warning tbody+tbody,
 .table-warning td,
 .table-warning th,
 .table-warning thead th {
-	border-color: #ffdf7e
+	border-color: #ffdf7e;
 }
 .table-hover .table-warning:hover {
-	background-color: #ffe8a1
+	background-color: #ffe8a1;
 }
 .table-hover .table-warning:hover>td,
 .table-hover .table-warning:hover>th {
-	background-color: #ffe8a1
+	background-color: #ffe8a1;
 }
 .table-danger,
 .table-danger>td,
 .table-danger>th {
-	background-color: #f5c6cb
+	background-color: #f5c6cb;
 }
 .table-danger tbody+tbody,
 .table-danger td,
 .table-danger th,
 .table-danger thead th {
-	border-color: #ed969e
+	border-color: #ed969e;
 }
 .table-hover .table-danger:hover {
-	background-color: #f1b0b7
+	background-color: #f1b0b7;
 }
 .table-hover .table-danger:hover>td,
 .table-hover .table-danger:hover>th {
-	background-color: #f1b0b7
+	background-color: #f1b0b7;
 }
 .table-light,
 .table-light>td,
 .table-light>th {
-	background-color: #fdfdfe
+	background-color: #fdfdfe;
 }
 .table-light tbody+tbody,
 .table-light td,
 .table-light th,
 .table-light thead th {
-	border-color: #fbfcfc
+	border-color: #fbfcfc;
 }
 .table-hover .table-light:hover {
-	background-color: #ececf6
+	background-color: #ececf6;
 }
 .table-hover .table-light:hover>td,
 .table-hover .table-light:hover>th {
-	background-color: #ececf6
+	background-color: #ececf6;
 }
 .table-dark,
 .table-dark>td,
 .table-dark>th {
-	background-color: #c6c8ca
+	background-color: #c6c8ca;
 }
 .table-dark tbody+tbody,
 .table-dark td,
 .table-dark th,
 .table-dark thead th {
-	border-color: #95999c
+	border-color: #95999c;
 }
 .table-hover .table-dark:hover {
-	background-color: #b9bbbe
+	background-color: #b9bbbe;
 }
 .table-hover .table-dark:hover>td,
 .table-hover .table-dark:hover>th {
-	background-color: #b9bbbe
+	background-color: #b9bbbe;
 }
 .table-active,.table-active>td,.table-active>th {
-	background-color: rgba(0,0,0,.075)
+	background-color: rgba(0,0,0,.075);
 }
 .table-hover .table-active:hover {
-	background-color: rgba(0,0,0,.075)
+	background-color: rgba(0,0,0,.075);
 }
 .table-hover .table-active:hover>td,
 .table-hover .table-active:hover>th {
-	background-color: rgba(0,0,0,.075)
+	background-color: rgba(0,0,0,.075);
 }
 .table .thead-dark th {
 	color: #fff;
 	background-color: #343a40;
-	border-color: #454d55
+	border-color: #454d55;
 }
 .table .thead-light th {
 	color: #495057;
 	background-color: #e9ecef;
-	border-color: #dee2e6
+	border-color: #dee2e6;
 }
 .table-dark {
 	color: #fff;
-	background-color: #343a40
+	background-color: #343a40;
 }
 .table-dark td,.table-dark th,
 .table-dark thead th {
-	border-color: #454d55
+	border-color: #454d55;
 }
 .table-dark.table-bordered {
-	border: 0
+	border: 0;
 }
 .table-dark.table-striped tbody tr:nth-of-type(odd) {
-	background-color: rgba(255,255,255,.05)
+	background-color: rgba(255,255,255,.05);
 }
 .table-dark.table-hover tbody tr:hover {
 	color: #fff;
-	background-color: rgba(255,255,255,.075)
+	background-color: rgba(255,255,255,.075);
 }
 
 @media (max-width: 575.98px) {
@@ -2958,10 +3029,10 @@ section.subpage-banner p {
 		display:block;
 		width: 100%;
 		overflow-x: auto;
-		-webkit-overflow-scrolling: touch
+		-webkit-overflow-scrolling: touch;
 	}
 	.table-responsive-sm>.table-bordered {
-		border: 0
+		border: 0;
 	}
 }
 @media (max-width: 767.98px) {
@@ -2969,10 +3040,10 @@ section.subpage-banner p {
 		display:block;
 		width: 100%;
 		overflow-x: auto;
-		-webkit-overflow-scrolling: touch
+		-webkit-overflow-scrolling: touch;
 	}
 	.table-responsive-md>.table-bordered {
-		border: 0
+		border: 0;
 	}
 }
 @media (max-width: 991.98px) {
@@ -2980,10 +3051,10 @@ section.subpage-banner p {
 		display:block;
 		width: 100%;
 		overflow-x: auto;
-		-webkit-overflow-scrolling: touch
+		-webkit-overflow-scrolling: touch;
 	}
 	.table-responsive-lg>.table-bordered {
-		border: 0
+		border: 0;
 	}
 }
 @media (max-width: 1199.98px) {
@@ -2991,20 +3062,20 @@ section.subpage-banner p {
 		display:block;
 		width: 100%;
 		overflow-x: auto;
-		-webkit-overflow-scrolling: touch
+		-webkit-overflow-scrolling: touch;
 	}
 	.table-responsive-xl>.table-bordered {
-		border: 0
+		border: 0;
 	}
 }
 .table-responsive {
 	display: block;
 	width: 100%;
 	overflow-x: auto;
-	-webkit-overflow-scrolling: touch
+	-webkit-overflow-scrolling: touch;
 }
 .table-responsive>.table-bordered {
-	border: 0
+	border: 0;
 }
 
 
@@ -3013,6 +3084,19 @@ section.subpage-banner p {
 .m0 {margin: 0;}
 .p0 {padding: 0;}
 
+.mt0 {margin-top: 0;}
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+.mt60 {margin-top: 60px;}
+.mt70 {margin-top: 70px;}
+.mt80 {margin-top: 80px;}
+.mt90 {margin-top: 90px;}
+.mt100 {margin-top: 100px;}
+
+.mb0 {margin-bottom: 0;}
 .mb10 {margin-bottom: 10px;}
 .mb20 {margin-bottom: 20px;}
 .mb30 {margin-bottom: 30px;}
@@ -3023,6 +3107,17 @@ section.subpage-banner p {
 .mb80 {margin-bottom: 80px;}
 .mb90 {margin-bottom: 90px;}
 .mb100 {margin-bottom: 100px;}
+
+.mtb10 {margin: 10px 0;}
+.mtb20 {margin: 20px 0;}
+.mtb30 {margin: 30px 0;}
+.mtb40 {margin: 40px 0;}
+.mtb50 {margin: 50px 0;}
+.mtb60 {margin: 60px 0;}
+.mtb70 {margin: 70px 0;}
+.mtb80 {margin: 80px 0;}
+.mtb90 {margin: 90px 0;}
+.mtb100 {margin: 100px 0;}
 
 .ptb10 {padding: 10px 0;}
 .ptb20 {padding: 20px 0;}
@@ -3036,6 +3131,7 @@ section.subpage-banner p {
 .ptb100 {padding: 100px 0;}
 .ptb200 {padding: 200px 0;}
 
+.pt0 {padding-top: 0;}
 .pt10 {padding-top: 10px;}
 .pt20 {padding-top: 20px;}
 .pt30 {padding-top: 30px;}
@@ -3048,6 +3144,7 @@ section.subpage-banner p {
 .pt100 {padding-top: 100px;}
 .pt200 {padding-top: 200px;}
 
+.pb0 {padding-bottom: 0;}
 .pb10 {padding-bottom: 10px;}
 .pb20 {padding-bottom: 20px;}
 .pb30 {padding-bottom: 30px;}
@@ -3117,4 +3214,10 @@ section.bg-lightgray, .bg-lightgray {background-color: #747d82;}
 	.container-960 {width: 100%;padding:0 15px;}
 	.container-900 {width: 100%;padding:0 15px;}
 	.container-800 {width: 100%;padding:0 15px;}
+	.ptb60 {padding: 30px 0;}
+	.ptb70 {padding: 40px 0;}
+	.ptb80 {padding: 50px 0;}
+	.ptb90 {padding: 60px 0;}
+	.ptb100 {padding: 70px 0;}
+	.ptb200 {padding: 170px 0;}
 }
