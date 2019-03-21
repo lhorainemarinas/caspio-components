@@ -2675,12 +2675,13 @@ body.scrollable {
 }
 
 /* ----- SUBPAGE SUB BANNER ----- */
-.subpage-banner {
+section.subpage-banner {
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center center;
 	min-height: 300px;
 }
-.subpage-banner.center-content {
+section.subpage-banner.center-content {
 	text-align: center;
 }
 @media (max-width:970px) {

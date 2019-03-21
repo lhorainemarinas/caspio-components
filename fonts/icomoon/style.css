@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h622bj');
-  src:  url('fonts/icomoon.eot?h622bj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h622bj') format('truetype'),
-    url('fonts/icomoon.woff?h622bj') format('woff'),
-    url('fonts/icomoon.svg?h622bj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5x78yx');
+  src:  url('fonts/icomoon.eot?5x78yx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5x78yx') format('truetype'),
+    url('fonts/icomoon.woff?5x78yx') format('woff'),
+    url('fonts/icomoon.svg?5x78yx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-reverse:before {
+  content: "\eb7f";
+}
 .icon-data-page-cog-colored .path1:before {
   content: "\eb7e";
   color: rgb(17, 150, 186);
@@ -294,9 +297,6 @@
 }
 .icon-manage-services:before {
   content: "\ebb6";
-}
-.icon-reverse:before {
-  content: "\eb7f";
 }
 .icon-server1:before {
   content: "\eb7c";

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/pricing-page.css">
 </head>
-<body class="pricing-page">
+<body class="pricing-page standard">
 	<div class="menu-overlay hidden-sm hidden-xs"></div>
 	<nav class="navbar navbar-top navbar-fixed-top">
 		<div class="menu-overlay hidden-lg hidden-md"></div>
@@ -296,7 +296,7 @@
 		</div>
 	</nav>
 
-	<section class="subpage-banner center-content font-white pb200" style="background-image: url(img/pricing-banner.jpg)">
+	<section class="subpage-banner center-content font-white pb200" style="background-image: url(img/pricing-banner.svg)">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -304,7 +304,7 @@
 					<ul>
 						<li><span class="icon-users"></span>Unlimited Users</li>
 						<li><span class="icon-file-1"></span>Unmetered Records</li>
-						<li><span class="icon-repeat"></span>Unmetered Data</li>
+						<li><span class="icon-reverse"></span>Unmetered Data</li>
 					</ul>
 					<a href="pricing-premium.html" class="btn light-blue btn-l">VIEW PREMIUM PLANS</a>
 				</div>
@@ -382,7 +382,7 @@
 		</div>
 	</section>
 	<div class="tab-content">
-		<section class="plan-features tab-pane active" role="tabpanel" class="" id="planGrow">
+		<section class="plan-features tab-pane active" role="tabpanel" id="planGrow">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-12 col-xs-12 plan-feature-col">
@@ -432,13 +432,13 @@
 						<div class="plan-feature-wrap">
 							<p><span>training support</span></p>
 							<ul>
-								<li class="inactive">24/7 Support Tickets</li>
-								<li>24/7 Phone Support</li>
-								<li>24/7 Live Chat</li>
 								<li>Online Training</li>
 								<li>Community Forum</li>
 								<li>On-Demand Tutorials</li>
 								<li>Knowledge Center</li>
+								<li>24/7 Support Tickets</li>
+								<li>24/7 Phone Support</li>
+								<li>24/7 Live Chat</li>
 							</ul>
 						</div>
 					</div>
@@ -448,10 +448,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5 plans-wrap p0">
-							<div class="plans-item">
+							<div class="plans-item" href="#planGrowCompliance" data-toggle="tab" role="tab">
 								<div class="plan-radio">
-									<input class="radio" id="plan-grow-compliance" name="plan-grow-advance" type="radio"
-										value="plan-grow-compliance">
+									<input class="radio" id="plan-grow-compliance" name="plan-grow-advance" type="radio" value="plan-grow-compliance">
 									<label for="plan-grow-compliance">grow compliance</label>
 								</div>
 								<div class="plan-price">
@@ -460,10 +459,9 @@
 								<p>Billed annually or $198<sup>75</sup> <br>month-to-month</p>
 								<a href="" class="btn">try it for free</a>
 							</div>
-							<div class="plans-item">
+							<div class="plans-item active" href="#planGrowHipaa" data-toggle="tab" role="tab">
 								<div class="plan-radio">
-									<input class="radio" id="plan-grow-hipaa" name="plan-grow-advance" type="radio"
-										value="plan-grow-hipaa" checked>
+									<input class="radio" id="plan-grow-hipaa" name="plan-grow-advance" type="radio" value="plan-grow-hipaa" checked>
 									<label for="plan-grow-hipaa">grow hipaa</label>
 								</div>
 								<div class="plan-price">
@@ -474,16 +472,29 @@
 							</div>
 						</div>
 						<div class="col-md-7 col-sm-10 col-xs-12">
-							<div class="advance-plan-features">
-								<ul>
-									<li>Data Encryption at Rest</li>
-									<li>Audit Logs</li>
-									<li>Administrative Security Controls</li>
-									<li>Technical Security Controls</li>
-									<li>Compliant Infrastructure</li>
-									<li>HIPAA Documented Policies and Procedures</li>
-									<li>Business Associate Agreements</li>
-								</ul>
+							<div class="tab-content">
+								<div class="advance-plan-features tab-pane active" role="tabpanel" id="planGrowHipaa">
+									<ul>
+										<li>Data Encryption at Rest</li>
+										<li>Audit Logs</li>
+										<li>Administrative Security Controls</li>
+										<li>Technical Security Controls</li>
+										<li>Compliant Infrastructure</li>
+										<li>HIPAA Documented Policies and Procedures</li>
+										<li>Business Associate Agreements</li>
+									</ul>
+								</div>
+								<div class="advance-plan-features tab-pane" role="tabpanel" id="planGrowCompliance">
+									<ul>
+										<li>Data Encryption at Rest</li>
+										<li>Audit Logs</li>
+										<li>Administrative Security Controls</li>
+										<li>Technical Security Controls</li>
+										<li>Compliant Infrastructure</li>
+										<li class="inactive">HIPAA Documented Policies and Procedures</li>
+										<li class="inactive">Business Associate Agreements</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -530,8 +541,8 @@
 								<li>Triggered Actions</li>
 								<li>Scheduled Import/Export</li>
 								<li>Tasks</li>
-								<li class="inactive">Distance Search</li>
-								<li class="inactive">User Logs</li>
+								<li>Distance Search</li>
+								<li>User Logs</li>
 								<li class="inactive">Payment Integration</li>
 							</ul>
 						</div>
@@ -540,13 +551,13 @@
 						<div class="plan-feature-wrap">
 							<p><span>training support</span></p>
 							<ul>
-								<li class="inactive">24/7 Support Tickets</li>
-								<li>24/7 Phone Support</li>
-								<li>24/7 Live Chat</li>
 								<li>Online Training</li>
 								<li>Community Forum</li>
 								<li>On-Demand Tutorials</li>
 								<li>Knowledge Center</li>
+								<li>24/7 Support Tickets</li>
+								<li>24/7 Phone Support</li>
+								<li>24/7 Live Chat</li>
 							</ul>
 						</div>
 					</div>
@@ -568,9 +579,9 @@
 								<li>1 Logins per Account</li>
 								<li>1,000 Notification Emails</li>
 								<li>7 Days Daily Backup Retention</li>
-								<li>SMS Notifications</li>
-								<li>FileStor CDN</li>
-								<li>Import Update</li>
+								<li class="inactive">SMS Notifications</li>
+								<li class="inactive">FileStor CDN</li>
+								<li class="inactive">Import Update</li>
 							</ul>
 						</div>
 					</div>
@@ -588,11 +599,11 @@
 								<li>Record-Level Security</li>
 								<li>Section 508 Compliance</li>
 								<li>Formulas and Calculations</li>
-								<li>PDF Reports</li>
-								<li>Pivot Table Reports</li>
-								<li>Triggered Actions</li>
-								<li>Scheduled Import/Export</li>
-								<li>Tasks</li>
+								<li class="inactive">PDF Reports</li>
+								<li class="inactive">Pivot Table Reports</li>
+								<li class="inactive">Triggered Actions</li>
+								<li class="inactive">Scheduled Import/Export</li>
+								<li class="inactive">Tasks</li>
 								<li class="inactive">Distance Search</li>
 								<li class="inactive">User Logs</li>
 								<li class="inactive">Payment Integration</li>
@@ -603,13 +614,13 @@
 						<div class="plan-feature-wrap">
 							<p><span>training support</span></p>
 							<ul>
-								<li class="inactive">24/7 Support Tickets</li>
-								<li class="inactive">24/7 Phone Support</li>
-								<li class="inactive">24/7 Live Chat</li>
-								<li class="inactive">Online Training</li>
-								<li class="inactive">Community Forum</li>
+								<li>Online Training</li>
+								<li>Community Forum</li>
 								<li>On-Demand Tutorials</li>
 								<li>Knowledge Center</li>
+								<li>24/7 Support Tickets</li>
+								<li>24/7 Phone Support</li>
+								<li>24/7 Live Chat</li>
 							</ul>
 						</div>
 					</div>
@@ -631,9 +642,9 @@
 								<li>1 Logins per Account</li>
 								<li>1,000 Notification Emails</li>
 								<li>7 Days Daily Backup Retention</li>
-								<li>SMS Notifications</li>
-								<li>FileStor CDN</li>
-								<li>Import Update</li>
+								<li class="inactive">SMS Notifications</li>
+								<li class="inactive">FileStor CDN</li>
+								<li class="inactive">Import Update</li>
 							</ul>
 						</div>
 					</div>
@@ -648,8 +659,8 @@
 								<li>Calendars</li>
 								<li>Localization</li>
 								<li>Custom Application Styling</li>
-								<li class="inactive">Record-Level Security</li>
-								<li class="inactive">Section 508 Compliance</li>
+								<li>Record-Level Security</li>
+								<li>Section 508 Compliance</li>
 								<li class="inactive">Formulas and Calculations</li>
 								<li class="inactive">PDF Reports</li>
 								<li class="inactive">Pivot Table Reports</li>
@@ -666,13 +677,13 @@
 						<div class="plan-feature-wrap">
 							<p><span>training support</span></p>
 							<ul>
+								<li>Online Training</li>
+								<li>Community Forum</li>
+								<li>On-Demand Tutorials</li>
+								<li>Knowledge Center</li>
 								<li class="inactive">24/7 Support Tickets</li>
 								<li class="inactive">24/7 Phone Support</li>
 								<li class="inactive">24/7 Live Chat</li>
-								<li class="inactive">Online Training</li>
-								<li class="inactive">Community Forum</li>
-								<li>On-Demand Tutorials</li>
-								<li>Knowledge Center</li>
 							</ul>
 						</div>
 					</div>

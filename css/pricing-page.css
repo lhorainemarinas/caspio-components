@@ -1,3 +1,6 @@
+section.subpage-banner {
+	background-position: center center;
+}
 .subpage-banner ul {
 	list-style: none;
 	margin-bottom: 30px;
@@ -87,7 +90,7 @@ section.plans-container {
 	font-size: 12px;
 	margin-bottom: 0;
 }
-.plans-wrap > div:first-child .plan-price + p{
+.standard .plans-wrap > div:first-child .plan-price + p{
 	opacity: 0;
 }
 .plans-wrap > div .plan-price + p {
@@ -229,6 +232,9 @@ section.plan-features {
 	list-style: none;
 	padding-left: 17px;
 	height: 340px;
+}
+.premium .plan-feature-col .plan-feature-wrap ul {
+	height: 620px;
 }
 .plan-feature-col .plan-feature-wrap ul li,
 .advance-plan-features ul li {
