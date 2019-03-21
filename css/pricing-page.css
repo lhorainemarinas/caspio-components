@@ -449,7 +449,7 @@ section.advance-plan-features-wrap {
 		font-size: 14px;
 	}
 	.plans-item > *:not(a) {
-		padding: 0 10px;
+		padding: 0 11px;
 	}
 	.plans-item .plan-radio label {
 		font-size: 18px;
