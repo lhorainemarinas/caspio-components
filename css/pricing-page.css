@@ -9,6 +9,7 @@ section.subpage-banner {
 	display: inline-block;
 	margin-right: 20px;
 	font-size: 24px;
+	font-weight: 300;
 }
 .subpage-banner ul li:last-child {
 	margin-right: 0;
@@ -16,7 +17,9 @@ section.subpage-banner {
 .subpage-banner ul li span {
 	display: inline-block;
 	margin-right: 15px;
-	animation: tada 1s infinite;
+	font-weight: bold;
+	/* text-shadow: 0 0 5px #FFF; */
+	/* animation: tada 1s infinite; */
 }
 
 @media (max-width: 1545px) {
