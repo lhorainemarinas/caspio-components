@@ -147,13 +147,13 @@ section.plans-container {
 	height: 10px;
 	-webkit-transform: scale(0);
 	transform: scale(0);
-	background-color: #3c91e6;
+	background-color: #027faa;
 }
 .premium .plans-item .plan-radio label:after {
 	background-color: #ff6b00;
 }
 .plans-item .plan-radio .radio:checked + label:before {
-	border-color: #3c91e6;
+	border-color: #027faa;
 }
 .premium .plans-item .plan-radio .radio:checked + label:before {
 	border-color: #ff6b00;
