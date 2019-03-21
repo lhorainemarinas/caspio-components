@@ -121,6 +121,9 @@ section.plans-container {
 	color: #027faa;
 	margin-bottom: 0;
 }
+.premium .plans-item .plan-radio label {
+	color: #ff6b00;
+}
 .plans-item .plan-radio label:before,
 .plans-item .plan-radio label:after {
 	content: "";
@@ -146,8 +149,14 @@ section.plans-container {
 	transform: scale(0);
 	background-color: #3c91e6;
 }
+.premium .plans-item .plan-radio label:after {
+	background-color: #ff6b00;
+}
 .plans-item .plan-radio .radio:checked + label:before {
 	border-color: #3c91e6;
+}
+.premium .plans-item .plan-radio .radio:checked + label:before {
+	border-color: #ff6b00;
 }
 .plans-item .plan-radio .radio:checked + label:after {
 	-o-transform: scale(1);
@@ -179,6 +188,9 @@ section.plans-container {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.premium .plans-item a {
+	background: #ff9750;
+}
 .plans-item.active {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
@@ -188,7 +200,7 @@ section.plans-container {
 	z-index: 1;
 }
 .plans-item.active a{
-	background: #ff7510;
+	background: #ff6b00;
 }
 
 
@@ -207,6 +219,9 @@ section.plan-features {
 .plan-feature-col .plan-feature-wrap {
 	border:  1px solid #1195bb;
 }
+.premium .plan-feature-col .plan-feature-wrap {
+	border:  1px solid #747d82;
+}
 .plan-feature-col .plan-feature-wrap p {
 	color: #015883;
 	font-size: 20px;
@@ -218,6 +233,9 @@ section.plan-features {
 	z-index: 1;
 	margin-left: 15px;
 	margin-bottom: 0;
+}
+.premium .plan-feature-col .plan-feature-wrap p {
+	color: #ff6b00;
 }
 .plan-feature-col .plan-feature-wrap p span {
 	position: relative;
@@ -256,7 +274,10 @@ section.plan-features {
 	position: absolute;
 	left: 0;
 	top: 3px;
-
+}
+.premium .plan-feature-col .plan-feature-wrap ul li:before,
+.premium .advance-plan-features ul li:before {
+	color: #ff9750;
 }
 .plan-features .container .row > div:nth-child(2) ul,
 .advance-plan-features ul{
@@ -301,6 +322,9 @@ section.advance-plan-features-wrap {
 	padding: 20px 20px 15px;
 	box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
 	-webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+}
+.premium .advance-plan-features {
+	border-color: #ff6b00;
 }
 .advance-plan-features ul {
 	height: auto;
