@@ -96,7 +96,7 @@ section.plans-container {
 	margin-bottom: 0;
 }
 .standard .plans-wrap > div:first-child .plan-price + p{
-	opacity: 0;
+	visibility: hidden;
 }
 .plans-wrap > div .plan-price + p {
 	margin-bottom: 16px;
@@ -374,7 +374,7 @@ section.advance-plan-features-wrap {
 	margin-bottom: 2px;
 }
 .advance-plan-features-wrap .plans-wrap > div:first-child .plan-price + p {
-	opacity: 1;
+	visibility: visible;
 }
 
 @media (max-width: 1199px) {
@@ -466,8 +466,7 @@ section.advance-plan-features-wrap {
 		display: table;
 		width: 100%;
 		padding-top: 0;
-		border-collapse: separate;
-		border-spacing: 0 10px;
+		margin-bottom: 15px;
 	}
 	.plans-item > * {
 		display: table-cell;
@@ -475,9 +474,36 @@ section.advance-plan-features-wrap {
 	}
 	.plans-item > a {
 		width: 100px;
+		float: right;
+		height: 95px;
+		line-height: 1.3;
+	}
+	.plans-item > a:before {
+		content: '';
+		display: inline-block;
+		margin-top: 40%;
 	}
 	.plans-item .plan-radio label {
 		font-size: 20px;
+	}
+	.plans-item.active {
+		-webkit-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+	.plans-item .plan-price-name {
+		text-align: left;
+		padding-left: 50px;
+	}
+	.plans-item .plan-radio label {
+		padding: 0;
+	}
+	.plans-item .plan-radio label:before {
+		left: -30px;
+	}
+	.plans-item .plan-radio label:after {
+		left: -25px;
 	}
 }
 
@@ -575,6 +601,11 @@ section.help-diamond {
 	}
 	.help-diamond img {
 		width: 80%;
+	}
+}
+@media (max-width: 660px) {
+	.standard .plans-wrap > div:first-child .plan-price + p{
+		display: block;
 	}
 }
 

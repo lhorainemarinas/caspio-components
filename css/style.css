@@ -2794,3 +2794,8 @@ section.bg-lightgray, .bg-lightgray {background-color: #747d82;}
 	.container-900 {width: 650px;}
 	.container-800 {width: 650px;}
 }
+@media (max-width: 660px) {
+	.container-960 {width: 540px;padding:0 15px;}
+	.container-900 {width: 540px;padding:0 15px;}
+	.container-800 {width: 540px;padding:0 15px;}
+}
