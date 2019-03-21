@@ -124,6 +124,12 @@ section.plans-container {
 .premium .plans-item .plan-radio label {
 	color: #ff6b00;
 }
+.premium.light-blue .plans-item .plan-radio label {
+	color: #1195bb;
+}
+.premium.green .plans-item .plan-radio label {
+	color: #68b205;
+}
 .plans-item .plan-radio label:before,
 .plans-item .plan-radio label:after {
 	content: "";
@@ -152,11 +158,23 @@ section.plans-container {
 .premium .plans-item .plan-radio label:after {
 	background-color: #ff6b00;
 }
+.premium.green .plans-item .plan-radio label:after {
+	background-color: #68b205;
+}
+.premium.light-blue .plans-item .plan-radio label:after {
+	background-color: #1195bb;
+}
 .plans-item .plan-radio .radio:checked + label:before {
 	border-color: #027faa;
 }
 .premium .plans-item .plan-radio .radio:checked + label:before {
 	border-color: #ff6b00;
+}
+.premium.light-blue .plans-item .plan-radio .radio:checked + label:before {
+	border-color: #1195bb;
+}
+.premium.green .plans-item .plan-radio .radio:checked + label:before {
+	border-color: #68b205;
 }
 .plans-item .plan-radio .radio:checked + label:after {
 	-o-transform: scale(1);
@@ -189,7 +207,7 @@ section.plans-container {
 	transition: all 0.3s ease-in-out;
 }
 .premium .plans-item a {
-	background: #ff9750;
+	background: #747d82;
 }
 .plans-item.active {
 	-webkit-transform: scale(1.1);
@@ -202,7 +220,12 @@ section.plans-container {
 .plans-item.active a{
 	background: #ff6b00;
 }
-
+.green .plans-item.active a {
+	background: #68b205;
+}
+.light-blue .plans-item.active a {
+	background: #1195bb;
+}
 
 /* PLAN FEATURES */
 section.plan-features {
@@ -234,8 +257,8 @@ section.plan-features {
 	margin-left: 15px;
 	margin-bottom: 0;
 }
-.premium .plan-feature-col .plan-feature-wrap p {
-	color: #ff6b00;
+.premium.light-blue .plan-feature-col .plan-feature-wrap p {
+	color: #1195bb;
 }
 .plan-feature-col .plan-feature-wrap p span {
 	position: relative;
@@ -277,7 +300,11 @@ section.plan-features {
 }
 .premium .plan-feature-col .plan-feature-wrap ul li:before,
 .premium .advance-plan-features ul li:before {
-	color: #ff9750;
+	color: #1196ba;
+}
+.premium.light-blue .plan-feature-col .plan-feature-wrap ul li:before,
+.premium.light-blue .advance-plan-features ul li:before {
+	color: rgba(17, 149, 187, 0.4);
 }
 .plan-features .container .row > div:nth-child(2) ul,
 .advance-plan-features ul{
@@ -322,9 +349,6 @@ section.advance-plan-features-wrap {
 	padding: 20px 20px 15px;
 	box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
 	-webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
-}
-.premium .advance-plan-features {
-	border-color: #ff6b00;
 }
 .advance-plan-features ul {
 	height: auto;
@@ -625,6 +649,9 @@ section.help-diamond {
 	color:#015883;
 	font-size: 20px;
 	margin-bottom: 0;
+}
+.light-blue .table-plan-name {
+	color: #1195bb;
 }
 .table-plan-price {
 	color:#2a2a2a;
