@@ -2682,6 +2682,7 @@ section.subpage-banner {
 	background-size: cover;
 	background-position: center center;
 	min-height: 300px;
+	position: relative;
 }
 section.subpage-banner.b350 {
 	min-height: 350px;
@@ -2703,6 +2704,35 @@ section.subpage-banner.right-content {
 section.subpage-banner p {
 	font-size: 27px;
 	color: rgba(255,255,255,0.7);
+}
+section.subpage-banner:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+section.subpage-banner.overlay-black:before {
+	background: rgba(0,0,0,0.5);
+}
+section.subpage-banner.overlay-darkest-blue:before {
+	background: rgba(1,88,131,0.5);
+}
+section.subpage-banner.overlay-dark-blue:before {
+	background: rgba(2,127,171,0.5);
+}
+section.subpage-banner.overlay-blue:before {
+	background: rgba(17,149,187,0.5);
+}
+section.subpage-banner.overlay-light-blue:before {
+	background: rgba(63,202,235,0.5);
+}
+section.subpage-banner.overlay-orange:before {
+	background: rgba(255,117,16,0.5);
+}
+section.subpage-banner.overlay-green:before {
+	background: rgba(104,178,5,0.5);
 }
 
 @media (max-width:1600px) {
@@ -3077,7 +3107,11 @@ section.subpage-banner p {
 .table-responsive>.table-bordered {
 	border: 0;
 }
-
+.table-border tr > *{
+	border:  1px solid #fff;
+	border-top: 0;
+	border-bottom: 0;
+}
 
 
 /* ----- HELPERS CLASSES ----- */

@@ -7,19 +7,30 @@ section.subpage-banner {
 }
 .subpage-banner ul li {
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 5rem;
 	font-size: 24px;
-	font-weight: 300;
+	/* font-weight: 300; */
 }
 .subpage-banner ul li:last-child {
 	margin-right: 0;
 }
 .subpage-banner ul li span {
 	display: inline-block;
-	margin-right: 15px;
-	font-weight: bold;
+	margin-right: 7px;
+	/* font-weight: bold; */
 	/* text-shadow: 0 0 5px #FFF; */
 	/* animation: tada 1s infinite; */
+}
+.icon-circle li span {
+	background: #fff;
+	color: #1196ba;
+	font-size: 20px;
+	font-weight: bold;
+	width: 35px;
+	height: 35px;
+	line-height: 1.7;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
 }
 
 @media (max-width: 1545px) {
@@ -71,6 +82,8 @@ section.plans-container {
 .plans-wrap {
 	display: table;
 	width: 100%;
+	border-collapse: separate;
+	border-spacing: 10px 0;
 }
 .plans-item {
 	display: table-cell;
@@ -121,15 +134,6 @@ section.plans-container {
 	color: #027faa;
 	margin-bottom: 0;
 }
-.premium .plans-item .plan-radio label {
-	color: #ff6b00;
-}
-.premium.light-blue .plans-item .plan-radio label {
-	color: #1195bb;
-}
-.premium.green .plans-item .plan-radio label {
-	color: #68b205;
-}
 .plans-item .plan-radio label:before,
 .plans-item .plan-radio label:after {
 	content: "";
@@ -155,26 +159,8 @@ section.plans-container {
 	transform: scale(0);
 	background-color: #027faa;
 }
-.premium .plans-item .plan-radio label:after {
-	background-color: #ff6b00;
-}
-.premium.green .plans-item .plan-radio label:after {
-	background-color: #68b205;
-}
-.premium.light-blue .plans-item .plan-radio label:after {
-	background-color: #1195bb;
-}
 .plans-item .plan-radio .radio:checked + label:before {
 	border-color: #027faa;
-}
-.premium .plans-item .plan-radio .radio:checked + label:before {
-	border-color: #ff6b00;
-}
-.premium.light-blue .plans-item .plan-radio .radio:checked + label:before {
-	border-color: #1195bb;
-}
-.premium.green .plans-item .plan-radio .radio:checked + label:before {
-	border-color: #68b205;
 }
 .plans-item .plan-radio .radio:checked + label:after {
 	-o-transform: scale(1);
@@ -206,14 +192,11 @@ section.plans-container {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.premium .plans-item a {
-	background: #747d82;
-}
 .plans-item.active {
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
+	-webkit-transform: scaleY(1.1);
+	-ms-transform: scaleY(1.1);
+	-o-transform: scaleY(1.1);
+	transform: scaleY(1.1);
 	position: relative;
 	z-index: 1;
 }
@@ -242,9 +225,6 @@ section.plan-features {
 .plan-feature-col .plan-feature-wrap {
 	border:  1px solid #1195bb;
 }
-.premium .plan-feature-col .plan-feature-wrap {
-	border:  1px solid #747d82;
-}
 .plan-feature-col .plan-feature-wrap p {
 	color: #015883;
 	font-size: 20px;
@@ -256,9 +236,6 @@ section.plan-features {
 	z-index: 1;
 	margin-left: 15px;
 	margin-bottom: 0;
-}
-.premium.light-blue .plan-feature-col .plan-feature-wrap p {
-	color: #1195bb;
 }
 .plan-feature-col .plan-feature-wrap p span {
 	position: relative;
@@ -279,9 +256,6 @@ section.plan-features {
 	padding-left: 17px;
 	height: 340px;
 }
-.premium .plan-feature-col .plan-feature-wrap ul {
-	height: 620px;
-}
 .plan-feature-col .plan-feature-wrap ul li,
 .advance-plan-features ul li {
 	margin-bottom: 12px;
@@ -297,14 +271,6 @@ section.plan-features {
 	position: absolute;
 	left: 0;
 	top: 3px;
-}
-.premium .plan-feature-col .plan-feature-wrap ul li:before,
-.premium .advance-plan-features ul li:before {
-	color: #1196ba;
-}
-.premium.light-blue .plan-feature-col .plan-feature-wrap ul li:before,
-.premium.light-blue .advance-plan-features ul li:before {
-	color: rgba(17, 149, 187, 0.4);
 }
 .plan-features .container .row > div:nth-child(2) ul,
 .advance-plan-features ul{
@@ -399,6 +365,10 @@ section.advance-plan-features-wrap {
 	}
 }
 @media (max-width: 991px) {
+	.plans-wrap {
+		border-spacing: 0 0;
+		border-collapse: collapse;
+	}
 	.plan-features .container .row > div  ul,
 	.advance-plan-features ul{
 		-webkit-column-count: 2;
