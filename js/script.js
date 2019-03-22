@@ -316,11 +316,11 @@ jQuery(function() {
 	========================================*/
 	function topPadding() {
 		if(winWidth >= 992) {
-			$(".submenu").css('top', navHeight);
-			$("body").css('padding-top', navHeight);
+			$(".submenu").css('top', navHeight + 10);
+			$("body").css('padding-top', navHeight + 10);
 		} else if(winWidth <= 991) {
 			$("body").css('padding-top', 0);
-			$("body").css('padding-top', navHeight);
+			$("body").css('padding-top', navHeight + 10);
 			$(".submenu").attr('style', function(i, style) {
 				return style && style.replace(/display[^;]+;?/g, '');
 			});
@@ -437,5 +437,6 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	
+
+	$("#includeNav").load("template/nav.html"); 
 });
