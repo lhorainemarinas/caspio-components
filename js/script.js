@@ -12,7 +12,7 @@ jQuery(function() {
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
 		navWidth = jQuery('.navbar-nav > li').innerWidth(),
-		url = window.location.origin;
+		url = window.location.origin + 'caspio-components/';
 
 	/**
 	* --------------------------------------------------------------------------
