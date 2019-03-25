@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caspio Buttons</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="menu-overlay hidden-sm hidden-xs"></div>
+	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
+	<section>
+		<div class="container">
+			<div class="row">
+				<p class="desc">&lt;h1 tag with description&gt;</p>
+				<div class="col-md-12 title-desc text-center">
+					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+					<p class="w960">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae placeat dignissimos reprehenderit earum repudiandae, maiores adipisci ipsum quisquam fugiat explicabo debitis cupiditate perferendis, corporis aut vero dolores. Natus sapiente dignissimos explicabo earum. Architecto excepturi quis fugit unde eos est fuga, repellat voluptatem. Ratione quam inventore optio, minima, doloribus fugiat obcaecati quaerat ea possimus veniam quod nemo voluptate, voluptates. Tempore debitis nisi similique cupiditate ad minima, fugit iste eligendi perspiciatis, quos officia nostrum dignissimos delectus, blanditiis. Cupiditate laboriosam eligendi quia debitis id neque quae amet nihil deserunt consequuntur itaque enim, labore porro at non voluptates numquam autem. Nostrum eligendi, asperiores officia!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<p class="desc">&lt;Modals&gt;</p>
+				<div class="col-md-12">
+					
+					<!-- START OF DEFAULT MODAL -->
+					<button type="button" class="btn blue" data-toggle="modal" data-target="#defaultModal">Default modal</button>
+					<div class="modal fade" tabindex="-1" role="dialog" id="defaultModal" aria-labelledby="defaultModal">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content text-center">
+								<div class="modal-header">
+									<p>Be always up to date</p>
+								</div>
+								<div class="modal-body">
+									<p>Do you want to receive the push notification about the newest posts?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn blue btn-m">YES</button>
+									<button type="button" class="btn blue btn-m btn-line" data-dismiss="modal">NO</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OF DEFAULT MODAL -->
+
+					<!-- START OF COOKIES MODAL -->
+					<button type="button" class="btn orange" data-toggle="modal" data-target="#cookiesModal" data-backdrop="false">Cookies Modal</button>
+					<div class="modal fade bottom" tabindex="-1" role="dialog" id="cookiesModal" aria-labelledby="cookiesModal">
+						<div class="modal-dialog modal-frame modal-bottom" role="document">
+							<div class="modal-content text-center">
+								<div class="modal-body">
+									<p>We use cookies to improve your website experience</p>
+									<a type="button" class="btn blue btn-m" data-dismiss="modal">Ok, Thanks!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OF COOKIES MODAL -->
+
+					<!-- START OF WISTIA MODAL -->
+					<button type="button" class="btn green" data-toggle="modal" data-target="#wistiaModal">Wistia Video Modal</button>
+					<div class="modal fade modal-vid" tabindex="-1" role="dialog" id="wistiaModal" aria-labelledby="wistiaModal">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content text-center">
+								<div class="modal-body p0">
+									<div class="wistia_embed wistia_async_lqdusrvh9q videoFoam=true" style="width:100%;" id="my_video">&nbsp;</div>
+								</div>
+								<div class="modal-footer">
+									<p>Spread the word!</p>
+									<div class="modal-sns">
+										<a type="button" class="btn btn-sns btn-fb">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<!--Twitter-->
+										<a type="button" class="btn btn-sns btn-tweet">
+										  <i class="fa fa-twitter"></i>
+										</a>
+										<!--Google +-->
+										<a type="button" class="btn btn-sns btn-yt">
+											<i class="fa fa-youtube-play"></i>
+										</a>
+										<!--Linkedin-->
+										<a type="button" class="btn btn-sns btn-lin">
+											<i class="fa fa-linkedin"></i>
+										</a>
+									</div>
+									<button type="button" class="btn blue btn-m" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OF WISTIA MODAL -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<link rel='dns-prefetch' href='//fast.wistia.net' />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src='https://fast.wistia.net/assets/external/E-v1.js?ver=1'></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+	<!-- <script type="text/javascript" src="js/numscroll.js"></script> -->
+	<script type="text/javascript" src="js/autoheight.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

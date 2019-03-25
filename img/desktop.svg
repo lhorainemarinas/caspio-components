@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 540 398" style="enable-background:new 0 0 540 398;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#E0E1E3;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="268.6493" y1="2434.2" x2="268.6493" y2="2370.6001" gradientTransform="matrix(1 0 0 1 0 -2036)">
+	<stop  offset="0" style="stop-color:#8D8D91"/>
+	<stop  offset="2.103771e-02" style="stop-color:#B5B5B8"/>
+	<stop  offset="4.207159e-02" style="stop-color:#D5D5D7"/>
+	<stop  offset="6.229944e-02" style="stop-color:#ECECED"/>
+	<stop  offset="8.128816e-02" style="stop-color:#FAFAFA"/>
+	<stop  offset="9.776703e-02" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.2095" style="stop-color:#ABABAB"/>
+	<stop  offset="0.2877" style="stop-color:#858585"/>
+	<stop  offset="0.4007" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.4972" style="stop-color:#DCDDDE"/>
+	<stop  offset="0.6165" style="stop-color:#B8B9BB"/>
+	<stop  offset="0.7282" style="stop-color:#9E9FA2"/>
+	<stop  offset="0.8284" style="stop-color:#8F8F93"/>
+	<stop  offset="0.9073" style="stop-color:#898A8E"/>
+</linearGradient>
+<path class="st0" d="M216,334.6c0,0-2.9,51.6-6.2,54.5c-1.3,1.2-4.2,2.8-8.4,3.8c-4.4,1-10.2,1.4-13.4,2.8c-3.4,1.5-0.6,2.5-0.6,2.5
+	h162.2c0,0,3.9-2.7-1.4-3.6c-2.3-0.4-7.1-0.2-11.1-1.1c-4.5-1-8.1-3.2-9.3-4.5c-2.3-2.5-6.9-54.3-6.9-54.3L216,334.6L216,334.6z"/>
+<path class="st1" d="M535.1,335.6H4.9c-2.7,0-4.9-2.2-4.9-4.9v-16c0-2.7,2.2-4.9,4.9-4.9H535c2.7,0,4.9,2.2,4.9,4.9v16
+	C540,333.4,537.8,335.6,535.1,335.6z"/>
+<rect y="301.4" width="540" height="16.6"/>
+<path d="M534.2,318H5.8c-3.2,0-5.8-2.6-5.8-5.9V6.7c0-3.2,2.6-5.8,5.8-5.8h528.3c3.2,0,5.8,2.6,5.8,5.8v305.5
+	C540,315.4,537.4,318,534.2,318z M518.2,21.8H19v277.5h499.2V21.8z"/>
+</svg>

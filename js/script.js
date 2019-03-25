@@ -11,7 +11,8 @@ jQuery(function() {
 		cpad = (winWidth-container)/2 + 'px',
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
-		navWidth = jQuery('.navbar-nav > li').innerWidth();
+		navWidth = jQuery('.navbar-nav > li').innerWidth(),
+		url = window.location.origin;
 
 	/**
 	* --------------------------------------------------------------------------
@@ -48,7 +49,7 @@ jQuery(function() {
 		container = jQuery(".container").innerWidth();
 		quote_p_height = $('.review-style1 .review-style1-quote p').outerHeight();
 		cpad = (winWidth-container)/2 + 'px';
-		navHeight = jQuery('nav').outerHeight(true);
+		navHeight = jQuery('nav').outerHeight(true) - 10;
 		navWidth = jQuery('.navbar-nav > li').innerWidth();
 	}
 
@@ -437,6 +438,5 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-
-	$("#includeNav").load("template/nav.html"); 
+	$("#includeNav").load(url + "/template/nav.html"); 
 });
