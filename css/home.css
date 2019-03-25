@@ -1,8 +1,27 @@
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -2;
+}
 section.home-banner {
 	height: calc(100vh - 60px);
 	width: 100%;
-	background-size: auto 100%;
 	overflow: hidden;
+}
+section.home-banner:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: auto 100%;
+	background-image: url('/img/home-bg.svg');
+	background-repeat: no-repeat;
+	z-index: -1;
 }
 section.home-banner h1 {
 	font-weight: 900;
@@ -21,7 +40,7 @@ section.home-banner .title-desc {
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-section.home-banner.bg-right {
+section.home-banner.bg-right:after {
 	background-position: 50vw top;
 }
 .home-img {

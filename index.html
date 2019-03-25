@@ -12,7 +12,8 @@
 	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
 
 	
-	<section class="home-banner subpage-banner font-black left-content bg-right" style="background-image: url('/img/home-bg.svg')">
+	<section class="home-banner subpage-banner font-black left-content bg-right">
+		<div id="particles-js"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -21,7 +22,6 @@
 						<p>A modern responsive front-end framework based on Bootstrap and Materialize Design</p>
 						<a href="" class="btn btn-l orange">GET STARTED</a>
 					</div>
-					<div id="particles-js"></div>
 				</div>
 				<div class="col-md-6">
 					<div class="home-img">
@@ -51,17 +51,17 @@
 			scalarX: 10,
 			 frictionY: .1
 		});
-		 particlesJS("particles-js", {
+		particlesJS("particles-js", {
 		  "particles": {
 		    "number": {
-		      "value": 120,
+		      "value": 50,
 		      "density": {
 		        "enable": true,
 		        "value_area": 800
 		      }
 		    },
 		    "color": {
-		      "value": "#ffffff"
+		      "value": "#ccc"
 		    },
 		    "shape": {
 		      "type": "circle",
@@ -79,7 +79,7 @@
 		      }
 		    },
 		    "opacity": {
-		      "value": 0.5,
+		      "value": 0.2,
 		      "random": false,
 		      "anim": {
 		        "enable": false,
@@ -100,14 +100,14 @@
 		    },
 		    "line_linked": {
 		      "enable": true,
-		      "distance": 150,
-		      "color": "#ffffff",
-		      "opacity": 0.4,
+		      "distance": 300,
+		      "color": "#ccc",
+		      "opacity": 0.2,
 		      "width": 1
 		    },
 		    "move": {
 		      "enable": true,
-		      "speed": 6,
+		      "speed": 1,
 		      "direction": "none",
 		      "random": false,
 		      "straight": false,
