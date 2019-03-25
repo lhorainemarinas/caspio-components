@@ -2740,33 +2740,7 @@ section.subpage-banner.overlay-orange:before {
 section.subpage-banner.overlay-green:before {
 	background: rgba(104,178,5,0.5);
 }
-section.home-banner {
-	height: 92vh;
-	width: 100%;
-	background-size: auto 100%;
-	overflow: hidden;
-}
-section.home-banner h1 {
-	font-weight: 900;
-	font-size: 46px;
-	line-height: 1.2;
-}
-section.home-banner p {
-	color: rgba(75,75,75,0.85);
-	font-weight: 600;
-	font-size: 24px;
-}
-section.home-banner .title-desc {
-	margin-top: 50%;
-	left: 0;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-section.home-banner.bg-right {
-	background-position: 50vw top;
-}
+
 @media (max-width:1733px) {
 	section.subpage-banner.right-diamond {
 		background-position: center center, 98% 30%;

@@ -1,3 +1,53 @@
+section.home-banner {
+	height: calc(100vh - 60px);
+	width: 100%;
+	background-size: auto 100%;
+	overflow: hidden;
+}
+section.home-banner h1 {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.2;
+}
+section.home-banner p {
+	color: rgba(75,75,75,0.85);
+	font-weight: 600;
+	font-size: 24px;
+}
+section.home-banner .title-desc {
+	margin-top: 70%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+section.home-banner.bg-right {
+	background-position: 50vw top;
+}
+.home-img {
+	position: relative;
+	margin-top: 50%;
+	-webkit-transform: translateY(-30%);
+	-ms-transform: translateY(-30%);
+	-o-transform: translateY(-30%);
+	transform: translateY(-30%);
+}
 .home-img img {
-	width: 130%;
+	display: inline-block;
+	width: 140%;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+}
+
+@media (max-width: 1366px) {
+	.home-img {
+		margin-top: 40%;
+	}
+	.home-img img {
+		width: 110%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 50%;
+	}
 }
