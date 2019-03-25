@@ -12,7 +12,7 @@ jQuery(function() {
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
 		navWidth = jQuery('.navbar-nav > li').innerWidth(),
-		url = window.location.origin + 'caspio-components/';
+		url = window.location.origin;
 
 	/**
 	* --------------------------------------------------------------------------
@@ -438,5 +438,5 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	$("#includeNav").load(url + "/template/nav.html"); 
+	$("#includeNav").load(url + "caspio-components/template/nav.html"); 
 });
