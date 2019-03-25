@@ -2741,7 +2741,7 @@ section.subpage-banner.overlay-green:before {
 	background: rgba(104,178,5,0.5);
 }
 section.home-banner {
-	height: 100vh;
+	height: 92vh;
 	width: 100%;
 	background-size: auto 100%;
 	overflow: hidden;
