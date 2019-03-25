@@ -438,6 +438,6 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	console.log(url)
+	// console.log(url)
 	$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
 });
