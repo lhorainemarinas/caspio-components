@@ -438,5 +438,5 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	$("#includeNav").load(url + "caspio-components/template/nav.html"); 
+	$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
 });
