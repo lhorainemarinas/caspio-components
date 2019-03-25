@@ -439,5 +439,10 @@ jQuery(function() {
 	* --------------------------------------------------------------------------
 	*/
 	// console.log(url)
-	$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
+	var github = 'https://lhorainemarinas.github.io/';
+	if(url == github) {
+		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
+	} else {
+		$("#includeNav").load(url + "/template/nav.html"); 
+	}
 });
