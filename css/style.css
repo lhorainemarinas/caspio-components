@@ -736,6 +736,9 @@ section p:last-child {
 	font-size: 12px;
 	padding: 4px 8px;
 }
+.btn-with-mini-text a strong{
+	font-weight: 700;
+}
 
 /* ----- MEGAMENNU ----- */
 .navbar {
