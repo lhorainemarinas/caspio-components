@@ -1558,6 +1558,10 @@ body.scrollable {
 	color: #616161;
 }
 
+.modal.modal-dark .modal-content .modal-body{
+	background: #20282b;
+}
+
 .modal-header {
 	padding: 20px;
 	background: #027faa;
