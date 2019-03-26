@@ -2751,6 +2751,9 @@ section.subpage-banner.divider-arrow-darkblue:after {
 	section.subpage-banner p {
 		font-size: 25px;
 	}
+	section.subpage-banner.b445 {
+		min-height: 370px;
+	}
 }
 @media (max-width:1410px) {
 	section.subpage-banner.right-diamond {
