@@ -278,8 +278,11 @@ h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 25px;}
 
+@media (max-width: 1440px) {
+	h1 {font-size: 40px;}
+}
 @media (max-width:1170px) {
-	h1 {font-size: 43px;}
+	h1 {font-size: 35px;}
 	h2 {font-size: 31px;}
 	h3 {font-size: 27px;}
 	h4 {font-size: 25px;}
@@ -2687,6 +2690,7 @@ section.subpage-banner.right-content {
 section.subpage-banner p {
 	font-size: 27px;
 	color: rgba(255,255,255,0.7);
+	line-height: 1.2;
 }
 section.subpage-banner.font-black p {
 	color: rgba(75,75,75,0.85);
@@ -2741,6 +2745,11 @@ section.subpage-banner.divider-arrow-darkblue:after {
 @media (max-width:1600px) {
 	section.subpage-banner.right-diamond {
 		background-position: 58% center, 98% 30%;
+	}
+}
+@media (max-width: 1440px) {
+	section.subpage-banner p {
+		font-size: 25px;
 	}
 }
 @media (max-width:1410px) {
