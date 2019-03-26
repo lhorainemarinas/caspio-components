@@ -266,31 +266,35 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 700;
 	font-family:'Lato', sans-serif;
 }
-h2 {font-weight:900;}
+h2,
+strong {
+	font-weight: 900;
+}
+strong {color:#20282B;}
 
 h1 {font-size: 48px;}
-h2 {font-size: 40px;}
-h3 {font-size: 33px;}
+h2 {font-size: 36px;}
+h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 25px;}
 
 @media (max-width:1170px) {
 	h1 {font-size: 43px;}
-	h2 {font-size: 35px;}
-	h3 {font-size: 28px;}
+	h2 {font-size: 31px;}
+	h3 {font-size: 27px;}
 	h4 {font-size: 25px;}
 	h5 {font-size: 20px;}
 }
 @media (max-width:970px) {
 	h1 {font-size: 38px;margin-bottom: 20px;}
-	h2 {font-size: 30px;margin-bottom: 20px;}
-	h3 {font-size: 23px;margin-bottom: 20px;}
+	h2 {font-size: 26px;margin-bottom: 20px;}
+	h3 {font-size: 22px;margin-bottom: 20px;}
 	h4 {font-size: 20px;margin-bottom: 20px;}
 	h5 {font-size: 15px;margin-bottom: 20px;}
 }
 @media (max-width:720px) {
 	h1 {font-size: 33px;margin-bottom: 16px;}
-	h2 {font-size: 25px;margin-bottom: 16px;}
+	h2 {font-size: 21px;margin-bottom: 16px;}
 	h3 {font-size: 18px;margin-bottom: 16px;}
 }
 @media (max-width:540px) {
@@ -307,6 +311,17 @@ h6 + p {
 	font-weight: 600;
 	font-size: 18px;
 	color: rgba(75,75,75,0.85);
+}
+
+.font-white h1 + p,
+.font-white h2 + p,
+.font-white h3 + p,
+.font-white h4 + p,
+.font-white h5 + p,
+.font-white h6 + p {
+	font-weight: 700;
+	font-size: 18px;
+	color: rgba(255,255,255,0.85);
 }
 
 p {
@@ -2649,6 +2664,9 @@ section.subpage-banner {
 	min-height: 300px;
 	position: relative;
 }
+section.subpage-banner.fix {
+	background-attachment: fixed;
+}
 section.subpage-banner.b445 {
 	min-height: 445px;
 }
@@ -2669,6 +2687,9 @@ section.subpage-banner.right-content {
 section.subpage-banner p {
 	font-size: 27px;
 	color: rgba(255,255,255,0.7);
+}
+section.subpage-banner.font-black p {
+	color: rgba(75,75,75,0.85);
 }
 section.subpage-banner:before {
 	content: '';
@@ -2698,6 +2719,18 @@ section.subpage-banner.overlay-orange:before {
 }
 section.subpage-banner.overlay-green:before {
 	background: rgba(104,178,5,0.5);
+}
+section.subpage-banner.divider-arrow-darkblue:after {
+	content: '';
+	height: 40px;
+	position: absolute;
+	bottom: -14px;
+	left: 0;
+	right: 0;
+	background-image: url(../img/dividers/arrow-down-dark-blue.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
 }
 
 @media (max-width:1733px) {
