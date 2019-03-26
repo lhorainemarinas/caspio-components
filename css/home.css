@@ -1,3 +1,26 @@
+section:nth-child(even) {
+	background: #fff;
+}
+section h2 {
+	text-transform: capitalize;
+	font-size: 25px;
+	font-weight: 800;
+	position: relative;
+	background: #fff;
+}
+section h2:after {
+	content: '';
+	height: 1px;
+	background: #ccc;
+	position: absolute;	
+	left: 15%;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
 #particles-js {
 	position: absolute;
 	top: 0;
@@ -19,7 +42,7 @@ section.home-banner:after {
 	left: 0;
 	right: 0;
 	background-size: auto 100%;
-	background-image: url('/img/home-bg.svg');
+	background-image: url('../img/home-bg.svg');
 	background-repeat: no-repeat;
 	z-index: -1;
 }
@@ -69,4 +92,17 @@ section.home-banner.bg-right:after {
 	section.home-banner .title-desc {
 		margin-top: 50%;
 	}
+}
+
+section.logo p {
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+section.logo div[class^="bg-"] {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.modal-body {
+	padding: 20px 5rem;
+	
 }
