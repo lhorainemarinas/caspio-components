@@ -313,7 +313,7 @@ h5 + p,
 h6 + p {
 	font-weight: 600;
 	font-size: 18px;
-	color: rgba(75,75,75,0.85);
+	color: #515151;
 }
 
 .font-white h1 + p,
@@ -3491,6 +3491,9 @@ section.bottom-pointer.bottom-pointer-blue:after{
 .font-700 {font-weight:700;}
 .font-800 {font-weight:800;}
 .font-900 {font-weight:900;}
+
+.font-italic {font-style:italic;}
+.font-strike {text-decoration: line-through;}
 
 section.bg-white, .bg-white {background-color: #fff;}
 section.bg-black, .bg-black {background-color: #484848;}
