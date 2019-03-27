@@ -37,6 +37,7 @@ jQuery(function() {
 
 	$document.on('ready', function () {
 	});
+		urlFix();
 
 	var updateOnResize = debounce(function() {
 		updateValueOnResize();
@@ -625,17 +626,20 @@ jQuery(function() {
 		}
 	}(jQuery);
 
+	function urlFix() {
+		var github = 'https://lhorainemarinas.github.io/';
+		if(url == github) {
+			$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
+		} else {
+			$("#includeNav").load(url + "/template/nav.html"); 
+		}
+	}
+
 
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	// console.log(url)
-	var github = 'https://lhorainemarinas.github.io/';
-	if(url == github) {
-		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
-	} else {
-		$("#includeNav").load(url + "/template/nav.html"); 
-	}
+	
 });
