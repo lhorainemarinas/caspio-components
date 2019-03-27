@@ -42,7 +42,7 @@ section.home-banner:after {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-section.home-banner h1 {
+h1 {
 	font-weight: 900;
 	font-size: 46px;
 	line-height: 1.2;
@@ -77,18 +77,103 @@ section.home-banner.bg-right:after {
 	background-repeat: no-repeat;
 	background-position: center 10px;
 }
-
-@media (max-width: 1366px) {
-	.home-img {
-		margin-top: 40%;
+/* BANNER DESKTOP RESPONSIVE */
+@media (max-width: 1920px) {
+	section.home-banner.bg-right:after {
+		background-position: 30vw top;
 	}
+}
+@media (max-width: 1657px) {
+	.home-img img {
+		width: 120%;
+	}
+}
+@media (max-width: 1600px) {
+	section.home-banner.bg-right:after {
+		background-position: 30vw top;
+	}
+}
+@media (max-width: 1440px) {
 	.home-img img {
 		width: 110%;
+	}
+}
+@media (max-width: 1377px) {
+	.home-img {
+		margin-top: 40%;
 	}
 	section.home-banner .title-desc {
 		margin-top: 50%;
 	}
 }
+@media (max-width: 1292px) {
+	.home-img img {
+		width: 100%;
+	}
+	section.home-banner p {
+		font-size: 22px;
+	}
+}
+@media (max-height: 1080px) {
+	.home-img {
+		margin-top: 60%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 70%;
+	}
+}
+@media (max-height: 950px) {
+	.home-img {
+		margin-top: 50%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 60%;
+	}
+}
+@media (max-height: 768px) {
+	.home-img {
+		margin-top: 40%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 50%;
+	}
+}
+/* BANNER MOBILE RESPONSIVE */
+@media (max-width: 991px) {
+	section.home-banner.bg-right:after {
+		-webkit-transform: scaleX(-1);
+		-ms-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		transform: scaleX(-1);
+	}
+	.home-img {
+		margin-top: 22%;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.home-img img {
+		width: 60%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 0;
+	}
+}
+@media (max-width: 767px) {
+	.home-img {
+		margin-top: 26%;
+	}
+	.home-img img {
+		width: 80%;
+	}
+	section.home-banner.bg-right:after {
+		background-position:  20vw top;
+	}
+	section.home-banner p {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+}
+
 
 section.logo p {
 	margin-bottom: 10px;
