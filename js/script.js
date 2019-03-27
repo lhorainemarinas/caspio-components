@@ -445,6 +445,186 @@ jQuery(function() {
 		});
 	}
 
+	/*============================================
+	  SCROLL SPY
+	==============================================*/
+	var SMOOTH_SCROLL_DURATION = 700;
+	$(".smooth-scroll").on("click", "a", function() {
+		var e = $(this).attr("href");
+		if (void 0 !== e && 0 === e.indexOf("#")) {
+			var t = $(this).attr("data-offset") ? $(this).attr("data-offset") : 0
+			  , n = $(this).parentsUntil(".smooth-scroll").last().parent().attr("data-allow-hashes");
+			return $("body,html").animate({
+				scrollTop: $(e).offset().top - t - navHeight
+			}, SMOOTH_SCROLL_DURATION),
+			void 0 !== n && !1 !== n && history.replaceState(null, null, e),
+			!1
+		}
+	}),
+	function(e) {
+		e.fn.scrollTo = function(t) {
+			return e(this).scrollTop(e(this).scrollTop() - e(this).offset().top + e(t).offset().top),
+			this
+		}
+		,
+		e.fn.dropdown = function(t) {
+			this.each(function() {
+				var n = e(this)
+				  , i = e.extend({}, e.fn.dropdown.defaults, t)
+				  , r = !1
+				  , o = e("#".concat(n.attr("data-activates")));
+				function a() {
+					void 0 !== n.data("induration") && (i.inDuration = n.data("inDuration")),
+					void 0 !== n.data("outduration") && (i.outDuration = n.data("outDuration")),
+					void 0 !== n.data("constrainwidth") && (i.constrain_width = n.data("constrainwidth")),
+					void 0 !== n.data("hover") && (i.hover = n.data("hover")),
+					void 0 !== n.data("gutter") && (i.gutter = n.data("gutter")),
+					void 0 !== n.data("beloworigin") && (i.belowOrigin = n.data("beloworigin")),
+					void 0 !== n.data("alignment") && (i.alignment = n.data("alignment"))
+				}
+				function s(t) {
+					"focus" === t && (r = !0),
+					a(),
+					o.addClass("active"),
+					n.addClass("active"),
+					!0 === i.constrain_width ? o.css("width", n.outerWidth()) : o.css("white-space", "nowrap");
+					var s = window.innerHeight
+					  , l = n.innerHeight()
+					  , c = n.offset().left
+					  , u = n.offset().top - e(window).scrollTop()
+					  , d = i.alignment
+					  , f = 0
+					  , h = 0
+					  , p = 0;
+					!0 === i.belowOrigin && (p = l);
+					var g = 0
+					  , m = n.parent();
+					if (!m.is("body") && m[0].scrollHeight > m[0].clientHeight && (g = m[0].scrollTop),
+					c + o.innerWidth() > e(window).width() ? d = "right" : c - o.innerWidth() + n.innerWidth() < 0 && (d = "left"),
+					u + o.innerHeight() > s)
+						if (u + l - o.innerHeight() < 0) {
+							var v = s - u - p;
+							o.css("max-height", v)
+						} else
+							p || (p += l),
+							p -= o.innerHeight();
+					if ("left" === d)
+						f = i.gutter,
+						h = n.position().left + f;
+					else if ("right" === d) {
+						h = n.position().left + n.outerWidth() - o.outerWidth() + (f = -i.gutter)
+					}
+					o.css({
+						position: "absolute",
+						top: n.position().top + p + g,
+						left: h
+					}),
+					o.stop(!0, !0).css("opacity", 0).slideDown({
+						queue: !1,
+						duration: i.inDuration,
+						easing: "easeOutCubic",
+						complete: function() {
+							e(this).css("height", "")
+						}
+					}).animate({
+						opacity: 1,
+						scrollTop: 0
+					}, {
+						queue: !1,
+						duration: i.inDuration,
+						easing: "easeOutSine"
+					})
+				}
+				function l() {
+					r = !1,
+					o.fadeOut(i.outDuration),
+					o.removeClass("active"),
+					n.removeClass("active"),
+					setTimeout(function() {
+						o.css("max-height", "")
+					}, i.outDuration)
+				}
+				if (a(),
+				n.after(o),
+				i.hover) {
+					var c = !1;
+					n.unbind("click.".concat(n.attr("id"))),
+					n.on("mouseenter", function() {
+						!1 === c && (s(),
+						c = !0)
+					}),
+					n.on("mouseleave", function(t) {
+						var n = t.toElement || t.relatedTarget;
+						e(n).closest(".dropdown-content").is(o) || (o.stop(!0, !0),
+						l(),
+						c = !1)
+					}),
+					o.on("mouseleave", function(t) {
+						var i = t.toElement || t.relatedTarget;
+						e(i).closest(".dropdown-button").is(n) || (o.stop(!0, !0),
+						l(),
+						c = !1)
+					})
+				} else
+					n.unbind("click.".concat(n.attr("id"))),
+					n.bind("click.".concat(n.attr("id")), function(t) {
+						r || (n[0] !== t.currentTarget || n.hasClass("active") || 0 !== e(t.target).closest(".dropdown-content").length ? n.hasClass("active") && (l(),
+						e(document).unbind("click.".concat(o.attr("id"), " touchstart.").concat(o.attr("id")))) : (t.preventDefault(),
+						s("click")),
+						o.hasClass("active") && e(document).bind("click.".concat(o.attr("id"), " touchstart.").concat(o.attr("id")), function(t) {
+							o.is(t.target) || n.is(t.target) || n.find(t.target).length || (l(),
+							e(document).unbind("click.".concat(o.attr("id"), " touchstart.").concat(o.attr("id"))))
+						}))
+					});
+				n.on("open", function(e, t) {
+					s(t)
+				}),
+				n.on("close", l)
+			})
+		}
+		,
+		e.fn.dropdown.defaults = {
+			inDuration: 300,
+			outDuration: 225,
+			constrain_width: !0,
+			hover: !1,
+			gutter: 0,
+			belowOrigin: !1,
+			alignment: "left"
+		},
+		e(".dropdown-button").dropdown(),
+		e.fn.mdbDropSearch = function(t) {
+			var n = e(this).find("input");
+			this.filter(function(t, i) {
+				e(i).on("keyup", function() {
+					for (var e = n.closest("div[id]").find("a, li"), t = 0; t < e.length; t++)
+						e.eq(t).html().toUpperCase().indexOf(n.val().toUpperCase()) > -1 ? e.eq(t).css({
+							display: ""
+						}) : e.eq(t).css({
+							display: "none"
+						})
+				})
+			});
+			var i = e.extend({
+				color: "#000",
+				backgroundColor: "",
+				fontSize: ".9rem",
+				fontWeight: "400",
+				borderRadius: "",
+				borderColor: ""
+			}, t);
+			return this.css({
+				color: i.color,
+				backgroundColor: i.backgroundColor,
+				fontSize: i.fontSize,
+				fontWeight: i.fontWeight,
+				borderRadius: i.borderRadius,
+				border: i.border,
+				margin: i.margin
+			})
+		}
+	}(jQuery);
+
 
 	/**
 	* --------------------------------------------------------------------------
