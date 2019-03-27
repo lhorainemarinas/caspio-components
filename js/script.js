@@ -1,3 +1,4 @@
+urlFix();
 jQuery(function() {
 	var $ = jQuery,
 		$window = jQuery(window),
@@ -37,7 +38,6 @@ jQuery(function() {
 
 	$document.on('ready', function () {
 	});
-		urlFix();
 
 	var updateOnResize = debounce(function() {
 		updateValueOnResize();
@@ -318,11 +318,11 @@ jQuery(function() {
 	========================================*/
 	function topPadding() {
 		if(winWidth >= 992) {
-			$(".submenu").css('top', navHeight + 10);
-			$("body").css('padding-top', navHeight + 10);
+			$(".submenu").css('top', navHeight);
+			$("body").css('padding-top', navHeight);
 		} else if(winWidth <= 991) {
 			$("body").css('padding-top', 0);
-			$("body").css('padding-top', navHeight + 10);
+			$("body").css('padding-top', navHeight);
 			$(".submenu").attr('style', function(i, style) {
 				return style && style.replace(/display[^;]+;?/g, '');
 			});
@@ -626,16 +626,6 @@ jQuery(function() {
 		}
 	}(jQuery);
 
-	function urlFix() {
-		var github = 'https://lhorainemarinas.github.io/';
-		if(url == github) {
-			$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
-		} else {
-			$("#includeNav").load(url + "/template/nav.html"); 
-		}
-	}
-
-
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
@@ -643,3 +633,13 @@ jQuery(function() {
 	*/
 	
 });
+
+function urlFix() {
+	url = window.location.origin + '/';
+	var github = 'https://lhorainemarinas.github.io/';
+	if(url == github) {
+		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
+	} else {
+		$("#includeNav").load(url + "/template/nav.html"); 
+	}
+}
