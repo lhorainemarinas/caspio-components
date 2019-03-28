@@ -673,7 +673,8 @@ jQuery(function() {
 	function subpageUrl(){
 		if(url == github) {
 			$('a').each(function(){
-				console.log($(this).attr("href"))
+				var a = $(this).attr("href")
+				console.log($(this).attr("href", github + "caspio-components/" + a))
 			});
 		}
 	}
