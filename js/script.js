@@ -129,6 +129,7 @@ jQuery(function() {
 	/*=========================================
 	  AUTO HEIGHT FOR DIFFERENT ELEMENTS
 	===========================================*/
+	auto_pantay();
 	function auto_pantay() {
 		var qHeight = $('.review-style1 .review-style1-quote p').length,
 			blogTitleHeight = $('.blog-style1-content').length,
@@ -335,6 +336,7 @@ jQuery(function() {
 	/*======================================
 	  SLIDING ACTIVE LINE ON NAV
 	========================================*/
+	navSlide();
 	$slider.css('width',navWidth);
 	function navSlide() {
 		var $isActive = $('.navbar-nav > li.isactive'),
@@ -359,6 +361,7 @@ jQuery(function() {
 	/*========================
 	  MEGAMENU
 	==========================*/
+	megamenu();
 	function megamenu() {
 		var mainNav = $("#navbar ul"),
 			btnBack = $(".submenu-back"),
@@ -633,6 +636,7 @@ jQuery(function() {
 	/*============================================
 	  URL REWRITE
 	==============================================*/
+	subpageUrl();
 	function subpageUrl(){
 		if(url == github) {
 			$('a').each(function(){
