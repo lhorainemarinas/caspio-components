@@ -656,7 +656,7 @@ jQuery(function() {
 					rootRepath = url + 'caspio-components/' + last(arr_urls);
 				if(pth >= 0) {
 					$(this).attr("href", repath)
-				} else if(pth != 0) {
+				} else {
 					$(this).attr("href", rootRepath)
 				}
 			});
