@@ -640,7 +640,7 @@ jQuery(function() {
 			p = subpage.is('[href^="page"]');
 
 		if(p){
-			console.log('asd')
+			console.log($(this).length)
 		}
 		
 		if(subpage.is('[href^="page"]')) {
