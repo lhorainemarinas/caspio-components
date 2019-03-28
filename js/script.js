@@ -33,7 +33,7 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
-		subpageUrl();
+		// subpageUrl();
 	});
 
 	$document.on('ready', function () {
