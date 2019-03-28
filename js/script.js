@@ -634,7 +634,7 @@ jQuery(function() {
 	function subpageUrl() {
 		var homeUrl = filename != 'index.html',
 			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
-		if(homeUrl) {
+		if(homeUrl && (url != github)) {
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
@@ -645,13 +645,14 @@ jQuery(function() {
 				}
 			});
 		} else if((url == github) && (homeUrl)) {
-			console.log(1)
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
 					pth = pname.indexOf('page') >= 0,
 					repath = url + '/caspio-components/page/' + last(arr_urls);
 				if(pth) {
+					console.log(pname)
+
 					$(this).attr("href", repath)
 				}
 			});
