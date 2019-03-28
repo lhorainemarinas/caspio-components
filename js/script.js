@@ -651,13 +651,12 @@ jQuery(function() {
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page') >= 0,
-					rootPth = pname.indexOf('page') < 0,
+					pth = pname.indexOf('page'),
 					repath = url + 'caspio-components/page/' + last(arr_urls),
 					rootRepath = url + 'caspio-components/' + last(arr_urls);
-				if(pth) {
+				if(pth >= 0) {
 					$(this).attr("href", repath)
-				} else if(rootPth) {
+				} else if(pth != 0) {
 					$(this).attr("href", rootRepath)
 				}
 			});
