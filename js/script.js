@@ -691,5 +691,10 @@ function urlFix() {
 		$("#includeNav").load(url + "/template/nav.html"); 
 		$("#includeNav2").load(url + "/template/nav2.html"); 
 	}
+	if(url == github) {
+		$('a').each(function(){
+			console.log($(this).attr("href"))
+		});
+	}
 	
 }
