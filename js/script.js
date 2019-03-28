@@ -650,7 +650,6 @@ jQuery(function() {
 					}
 				});
 			} else if((url == github) && (homeUrl)) {
-				
 				subpage.each(function(){
 					var pname = $(this)[0].pathname,
 						arr_urls = pname.split('/'),
@@ -661,7 +660,7 @@ jQuery(function() {
 					}
 				});
 			}
-		} else {
+		} else if(!subpage.is('[href^="page"]')) {
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
