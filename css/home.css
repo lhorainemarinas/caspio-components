@@ -139,7 +139,7 @@ section.home-banner.bg-right:after {
 	}
 }
 /* BANNER MOBILE RESPONSIVE */
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-height:1366px) and (orientation: portrait) {
 	.home-img-wrap,
 	.home-text-wrap {
 		float: none;
