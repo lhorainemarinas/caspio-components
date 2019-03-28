@@ -1,4 +1,5 @@
-urlFix();
+
+
 jQuery(function() {
 	var $ = jQuery,
 		$window = jQuery(window),
@@ -37,6 +38,7 @@ jQuery(function() {
 	});
 
 	$document.on('ready', function () {
+		
 	});
 
 	var updateOnResize = debounce(function() {
@@ -652,7 +654,7 @@ jQuery(function() {
 	
 });
 
-function urlFix() {
+var urlFix = function() {
 	url = window.location.origin + '/';
 	currUrl = window.location.href;
 	pathUrl = window.location.pathname;
@@ -665,4 +667,4 @@ function urlFix() {
 		$("#includeNav").load(url + "/template/nav.html"); 
 		$("#includeNav2").load(url + "/template/nav2.html"); 
 	}
-}
+}();
