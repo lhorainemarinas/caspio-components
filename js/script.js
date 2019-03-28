@@ -630,51 +630,16 @@ jQuery(function() {
 	/*============================================
 	  URL REWRITE
 	==============================================*/
-	function last(array) {
-	    return array[array.length - 1];
-	}
-
-	function subpageUrsl() {
-		var homeUrl = filename != 'index.html',
-			sub = $('.submenu-left .has-child ul > li > a'),
-			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
-		if(homeUrl && (url != github)) {
-			subpage.each(function(){
-				var pname = $(this)[0].pathname,
-					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page') >= 0,
-					repath = url + 'page/' + last(arr_urls);
-				if(pth) {
-					$(this).attr("href", repath)
-				}
-			});
-		} else if((url == github) && (homeUrl)) {
-			sub.each(function(){
-				var pname = $(this)[0].pathname,
-					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page'),
-					rootRepath = url + 'caspio-components/' + last(arr_urls);
-				if(pth != 0) {
-					$(this).attr("href", rootRepath)
-				}
-			});
-			subpage.each(function(){
-				var pname = $(this)[0].pathname,
-					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page'),
-					repath = url + 'caspio-components/page/' + last(arr_urls);
-				if(pth >= 0) {
-					$(this).attr("href", repath)
-				}
-			});
-		}
-	}
-
 	function subpageUrl(){
 		if(url == github) {
 			$('a').each(function(){
 				var a = $(this).attr("href")
-				console.log($(this).attr("href", github + "caspio-components/" + a))
+				$(this).attr("href", github + "caspio-components/" + a);
+			});
+		} else {
+			$('a').each(function(){
+				var a = $(this).attr("href")
+				$(this).attr("href", '/' + a);
 			});
 		}
 	}
@@ -700,10 +665,4 @@ function urlFix() {
 		$("#includeNav").load(url + "/template/nav.html"); 
 		$("#includeNav2").load(url + "/template/nav2.html"); 
 	}
-	if(url == github) {
-		$('a').each(function(){
-			console.log($(this).attr("href"))
-		});
-	}
-	
 }
