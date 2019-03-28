@@ -649,15 +649,6 @@ jQuery(function() {
 				}
 			});
 		} else if((url == github) && (homeUrl)) {
-			subpage.each(function(){
-				var pname = $(this)[0].pathname,
-					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page'),
-					repath = url + 'caspio-components/page/' + last(arr_urls);
-				if(pth >= 0) {
-					$(this).attr("href", repath)
-				}
-			});
 			sub.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
@@ -665,6 +656,15 @@ jQuery(function() {
 					rootRepath = url + 'caspio-components/' + last(arr_urls);
 				if(pth != 0) {
 					$(this).attr("href", rootRepath)
+				}
+			});
+			subpage.each(function(){
+				var pname = $(this)[0].pathname,
+					arr_urls = pname.split('/'),
+					pth = pname.indexOf('page'),
+					repath = url + 'caspio-components/page/' + last(arr_urls);
+				if(pth >= 0) {
+					$(this).attr("href", repath)
 				}
 			});
 		}
