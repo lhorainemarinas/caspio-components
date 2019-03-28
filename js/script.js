@@ -639,7 +639,7 @@ jQuery(function() {
 			subpage = $('.submenu-left .has-child ul li a');
 		
 		if(subpage.is('[href^="page"]')) {
-			console.log($(this).length)
+			console.log('a' + $(this).length)
 			if(homeUrl && (url != github)) {
 				subpage.each(function(){
 					var pname = $(this)[0].pathname,
@@ -662,7 +662,7 @@ jQuery(function() {
 				});
 			}
 		} else if(!subpage.is('[href^="page"]')) {
-			console.log($(this).length)
+			console.log('b' + $(this).length)
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
