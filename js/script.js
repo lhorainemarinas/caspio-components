@@ -654,10 +654,12 @@ jQuery(function() {
 					pth = pname.indexOf('page'),
 					repath = url + 'caspio-components/page/' + last(arr_urls),
 					rootRepath = url + 'caspio-components/' + last(arr_urls);
+
+				console.log(pname)
 				if(pth >= 0) {
 					$(this).attr("href", repath)
 				} else {
-					console.log(pname)
+					console.log(this)
 					$(this).attr("href", rootRepath)
 				}
 			});
