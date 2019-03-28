@@ -653,7 +653,7 @@ jQuery(function() {
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
 					pth = pname.indexOf('page'),
-					rootRepath = url + 'caspio-components/' + last(arr_urls);
+					repath = url + 'caspio-components/page/' + last(arr_urls);
 				if(pth >= 0) {
 					$(this).attr("href", repath)
 				}
