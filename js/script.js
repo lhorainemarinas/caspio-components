@@ -318,6 +318,7 @@ jQuery(function() {
 	/*======================================
 	  BODY TOP SPACING FOR THE NAV
 	========================================*/
+	topPadding();
 	function topPadding() {
 		if(winWidth >= 992) {
 			$(".submenu").css('top', navHeight);
