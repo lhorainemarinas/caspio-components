@@ -33,7 +33,7 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
-		// subpageUrl();
+		subpageUrl();
 	});
 
 	$document.on('ready', function () {
@@ -634,7 +634,7 @@ jQuery(function() {
 	    return array[array.length - 1];
 	}
 
-	function subpageUrl() {
+	function subpageUrsl() {
 		var homeUrl = filename != 'index.html',
 			sub = $('.submenu-left .has-child ul > li > a'),
 			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
@@ -666,6 +666,14 @@ jQuery(function() {
 				if(pth >= 0) {
 					$(this).attr("href", repath)
 				}
+			});
+		}
+	}
+
+	function subpageUrl(){
+		if(url == github) {
+			$('a').each(function(){
+				console.log($(this).attr("href"))
 			});
 		}
 	}
