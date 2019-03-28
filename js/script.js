@@ -636,10 +636,15 @@ jQuery(function() {
 
 	function subpageUrl() {
 		var homeUrl = filename != 'index.html',
-			subpage = $('.submenu-left .has-child ul li a');
+			subpage = $('.submenu-left .has-child ul li a'),
+			p = subpage.is('[href^="page"]');
+
+		if(p){
+			console.log('asd')
+		}
 		
 		if(subpage.is('[href^="page"]')) {
-			console.log('a ' + this)
+			// console.log('a ' + $(this))
 			if(homeUrl && (url != github)) {
 				subpage.each(function(){
 					var pname = $(this)[0].pathname,
@@ -662,7 +667,7 @@ jQuery(function() {
 				});
 			}
 		} else if(!subpage.is('[href^="page"]')) {
-			console.log('b ' + this)
+			// console.log('b ' + this)
 			subpage.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
