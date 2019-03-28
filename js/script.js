@@ -634,8 +634,17 @@ jQuery(function() {
 	    return array[array.length - 1];
 	}
 
+	function getVal() {
+		var pname = $(this)[0].pathname,
+					arr_urls = pname.split('/'),
+					pth = pname.indexOf('page'),
+					repath = url + 'caspio-components/page/' + last(arr_urls),
+					rootRepath = url + 'caspio-components/' + last(arr_urls);
+	}
+
 	function subpageUrl() {
 		var homeUrl = filename != 'index.html',
+			sub = $('.submenu-left .has-child ul li a'),
 			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
 		if(homeUrl && (url != github)) {
 			subpage.each(function(){
@@ -649,17 +658,16 @@ jQuery(function() {
 			});
 		} else if((url == github) && (homeUrl)) {
 			subpage.each(function(){
-				var pname = $(this)[0].pathname,
-					arr_urls = pname.split('/'),
-					pth = pname.indexOf('page'),
-					repath = url + 'caspio-components/page/' + last(arr_urls),
-					rootRepath = url + 'caspio-components/' + last(arr_urls);
-
-				console.log(pname)
+				getVal();
 				if(pth >= 0) {
 					$(this).attr("href", repath)
 				} else {
-					console.log(this)
+					$(this).attr("href", rootRepath)
+				}
+			});
+			sub.each(function(){
+				getVal();
+				if(pth != 0) {
 					$(this).attr("href", rootRepath)
 				}
 			});
