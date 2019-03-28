@@ -636,7 +636,7 @@ jQuery(function() {
 
 	function subpageUrl() {
 		var homeUrl = filename != 'index.html',
-			subpage = $('.submenu-left .has-child ul li');
+			subpage = $('.submenu-left .has-child ul li a');
 		
 		if(subpage.is('[href^="page"]')) {
 			if(homeUrl && (url != github)) {
