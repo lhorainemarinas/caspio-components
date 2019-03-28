@@ -672,7 +672,7 @@ function urlFix() {
 	currUrl = window.location.href;
 	pathUrl = window.location.pathname;
 	filename = pathUrl.substring(pathUrl.lastIndexOf('/')+1);
-	var github = 'https://lhorainemarinas.github.io/';
+	github = 'https://lhorainemarinas.github.io/';
 	if(url == github) {
 		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
 		$("#includeNav2").load(url + "/caspio-components/template/nav2.html"); 
