@@ -139,6 +139,37 @@ section.home-banner.bg-right:after {
 	}
 }
 /* BANNER MOBILE RESPONSIVE */
+@media (max-width: 1024px) and (orientation: portrait) {
+	.home-img-wrap,
+	.home-text-wrap {
+		float: none;
+		width: 100%;
+		left: auto;
+		right: auto;
+	}
+	section.home-banner.bg-right:after {
+		-webkit-transform: scaleX(-1);
+		-ms-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		transform: scaleX(-1);
+	}
+	.home-img {
+		margin-top: 22%;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.home-img img {
+		width: 60%;
+	}
+	section.home-banner .title-desc {
+		margin-top: 0;
+		text-align: center;
+	}
+	section.home-banner p {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+}
 @media (max-width: 991px) {
 	section.home-banner.bg-right:after {
 		-webkit-transform: scaleX(-1);

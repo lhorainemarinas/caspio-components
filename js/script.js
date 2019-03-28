@@ -12,8 +12,7 @@ jQuery(function() {
 		cpad = (winWidth-container)/2 + 'px',
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
-		navWidth = jQuery('.navbar-nav > li').innerWidth(),
-		url = window.location.origin + '/';
+		navWidth = jQuery('.navbar-nav > li').innerWidth();
 
 	/**
 	* --------------------------------------------------------------------------
@@ -34,6 +33,7 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
+		subpageUrl();
 	});
 
 	$document.on('ready', function () {
@@ -624,7 +624,31 @@ jQuery(function() {
 				margin: i.margin
 			})
 		}
+
 	}(jQuery);
+
+	function last(array) {
+	    return array[array.length - 1];
+	}
+
+	function subpageUrl() {
+		var homeUrl = filename != 'index.html';
+		if(homeUrl) {
+			var subpage = $('.submenu-left .has-child ul li a[href^="page"]');
+			subpage.each(function(){
+				pname = $(this)[0].pathname;
+				arr_urls = pname.split('/');
+				pth = pname.indexOf('page') >= 0;
+				repath = url + 'page/' + last(arr_urls);
+				// console.log(url + 'page/' + last(arr_urls))
+				// console.log('pname = ' + pname + ' | may page ba na word = ' + pth)
+				// console.log(pname.indexOf('page').length >= 0)
+				if(pth) {
+					console.log($(this).attr("href", repath))
+				}
+			});
+		}
+	}
 
 	/**
 	* --------------------------------------------------------------------------
@@ -636,10 +660,16 @@ jQuery(function() {
 
 function urlFix() {
 	url = window.location.origin + '/';
+	currUrl = window.location.href;
+	pathUrl = window.location.pathname;
+	filename = pathUrl.substring(pathUrl.lastIndexOf('/')+1);
 	var github = 'https://lhorainemarinas.github.io/';
 	if(url == github) {
 		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
+		$("#includeNav2").load(url + "/caspio-components/template/nav2.html"); 
 	} else {
 		$("#includeNav").load(url + "/template/nav.html"); 
+		$("#includeNav2").load(url + "/template/nav2.html"); 
 	}
+	
 }
