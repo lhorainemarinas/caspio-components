@@ -652,14 +652,14 @@ jQuery(function() {
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
 					pth = pname.indexOf('page') >= 0,
-					// rootPth = pname.indexOf('page') >= 1,
+					rootPth = pname.indexOf('page') >= 1,
 					repath = url + '/caspio-components/page/' + last(arr_urls),
 					rootRepath = url + '/caspio-components/' + last(arr_urls);
 				if(pth) {
 					$(this).attr("href", repath)
-				} //else if(rootPth) {
-				// 	$(this).attr("href", rootRepath)
-				// }
+				} else if(rootPth) {
+					$(this).attr("href", rootRepath)
+				}
 			});
 		}
 	}
