@@ -632,19 +632,26 @@ jQuery(function() {
 	}
 
 	function subpageUrl() {
-		var homeUrl = filename != 'index.html';
+		var homeUrl = filename != 'index.html',
+			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
 		if(homeUrl) {
-			var subpage = $('.submenu-left .has-child ul li a[href^="page"]');
 			subpage.each(function(){
 				pname = $(this)[0].pathname;
 				arr_urls = pname.split('/');
 				pth = pname.indexOf('page') >= 0;
 				repath = url + 'page/' + last(arr_urls);
-				// console.log(url + 'page/' + last(arr_urls))
-				// console.log('pname = ' + pname + ' | may page ba na word = ' + pth)
-				// console.log(pname.indexOf('page').length >= 0)
 				if(pth) {
-					console.log($(this).attr("href", repath))
+					$(this).attr("href", repath)
+				}
+			});
+		} else if((url == github) && (homeUrl)) {
+			subpage.each(function(){
+				pname = $(this)[0].pathname;
+				arr_urls = pname.split('/');
+				pth = pname.indexOf('page') >= 0;
+				repath = url + 'caspio-components/page/' + last(arr_urls);
+				if(pth) {
+					$(this).attr("href", repath)
 				}
 			});
 		}
