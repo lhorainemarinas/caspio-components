@@ -657,6 +657,7 @@ jQuery(function() {
 				if(pth >= 0) {
 					$(this).attr("href", repath)
 				} else {
+					console.log(pname)
 					$(this).attr("href", rootRepath)
 				}
 			});
