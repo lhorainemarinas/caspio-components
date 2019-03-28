@@ -1047,7 +1047,7 @@ body.open-overlay .menu-overlay {
 .phone-info .phone-info-box {
 	cursor: default;
 	display: block;
-	background: #027faa;
+	background: #f5f5f5;
 	position: absolute;
 	top: 107%;
 	left: -170%;
@@ -1065,13 +1065,13 @@ body.open-overlay .menu-overlay {
 	transition: all 0.3s ease-in-out;
 }
 .phone-info:hover .phone-info-box {
-	height: 120%;
+	height: 70%;
 	overflow: visible;
 }
 .phone-info .phone-info-box > span {
 	display: block;
 	margin: 10px 20px;
-	color: #fff;
+	color: #027faa;
 	font-weight: 600;
 	font-size: 13px;
 }
