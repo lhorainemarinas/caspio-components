@@ -636,39 +636,20 @@ jQuery(function() {
 
 	function subpageUrl() {
 		var homeUrl = filename != 'index.html',
-			subpage = $('.submenu-left .has-child ul li a'),
-			p = subpage.is('[href^="page"]');
-
-		if(p){
-			console.log($(this).length)
-		}
-		
-		if(subpage.is('[href^="page"]')) {
-			// console.log('a ' + $(this))
-			if(homeUrl && (url != github)) {
-				subpage.each(function(){
-					var pname = $(this)[0].pathname,
-						arr_urls = pname.split('/'),
-						pth = pname.indexOf('page') >= 0,
-						repath = url + 'page/' + last(arr_urls);
-					if(pth) {
-						$(this).attr("href", repath)
-					}
-				});
-			} else if((url == github) && (homeUrl)) {
-				subpage.each(function(){
-					var pname = $(this)[0].pathname,
-						arr_urls = pname.split('/'),
-						pth = pname.indexOf('page'),
-						repath = url + 'caspio-components/page/' + last(arr_urls);
-					if(pth >= 0) {
-						$(this).attr("href", repath)
-					}
-				});
-			}
-		} else if(!subpage.is('[href^="page"]')) {
-			// console.log('b ' + this)
+			sub = $('.submenu-left .has-child ul > li > a'),
+			subpage = $('.submenu-left .has-child ul li a[href^="page"]');
+		if(homeUrl && (url != github)) {
 			subpage.each(function(){
+				var pname = $(this)[0].pathname,
+					arr_urls = pname.split('/'),
+					pth = pname.indexOf('page') >= 0,
+					repath = url + 'page/' + last(arr_urls);
+				if(pth) {
+					$(this).attr("href", repath)
+				}
+			});
+		} else if((url == github) && (homeUrl)) {
+			sub.each(function(){
 				var pname = $(this)[0].pathname,
 					arr_urls = pname.split('/'),
 					pth = pname.indexOf('page'),
@@ -677,38 +658,16 @@ jQuery(function() {
 					$(this).attr("href", rootRepath)
 				}
 			});
+			subpage.each(function(){
+				var pname = $(this)[0].pathname,
+					arr_urls = pname.split('/'),
+					pth = pname.indexOf('page'),
+					repath = url + 'caspio-components/page/' + last(arr_urls);
+				if(pth >= 0) {
+					$(this).attr("href", repath)
+				}
+			});
 		}
-
-		// if(homeUrl && (url != github)) {
-		// 	subpage.each(function(){
-		// 		var pname = $(this)[0].pathname,
-		// 			arr_urls = pname.split('/'),
-		// 			pth = pname.indexOf('page') >= 0,
-		// 			repath = url + 'page/' + last(arr_urls);
-		// 		if(pth) {
-		// 			$(this).attr("href", repath)
-		// 		}
-		// 	});
-		// } else if((url == github) && (homeUrl)) {
-		// 	sub.each(function(){
-		// 		var pname = $(this)[0].pathname,
-		// 			arr_urls = pname.split('/'),
-		// 			pth = pname.indexOf('page'),
-		// 			rootRepath = url + 'caspio-components/' + last(arr_urls);
-		// 		if(pth != 0) {
-		// 			$(this).attr("href", rootRepath)
-		// 		}
-		// 	});
-		// 	subpage.each(function(){
-		// 		var pname = $(this)[0].pathname,
-		// 			arr_urls = pname.split('/'),
-		// 			pth = pname.indexOf('page'),
-		// 			repath = url + 'caspio-components/page/' + last(arr_urls);
-		// 		if(pth >= 0) {
-		// 			$(this).attr("href", repath)
-		// 		}
-		// 	});
-		// }
 	}
 
 	/**
