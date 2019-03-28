@@ -645,11 +645,12 @@ jQuery(function() {
 				}
 			});
 		} else if((url == github) && (homeUrl)) {
+			console.log(1)
 			subpage.each(function(){
 				pname = $(this)[0].pathname;
 				arr_urls = pname.split('/');
 				pth = pname.indexOf('page') >= 0;
-				repath = url + 'caspio-components/page/' + last(arr_urls);
+				repath = url + '/caspio-components/page/' + last(arr_urls);
 				if(pth) {
 					$(this).attr("href", repath)
 				}
