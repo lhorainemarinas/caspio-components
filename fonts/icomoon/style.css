@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?zbwmbh');
-  src:  url('fonts/icomoon.eot?zbwmbh#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?zbwmbh') format('truetype'),
-    url('fonts/icomoon.woff?zbwmbh') format('woff'),
-    url('fonts/icomoon.svg?zbwmbh#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?vqijtd');
+  src:  url('fonts/icomoon.eot?vqijtd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vqijtd') format('truetype'),
+    url('fonts/icomoon.woff?vqijtd') format('woff'),
+    url('fonts/icomoon.svg?vqijtd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-phone-diamond:before {
+  content: "\ebc0";
+}
+.icon-file-text-diamond:before {
+  content: "\ebc1";
+}
+.icon-users-male-female:before {
+  content: "\ebbc";
+}
+.icon-multiple-users:before {
+  content: "\ebbd";
+}
+.icon-multiple-users-diamond:before {
+  content: "\ebbe";
+}
+.icon-users-male-female-diamond:before {
+  content: "\ebbf";
+}
 .icon-clipboard--1:before {
   content: "\ebb8";
 }
