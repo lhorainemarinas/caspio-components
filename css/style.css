@@ -2677,6 +2677,7 @@ section.subpage-banner {
 	background-position: center center;
 	min-height: 300px;
 	position: relative;
+	z-index: 1;
 }
 section.subpage-banner.fix {
 	background-attachment: fixed;

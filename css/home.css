@@ -29,6 +29,7 @@ section.home-banner {
 	height: calc(100vh - 60px);
 	width: 100%;
 	overflow: hidden;
+	z-index: 0;
 }
 section.home-banner:after {
 	content: "";
@@ -188,6 +189,24 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner .title-desc {
 		margin-top: 0;
+	}
+}
+
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+	section.home-banner .title-desc {
+		margin: 12rem 10rem 0;
+	}
+}
+@media (max-width: 768px) {
+	.home-banner .container {
+		position: relative;
+		z-index: 2;
+	}
+	section.home-banner:after {
+		z-index: 0;
+	}
+	section.home-banner p {
+		font-size: 28px;
 	}
 }
 @media (max-width: 767px) {
