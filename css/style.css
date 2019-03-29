@@ -281,13 +281,28 @@ h5 {font-size: 25px;}
 	h4 {font-size: 20px !important;margin-bottom: 20px !important;}
 	h5 {font-size: 15px !important;margin-bottom: 20px !important;}
 }
+@media (max-width: 812px) and (max-height: 375px) and (orientation: landscape) {
+	h1 {font-size: 35px !important;}
+}
+@media (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+	h1 {font-size: 30px !important;}
+}
 @media (max-width:720px) {
-	h1 {font-size: 37px !important;margin-bottom: 16px !important;}
+	h1 {font-size: 35px !important;margin-bottom: 16px !important;}
 	h2 {font-size: 21px !important;margin-bottom: 16px !important;}
 	h3 {font-size: 18px !important;margin-bottom: 16px !important;}
 }
+@media (max-width: 640px) and (max-height: 384px) and (orientation: landscape) {
+	h1 {font-size: 28px !important;margin-bottom: 10px !important;}
+}
+@media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+	h1 {font-size: 28px !important;margin-bottom: 10px !important;}
+}
+@media (max-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+	h1 {font-size: 26px !important;margin-bottom: 10px !important;}
+}
 @media (max-width:540px) {
-	h1 {font-size: 35px !important;margin-bottom: 10px !important;}
+	h1 {font-size: 26px !important;margin-bottom: 10px !important;}
 	h2 {font-size: 23px !important;margin-bottom: 10px !important;}
 }
 
@@ -723,6 +738,17 @@ section p:last-child {
 }
 .btn-with-mini-text a strong{
 	font-weight: 700;
+}
+
+@media (max-width: 568px) {
+	.btn-l {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+	.btn-m {
+		padding: 6px 14px;
+		font-size: 12px;
+	}
 }
 
 /* ----- MEGAMENNU ----- */
