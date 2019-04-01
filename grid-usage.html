@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Grid system</h1>
-					<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+					<p class="w960">See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
 				</div>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 			<div class="row mb40">
 				<div class="col-md-12 text-center">
 					<h2>Stacked-to-horizontal</h2>
-					<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+					<p class="w960">See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
 				</div>
 			</div>
 			<div class="row text-center">
@@ -226,25 +226,39 @@
 	</section>
 
 	<section class="bg-lightergray">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row text-center mb40">
-				<h2>Container Fluid</h2>
-				<p>Use <span class="font-orange">.container-fluid</span> for a full-width container, spanning the entire width of the viewport.</p>
+				<h2>Desktop to Mobile</h2>
+				<p class="w960">Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <span class="font-orange">.col-xxs-*</span> <span class="font-orange">.col-xs-*</span> <span class="font-orange">.col-sm-*</span> <span class="font-orange">.col-md-*</span> <span class="font-orange">.col-lg-*</span> to your columns. See the example below for a better idea of how it all works.</p>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="layout-blocks bg-lightlime h50"></div>
+			<div class="row text-center">
+				<div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-lightlime h50 font-white"><p>.col-lg-8 .col-md-8 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-lime h50 font-white"><p>.col-lg-4 .col-md-4 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-10">
-					<div class="layout-blocks bg-lightblue h100"></div>
+			<div class="row text-center">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-lightblue h50 font-white"><p>.col-lg-4 .col-md-4 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
 				</div>
-				<div class="col-md-2">
-					<div class="layout-blocks bg-lightorange h100"></div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-blue h50 font-white"><p>.col-lg-4 .col-md-4 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-darkblue h50 font-white"><p>.col-lg-4 .col-md-4 .col-sm-12 .col-xs-6 .col-xxs-12</p></div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row text-center">
+				<div class="col-lg-6 col-md-6 col-sm-3 col-xs-9 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-orange h50 font-white"><p>.col-lg-6 .col-md-6 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-9 col-xs-3 col-xxs-12">
+					<div class="layout-blocks ptb20 bg-lightorange h50 font-white"><p>.col-lg-6 .col-md-6 .col-sm-6 .col-xs-6 .col-xxs-12</p></div>
+				</div>
+			</div>
+			<div class="row text-center">
 				<div class="col-md-12">
 					<div class="code-wrap">
 						<div class="code-wrap-tabs">
@@ -260,16 +274,30 @@
 &lt;section>
 	&lt;div class="container-fluid">
 		&lt;div class="row">
-			&lt;div class="col-md-12">
-				&lt;div class="layout-blocks bg-lightlime h50">&lt;/div>
+			&lt;div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 col-xxs-12">
+				&lt;!-- content here -->
+			&lt;/div>
+			&lt;div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+				&lt;!-- content here -->
 			&lt;/div>
 		&lt;/div>
 		&lt;div class="row">
-			&lt;div class="col-md-10">
-				&lt;div class="layout-blocks bg-lightblue h100">&lt;/div>
+			&lt;div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+				&lt;!-- content here -->
 			&lt;/div>
-			&lt;div class="col-md-2">
-				&lt;div class="layout-blocks bg-lightorange h100">&lt;/div>
+			&lt;div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+				&lt;!-- content here -->
+			&lt;/div>
+			&lt;div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12">
+				&lt;!-- content here -->
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="row">
+			&lt;div class="col-lg-6 col-md-6 col-sm-3 col-xs-9 col-xxs-12">
+				&lt;!-- content here -->
+			&lt;/div>
+			&lt;div class="col-lg-6 col-md-6 col-sm-9 col-xs-3 col-xxs-12">
+				&lt;!-- content here -->
 			&lt;/div>
 		&lt;/div>
 	&lt;/div>
@@ -287,8 +315,8 @@
 	<section class="bg-white">
 		<div class="container">
 			<div class="row text-center mb40">
-				<h2>Responsive breakpoints</h2>
-				<p>Since Bootstrap is developed to be mobile first, we use a handful of media queries to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p>
+				<h2>Offsetting columns</h2>
+				<p>Move columns to the right using <span class="font-orange">.col-md-offset-*</span> classes. These classes increase the left margin of a column by <span class="font-orange">*</span> columns. <br>For example, <span class="font-orange">.col-md-offset-4</span> moves <span class="font-orange">.col-md-4</span> over four columns.</p>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
