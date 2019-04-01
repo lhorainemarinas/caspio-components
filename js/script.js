@@ -13,7 +13,9 @@ jQuery(function() {
 		cpad = (winWidth-container)/2 + 'px',
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
-		navWidth = jQuery('.navbar-nav > li').innerWidth();
+		navWidth = jQuery('.navbar-nav > li').innerWidth(),
+		scrollTime = 0.4,
+		scrollDistance = 170;
 
 	/**
 	* --------------------------------------------------------------------------
@@ -39,6 +41,21 @@ jQuery(function() {
 
 	$document.on('ready', function () {
 		
+	});
+
+	$window.on("mousewheel DOMMouseScroll", function(event){
+		// event.preventDefault();			
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+			
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+				autoKill: true,
+				overwrite: 5							
+			});
+					
 	});
 
 	var updateOnResize = debounce(function() {
@@ -651,6 +668,7 @@ jQuery(function() {
 		}
 	}
 
+
 	/**
 	* --------------------------------------------------------------------------
 	* ONLOAD FUNCTIONS
@@ -658,6 +676,21 @@ jQuery(function() {
 	*/
 	
 });
+(function(){
+  document.addEventListener('DOMContentLoaded', function(event) {
+	var list = document.querySelectorAll('.make-snippet');
+	[].forEach.call(list, function(el) {
+	  var snippet = el.innerHTML.replace(/</g,'&lt;');
+		  snippet = snippet.replace(/ /g,'&nbsp;');
+	  var code = '<pre class="language-markup"><code>'+snippet+'</pre></code>';
+	  el.insertAdjacentHTML('afterend',code);
+	});
+	// if your page has prism.js you get syntax highlighting
+	if(window.Prism){
+	  Prism.highlightAll(false);
+	}
+  });
+})();
 
 var urlFix = function() {
 	url = window.location.origin + '/';

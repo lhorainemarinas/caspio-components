@@ -1,3 +1,36 @@
+.make-snippet {
+	display: none;
+}
+/* :not(pre)>code[class*=language-], pre[class*=language-] { */
+code[class*=language-], pre[class*=language-] {
+	max-height: 200px;
+	background: transparent;
+	overflow-x: auto;
+	border: transparent;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+pre[class*=language-] {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+pre {
+	background: transparent;
+}
+
+
 /* ----- ADD BOOTSTRAP WIDTH FOR MOBILE SIZE ----- */
 @media (max-width: 576px) {
 	.container {
@@ -3209,115 +3242,115 @@ section.bottom-pointer.bottom-pointer-blue:after{
 /* ----- ALERTS ----- */
 
 .alert {
-    position: relative;
-    padding: .75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: .25rem
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem
 }
 .alert-heading {
-    color: inherit
+	color: inherit
 }
 .alert-link {
-    font-weight: 700
+	font-weight: 700
 }
 .alert-dismissible {
-    padding-right: 4rem
+	padding-right: 4rem
 }
 .alert-dismissible .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: .75rem 1.25rem;
-    color: inherit
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .75rem 1.25rem;
+	color: inherit
 }
 .alert-primary {
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff
+	color: #004085;
+	background-color: #cce5ff;
+	border-color: #b8daff
 }
 .alert-primary hr {
-    border-top-color: #9fcdff
+	border-top-color: #9fcdff
 }
 .alert-primary .alert-link {
-    color: #002752
+	color: #002752
 }
 .alert-secondary {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db
+	color: #383d41;
+	background-color: #e2e3e5;
+	border-color: #d6d8db
 }
 .alert-secondary hr {
-    border-top-color: #c8cbcf
+	border-top-color: #c8cbcf
 }
 .alert-secondary .alert-link {
-    color: #202326
+	color: #202326
 }
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb
 }
 .alert-success hr {
-    border-top-color: #b1dfbb
+	border-top-color: #b1dfbb
 }
 .alert-success .alert-link {
-    color: #0b2e13
+	color: #0b2e13
 }
 .alert-info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb
+	color: #0c5460;
+	background-color: #d1ecf1;
+	border-color: #bee5eb
 }
 .alert-info hr {
-    border-top-color: #abdde5
+	border-top-color: #abdde5
 }
 .alert-info .alert-link {
-    color: #062c33
+	color: #062c33
 }
 .alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba
+	color: #856404;
+	background-color: #fff3cd;
+	border-color: #ffeeba
 }
 .alert-warning hr {
-    border-top-color: #ffe8a1
+	border-top-color: #ffe8a1
 }
 .alert-warning .alert-link {
-    color: #533f03
+	color: #533f03
 }
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb
 }
 .alert-danger hr {
-    border-top-color: #f1b0b7
+	border-top-color: #f1b0b7
 }
 .alert-danger .alert-link {
-    color: #491217
+	color: #491217
 }
 .alert-light {
-    color: #818182;
-    background-color: #fefefe;
-    border-color: #fdfdfe
+	color: #818182;
+	background-color: #fefefe;
+	border-color: #fdfdfe
 }
 .alert-light hr {
-    border-top-color: #ececf6
+	border-top-color: #ececf6
 }
 .alert-light .alert-link {
-    color: #686868
+	color: #686868
 }
 .alert-dark {
-    color: #1b1e21;
-    background-color: #d6d8d9;
-    border-color: #c6c8ca
+	color: #1b1e21;
+	background-color: #d6d8d9;
+	border-color: #c6c8ca
 }
 .alert-dark hr {
-    border-top-color: #b9bbbe
+	border-top-color: #b9bbbe
 }
 .alert-dark .alert-link {
-    color: #040505
+	color: #040505
 }
 
 
@@ -3621,4 +3654,27 @@ section.bg-lightergray, .bg-lightergray {background-color: #f2f2f2;}
 	.ptb90 {padding: 60px 0;}
 	.ptb100 {padding: 70px 0;}
 	.ptb200 {padding: 170px 0;}
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #1196ba;
 }

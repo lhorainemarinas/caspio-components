@@ -1,0 +1,66 @@
+.h50 {height: 60px;}
+.h100 {height: 100px;}
+
+.layout-blocks {
+	width: 100%;
+	border-radius: 10px;
+	-webkiit-border-radius: 10px;
+	margin-bottom: 20px;
+}
+.code-wrap {
+	width: 70%;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	position: relative;
+	background: #282B36;
+	margin: 60px auto 0 auto;
+	box-shadow: 0 10px 40px 0 rgba(40,43,54,0.30);
+}
+.code-wrap-tabs {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 100%;
+}
+.code-wrap-tabs a {
+	z-index: 2;
+	color: #A5AAAF;
+	font-size: 13px;
+	padding: 5px 8px;
+	border-radius: 4px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.code-wrap-tabs .current {
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 40px;
+	height: 22px;
+	border-radius: 3px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.code-wrap-tabs a:hover,
+.code-wrap-tabs a.active {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+}
+.code-wrap-content {
+	width: 100%;
+}
+.code-wrap .tab-content {
+	width: 100%;
+	flex-shrink: 0;
+	color: #FFF;
+	font-size: 15px;
+	line-height: 24px;
+	padding: 60px 30px 30px 30px;
+}
+@media (max-width: 991px) {
+	.code-wrap {
+		width: 100%;
+	}
+}
