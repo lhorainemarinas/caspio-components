@@ -14,7 +14,7 @@ jQuery(function() {
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
 		navWidth = jQuery('.navbar-nav > li').innerWidth(),
-		scrollTime = 0.4,
+		scrollTime = 0.6,
 		scrollDistance = 170;
 
 	/**
@@ -51,7 +51,7 @@ jQuery(function() {
 			
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+				ease: Power1.easeOut,
 				autoKill: true,
 				overwrite: 5							
 			});
@@ -676,21 +676,7 @@ jQuery(function() {
 	*/
 	
 });
-(function(){
-  document.addEventListener('DOMContentLoaded', function(event) {
-	var list = document.querySelectorAll('.make-snippet');
-	[].forEach.call(list, function(el) {
-	  var snippet = el.innerHTML.replace(/</g,'&lt;');
-		  snippet = snippet.replace(/ /g,'&nbsp;');
-	  var code = '<pre class="language-markup"><code>'+snippet+'</pre></code>';
-	  el.insertAdjacentHTML('afterend',code);
-	});
-	// if your page has prism.js you get syntax highlighting
-	if(window.Prism){
-	  Prism.highlightAll(false);
-	}
-  });
-})();
+
 
 var urlFix = function() {
 	url = window.location.origin + '/';

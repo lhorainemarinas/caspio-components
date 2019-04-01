@@ -2,7 +2,8 @@
 	display: none;
 }
 /* :not(pre)>code[class*=language-], pre[class*=language-] { */
-code[class*=language-], pre[class*=language-] {
+code[class*=language-],
+pre[class*=language-] {
 	max-height: 200px;
 	background: transparent;
 	overflow-x: auto;
