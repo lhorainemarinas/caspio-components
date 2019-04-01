@@ -24,8 +24,9 @@
 
 	<section class="bg-white">
 		<div class="container">
-			<div class="row text-center">
-				<h2>Containers</h2>
+			<div class="row text-center mb40">
+				<h2>Container</h2>
+				<p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time). <br>While containers can be nested, most layouts do not require a nested container.</p>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
@@ -78,11 +79,58 @@
 		</div>
 	</section>
 
-	<section class="bg-white">
-		<div class="container">
+	<section class="bg-lightergray">
+		<div class="container-fluid">
+			<div class="row text-center mb40">
+				<h2>Container Fluid</h2>
+				<p>Use <span class="font-orange">.container-fluid</span> for a full-width container, spanning the entire width of the viewport.</p>
+			</div>
 			<div class="row">
 				<div class="col-md-12">
-					
+					<div class="layout-blocks bg-lightlime h50"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10">
+					<div class="layout-blocks bg-lightblue h100"></div>
+				</div>
+				<div class="col-md-2">
+					<div class="layout-blocks bg-lightorange h100"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="code-wrap">
+						<div class="code-wrap-tabs">
+							<a href="#codeHtml" data-toggle="tab" role="tab" class="active">html</a>
+							<a href="#codeCss" data-toggle="tab" role="tab"><!-- css</a>
+							<a href="#codeJquery" data-toggle="tab" role="tab">jquery</a> -->
+							<a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a>
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content tab-pane active" id="codeHtml" role="tabpanel">
+								<div class="make-snippet">
+<section>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="layout-blocks bg-lightlime h50"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<div class="layout-blocks bg-lightblue h100"></div>
+			</div>
+			<div class="col-md-2">
+				<div class="layout-blocks bg-lightorange h100"></div>
+			</div>
+		</div>
+	</div>
+</section>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
