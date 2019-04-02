@@ -14,7 +14,7 @@ jQuery(function() {
 		navHeight = jQuery('nav').outerHeight(true),
 		$slider = jQuery('.menu-slider'),
 		navWidth = jQuery('.navbar-nav > li').innerWidth(),
-		scrollTime = 0.6,
+		scrollTime = 0.3,
 		scrollDistance = 170;
 
 	/**
@@ -668,6 +668,20 @@ jQuery(function() {
 		}
 	}
 
+	/*============================================
+	  FIXED BUTTON
+	==============================================*/
+
+	var fixBtn = $(".btn").hasClass("fixed-bottom-right");
+	if(fixBtn == true) {
+		$(window).on('scroll', function() {
+			if ($(this).scrollTop() > 100) {
+				$(".fixed-bottom-right").removeClass("btn-hidden");
+			} else {
+				$(".fixed-bottom-right").addClass("btn-hidden");
+			}
+		});
+	}
 
 	/**
 	* --------------------------------------------------------------------------
@@ -677,7 +691,9 @@ jQuery(function() {
 	
 });
 
-
+/*============================================
+  URL FIX
+==============================================*/
 var urlFix = function() {
 	url = window.location.origin + '/';
 	currUrl = window.location.href;

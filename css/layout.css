@@ -64,3 +64,9 @@
 		width: 100%;
 	}
 }
+#gridPsd .modal-body span.fa{
+	font-size: 80px;
+}
+#gridPsd .modal-body p{
+	margin-bottom: 0;
+}
