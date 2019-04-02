@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caspio Layout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/files.css">
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<div class="menu-overlay hidden-sm hidden-xs"></div>
+	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
+	
+	<section class="subpage-banner b445 center-content ptb100 font-white fix" style="background-image: url('img/banner-7.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Banner Layouts</h1>
+					<p class="w960">The default height of all sub page banner is 445px.</p>
+					<a href="" class="btn btn-l orange">SAMPLE BUTTON</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row mb30">
+				<div class="col-md-12">
+					<div class="code-wrap w100p">
+						<div class="code-wrap-tabs">
+							<ul>
+								<li class="active"><a href="#bannerCodeHtml" data-toggle="tab" role="tab">html</a></li>
+								<li><a href="#bannerCodeCss" data-toggle="tab" role="tab">css</a></li>
+								<!-- <li><a href="#codeJquery" data-toggle="tab" role="tab">jquery</a></li> -->
+							</ul>
+							<!-- <a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a> -->
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content fade in tab-pane active" id="bannerCodeHtml" role="tabpanel">
+								<pre class="language-html">
+									<code class="language-html">
+&lt;section class="subpage-banner b445 center-content overlay-black ptb100 font-white fix" style="background-image: url('image/path/here/banner.jpg')">
+	&lt;div class="container">
+		&lt;div class="row">
+			&lt;div class="col-md-12">
+				&lt;h1>Banner Layouts&lt;/h1>
+				&lt;p class="w960">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores sequi ullam tempora! Ea a eius deleniti temporibus quidem. Non.&lt;/p>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>
+									</code>
+								</pre>
+							</div>
+							<div class="code-wrap-content fade tab-pane" id="bannerCodeCss" role="tabpanel">
+								<pre class="language-css">
+									<code class="language-css">
+section.subpage-banner {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: 300px;
+	position: relative;
+	z-index: -1;
+}
+section.subpage-banner.fix {
+	background-attachment: fixed;
+}
+section.subpage-banner.b445 {
+	min-height: 445px;
+}
+section.subpage-banner.right-diamond {
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, auto 125%;
+	background-position: center center, 90% 30%;
+}
+section.subpage-banner.center-content {
+	text-align: center;
+}
+section.subpage-banner.left-content {
+	text-align: left;
+}
+section.subpage-banner.right-content {
+	text-align: right;
+}
+section.subpage-banner p {
+	font-size: 27px;
+	color: rgba(255,255,255,0.7);
+	line-height: 1.2;
+}
+section.subpage-banner.font-black p {
+	color: rgba(75,75,75,0.85);
+}
+section.subpage-banner:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+section.subpage-banner.overlay-black:before {
+	background: rgba(0,0,0,0.5);
+}
+section.subpage-banner.overlay-darkest-blue:before {
+	background: rgba(1,88,131,0.5);
+}
+section.subpage-banner.overlay-dark-blue:before {
+	background: rgba(2,127,171,0.5);
+}
+section.subpage-banner.overlay-blue:before {
+	background: rgba(17,149,187,0.5);
+}
+section.subpage-banner.overlay-light-blue:before {
+	background: rgba(63,202,235,0.5);
+}
+section.subpage-banner.overlay-orange:before {
+	background: rgba(255,117,16,0.5);
+}
+section.subpage-banner.overlay-green:before {
+	background: rgba(104,178,5,0.5);
+}
+section.subpage-banner.divider-arrow-darkblue:after {
+	content: '';
+	height: 40px;
+	position: absolute;
+	bottom: -14px;
+	left: 0;
+	right: 0;
+	background-image: url(../img/dividers/arrow-down-dark-blue.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+}
+section.bottom-pointer:after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 17.5px 0 17.5px;
+	display: block;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	z-index: 1;
+	margin-left: -17.5px;
+}
+section.bottom-pointer.bottom-pointer-white:after{
+	border-color: #fff transparent transparent transparent;
+}
+section.bottom-pointer.bottom-pointer-lightestgray:after{
+	border-color: #f2f2f2 transparent transparent transparent;
+}
+section.bottom-pointer.bottom-pointer-darkestblue:after{
+	border-color: #005883 transparent transparent transparent;
+}
+section.bottom-pointer.bottom-pointer-darkblue:after{
+	border-color: #027FAA transparent transparent transparent;
+}
+section.bottom-pointer.bottom-pointer-blue:after{
+	border-color: #1196BA transparent transparent transparent;
+}
+
+@media (max-width:1733px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 98% 30%;
+	}
+}
+@media (max-width:1600px) {
+	section.subpage-banner.right-diamond {
+		background-position: 58% center, 98% 30%;
+	}
+}
+@media (max-width: 1440px) {
+	section.subpage-banner p {
+		font-size: 25px;
+	}
+	section.subpage-banner.b445 {
+		min-height: 370px;
+	}
+}
+@media (max-width:1410px) {
+	section.subpage-banner.right-diamond {
+		background-position: 66% center, 98% 30%;
+	}
+}
+@media (max-width:1374px) {
+	section.subpage-banner.right-diamond {
+		background-position: 66% center, 98% 30%;
+	}
+}
+@media (max-width:1260px) {
+	section.subpage-banner.right-diamond {
+		background-position: 66% center, 106% 30%;
+	}
+}
+@media (max-width:1199px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 138% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:1095px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 160% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:1060px) {
+	section.subpage-banner.b445 {
+		min-height: 350px;
+	}
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 115% 30%;
+	}
+}
+@media (max-width:1010px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 120% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:991px) {
+	section.subpage-banner.b445 {
+		min-height: 280px;
+	}
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, center 30%;
+		background-size: 0 0, cover;
+		position: relative;
+	}
+	section.subpage-banner.right-diamond:before {
+		content: '';
+		background: rgba(0,0,0,0.3);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	section.subpage-banner.left-content,
+	section.subpage-banner.right-content,
+	section.subpage-banner {
+		text-align: center;
+	}
+}
+@media (max-width:970px) {
+	section.subpage-banner,
+	section.subpage-banner.b445 {
+		min-height: 200px;
+	}
+}
+@media (max-width: 767px) {
+	section.subpage-banner p {
+		font-size: 22px;
+	}
+}
+@media (max-width:480px) {
+	.subpage-banner {
+		min-height: 250px;
+	}
+}
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="alert alert-primary" role="alert">
+						Note to all <strong>Designers</strong>
+					</div>
+					 <ul>
+						<li>Make sure to design the banner in 445px or download the PSD file <a href="psd/banner1.psd" class="link font-700" title="Click the link to download PSD file"><em>here</em></a>.</li>
+						<li>Image should be in minimum of Aspect Ratio of <strong>16:9</strong>. <br>Calculate the aspect ratio <a href="https://andrew.hedges.name/experiments/aspect_ratio/" class="link font-700"><em>here</em>.</a></li>
+						<li>Image file size should not exceed to <strong>150KB</strong>.</li>
+						<li>If the image has overlay, apply an overlay (in your design) with an opacity of <strong>50%</strong>. Also please use the colors within our palette. But export the image without the overlay.</li>
+					 </ul>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="alert alert-primary" role="alert">
+						Note to all <strong>Developers</strong>
+					</div>
+					<ul>
+						<li>Please maximize our class names provided <strong>below</strong>.</li>
+						<li>If there are styles that is not within the provided styles, you can over-ride with your own styles on the <strong>custom stylesheet</strong> that is dedicated only on the page you are working on.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table">
+						<thead class="bg-lightorange font-white table-border">
+							<tr>
+								<th scope="col">Courses</th>
+								<th scope="col">Topics</th>
+								<th scope="col">Select a Session</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Introduction to App Building<br>(Basic)</td>
+								<td>
+									<ul>
+										<li>Caspio Interface Overview</li>
+										<li>Importing Data</li>
+										<li>Table Design</li>
+										<li>Searchable Reports</li>
+										<li>Submission Forms</li>
+										<li>Deployment</li>
+									</ul>
+								</td>
+								<td><a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=35&CourseName=Introduction to App Building (Basic)&sid=1822&DateTime=Tuesday, March 26 at 10AM PDT&Date=03/26/2019 10:00:00'; return false;">Tuesday, March 26 at 10AM PDT</a></td>
+							</tr>
+							<tr>
+								<td>Creating Feature-Rich Apps<br>(Intermediate)</td>
+								<td>
+									<ul>
+										<li>Application Planning</li>
+										<li>Setting Up User Permissions</li>
+										<li>Creating Authentications</li>
+										<li>Access Based on User Role</li>
+										<li>Stamping Records with User ID </li>
+									</ul>
+								</td>
+								<td><a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=36&CourseName=Creating Feature-Rich Apps (Intermediate)&sid=1823&DateTime=Wednesday, March 27 at 10AM PDT&Date=03/27/2019 10:00:00'; return false;">Wednesday, March 27 at 10AM PDT</a></td>
+							</tr>
+							<tr>
+								<td>Taking Your App to New Heights<br>(Advanced)</td>
+								<td>
+									<ul>
+										<li>Managing Table Relationships</li>
+										<li>Using Views to Join Tables</li>
+										<li>Introduction to Parameters</li>
+										<li>Passing and Receiving Parameters</li>
+									</ul>
+								</td>
+								<td>
+									<a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=37&amp;CourseName=Taking Your App to New Heights (Advanced)&amp;sid=1821&amp;DateTime=Thursday, March 21 at 10AM PDT&amp;Date=03/21/2019 10:00:00'; return false;">Thursday, March 21 at 10AM PDT</a>
+									<a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=37&amp;CourseName=Taking Your App to New Heights (Advanced)&amp;sid=1824&amp;DateTime=Thursday, March 28 at 10AM PDT&amp;Date=03/28/2019 10:00:00'; return false;">Thursday, March 28 at 10AM PDT</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<link rel='dns-prefetch' href='//fast.wistia.net' />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src='https://fast.wistia.net/assets/external/E-v1.js?ver=1'></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+	<!-- <script type="text/javascript" src="../js/numscroll.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
+	<script type="text/javascript" src="js/autoheight.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

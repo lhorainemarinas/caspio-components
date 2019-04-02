@@ -16,6 +16,9 @@
 	margin: 30px auto 0 auto;
 	box-shadow: 0 10px 40px 0 rgba(40,43,54,0.30);
 }
+.code-wrap.w100p {
+	width: 100%;
+}
 .code-wrap-tabs {
 	position: absolute;
 	top: 15px;
@@ -42,8 +45,16 @@
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.2);
 }
-.code-wrap-tabs a:hover,
-.code-wrap-tabs a.active {
+.code-wrap-tabs ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.code-wrap-tabs ul li {
+	display: inline-block;
+}
+.code-wrap-tabs ul li a:hover,
+.code-wrap-tabs ul li.active a {
 	color: #fff;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 3px;
@@ -57,7 +68,7 @@
 	color: #FFF;
 	font-size: 15px;
 	line-height: 24px;
-	padding: 60px 30px 30px 30px;
+	padding: 55px 30px 30px 30px;
 }
 @media (max-width: 991px) {
 	.code-wrap {

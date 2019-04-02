@@ -28,7 +28,7 @@ jQuery(function() {
 	});
 
 	$window.on('scroll', function(event){
-		
+
 	});
 
 	$window.on('load', function(){
@@ -40,22 +40,21 @@ jQuery(function() {
 	});
 
 	$document.on('ready', function () {
-		
+
 	});
 
 	$window.on("mousewheel DOMMouseScroll", function(event){
-		// event.preventDefault();			
+		// event.preventDefault();
 		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
 		var scrollTop = $window.scrollTop();
 		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-			
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,
-				autoKill: true,
-				overwrite: 5							
-			});
-					
+
+		// TweenMax.to($window, scrollTime, {
+		// 	scrollTo: { y: finalScroll, autoKill:true },
+		// 		ease: Power1.easeOut,
+		// 	autoKill: true,
+		// 	overwrite: 5
+		// });
 	});
 
 	var updateOnResize = debounce(function() {
@@ -99,7 +98,7 @@ jQuery(function() {
 	/*==============================
 	  MATERIALIZE BUTTON
 	================================*/
-	
+
 	$('.btn').click(function (e) {
 		var target = e.target;
 		var rect = target.getBoundingClientRect();
@@ -141,7 +140,7 @@ jQuery(function() {
 		autoPlay: true
 	  });
 	};
-	
+
 
 	/*=========================================
 	  AUTO HEIGHT FOR DIFFERENT ELEMENTS
@@ -425,7 +424,7 @@ jQuery(function() {
 			});
 			btnBack.click(function (e) {
 				var p = mainNav.find('li.active').removeClass('open active').closest('.open');
-				
+
 				if (p.closest(mainNav).length) {
 					p.addClass('active')
 				} else {
@@ -433,7 +432,7 @@ jQuery(function() {
 				}
 			});
 		}
-		
+
 
 		$(".navbar-toggle").on("click", function(e){
 			e.preventDefault();
@@ -660,12 +659,12 @@ jQuery(function() {
 				var a = $(this).attr("href")
 				$(this).attr("href", github + "caspio-components/" + a);
 			});
-		} else {
-			$('a').each(function(){
-				var a = $(this).attr("href")
-				$(this).attr("href", '/' + a);
-			});
-		}
+		}//  else {
+		// 	$('a').each(function(){
+		// 		var a = $(this).attr("href")
+		// 		$(this).attr("href", '/' + a);
+		// 	});
+		// }
 	}
 
 	/*============================================
@@ -688,7 +687,7 @@ jQuery(function() {
 	* ONLOAD FUNCTIONS
 	* --------------------------------------------------------------------------
 	*/
-	
+
 });
 
 /*============================================
@@ -701,10 +700,10 @@ var urlFix = function() {
 	filename = pathUrl.substring(pathUrl.lastIndexOf('/')+1);
 	github = 'https://lhorainemarinas.github.io/';
 	if(url == github) {
-		$("#includeNav").load(url + "/caspio-components/template/nav.html"); 
-		$("#includeNav2").load(url + "/caspio-components/template/nav2.html"); 
+		$("#includeNav").load(url + "/caspio-components/template/nav.html");
+		$("#includeNav2").load(url + "/caspio-components/template/nav2.html");
 	} else {
-		$("#includeNav").load(url + "/template/nav.html"); 
-		$("#includeNav2").load(url + "/template/nav2.html"); 
+		$("#includeNav").load(url + "/template/nav.html");
+		$("#includeNav2").load(url + "/template/nav2.html");
 	}
 }();
