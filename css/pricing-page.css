@@ -822,7 +822,7 @@ section.compare-table {
 
 
 /* OVERRIDE TOOLTIP BOOTSTRAP JS INLINE STYLES */
-/* @media (min-width: 768px) { */
+@media (min-width: 768px) {
 	.tooltip.right {
 		left: 100% !important;
 		min-width: 180px;
@@ -847,4 +847,4 @@ section.compare-table {
 		display: inline-block;
 		position: relative;
 	}
-/* } */
+}

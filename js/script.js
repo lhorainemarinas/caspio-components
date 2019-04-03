@@ -37,7 +37,6 @@ jQuery(function() {
 		megamenu();
 		topPadding(); //this must be below megamenu()
 		subpageUrl();
-		pricingPage();
 	});
 
 	$document.on('ready', function () {
@@ -78,6 +77,23 @@ jQuery(function() {
 		navSlide();
 		megamenu();
 		topPadding(); //this must be below megamenu()
+
+
+		// var pricePage = $("[data-toggle='tooltip']").length;
+		// if(pricePage >= 1) {
+		// 	if (winWidth <=767) {
+		// 		$("[data-toggle='tooltip']").tooltip({
+		// 			placement: 'top',
+		// 			viewport: {selector: '.plan-feature-col .plan-feature-wrap ul li > div' },
+		// 		});
+		// 		console.log(1);
+		// 	} else {
+		// 		$("[data-toggle='tooltip']").tooltip({
+		// 			placement: 'right',
+		// 			viewport: {selector: '.plan-feature-col .plan-feature-wrap ul li > div',},
+		// 		});
+		// 	}
+		// }
 	}
 
 	function debounce(func, wait, immediate) {
@@ -671,23 +687,7 @@ jQuery(function() {
 	/*============================================
 	  PRICING PAGE
 	==============================================*/
-	pricingPage();
-	function pricingPage() {
-		var pricePage = $("[data-toggle='tooltip']").length;
-		if(pricePage >= 1) {
-			if (winWidth <=767) {
-				console.log(1)
-				$("[data-toggle='tooltip']").tooltip('destroy')
-				$("[data-toggle='tooltip']").attr('data-placement','top');
-				$("[data-toggle='tooltip']").tooltip();
-			} else {
-				console.log(2)
-				$("[data-toggle='tooltip']").tooltip('destroy')
-				$("[data-toggle='tooltip']").attr('data-placement','right');
-				$("[data-toggle='tooltip']").tooltip();
-			}
-		}
-	}
+	
 
 	// var pricePage = $("[data-toggle='tooltip']").length;
 	// if(pricePage >= 1) {
@@ -699,8 +699,6 @@ jQuery(function() {
 	// 		});
 	// 	}).trigger('resize');
 	// }
-
-
 
 
 	/*============================================
