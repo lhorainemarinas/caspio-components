@@ -221,6 +221,7 @@ section.plan-features {
 }
 .plan-feature-col {
 	padding: 0 7px;
+	position: static;
 }
 .plan-feature-col .plan-feature-wrap {
 	border:  1px solid #1195bb;
@@ -261,6 +262,7 @@ section.plan-features {
 	margin-bottom: 12px;
 	position: relative;
 	padding-left: 25px;
+	display: table;
 }
 .plan-feature-col .plan-feature-wrap ul li:before,
 .advance-plan-features ul li:before {
