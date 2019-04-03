@@ -440,6 +440,15 @@ section.advance-plan-features-wrap {
 	.plans-item .plan-radio label {
 		font-size: 18px;
 	}
+	.plan-features .container .row > div  ul,
+	.advance-plan-features ul{
+		-webkit-column-count: auto;
+		-moz-column-count: auto;
+		column-count: auto;
+		-moz-column-fill: auto;
+		column-fill: auto;
+		height: auto;
+	}
 }
 @media (max-width: 660px) {
 	section.plans-container {
