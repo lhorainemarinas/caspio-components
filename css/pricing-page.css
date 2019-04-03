@@ -229,7 +229,7 @@ section.plan-features {
 .plan-feature-col .plan-feature-wrap {
 	border:  1px solid #1195bb;
 }
-.plan-feature-col .plan-feature-wrap p {
+.plan-feature-col .plan-feature-wrap > p {
 	color: #015883;
 	font-size: 20px;
 	font-weight: 700;
@@ -241,10 +241,10 @@ section.plan-features {
 	margin-left: 15px;
 	margin-bottom: 0;
 }
-.plan-feature-col .plan-feature-wrap p span {
+.plan-feature-col .plan-feature-wrap > p span {
 	position: relative;
 }
-.plan-feature-col .plan-feature-wrap p span:after {
+.plan-feature-col .plan-feature-wrap > p span:after {
 	content: '';
 	background-color: #fff;
 	position: absolute;
@@ -265,7 +265,11 @@ section.plan-features {
 	margin-bottom: 12px;
 	position: relative;
 	padding-left: 25px;
-	display: table;
+}
+.plan-feature-col .plan-feature-wrap ul li > div,
+.advance-plan-features ul li > div{
+	display: inline-block;
+	position: relative;
 }
 .plan-feature-col .plan-feature-wrap ul li[data-toggle="popover"],
 .advance-plan-features ul li[data-toggle="popover"] {
@@ -353,7 +357,7 @@ section.advance-plan-features-wrap {
 }
 
 @media (max-width: 1199px) {
-	.plan-feature-col .plan-feature-wrap p {
+	.plan-feature-col .plan-feature-wrap > p {
 		font-size: 17px;
 		margin-left: 12px;	
 	}
@@ -802,4 +806,19 @@ section.compare-table {
 	section.compare-table {
 		display: none;
 	}
+}
+
+
+/* OVERRIDE TOOLTIP BOOTSTRAP JS INLINE STYLES */
+.tooltip {
+	left: 100% !important;
+	min-width: 180px;
+	top: 50% !important;
+	-webkit-transform: translateY(-50%) !important;
+	-ms-transform: translateY(-50%) !important;
+	-o-transform: translateY(-50%) !important;
+	transform: translateY(-50%) !important;
+}
+.tooltip .tooltip-arrow {
+	top: 50% !important;
 }

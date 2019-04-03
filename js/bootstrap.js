@@ -1297,7 +1297,7 @@ if (typeof jQuery === 'undefined') {
     html: false,
     container: false,
     viewport: {
-      selector: '.plan-feature-col .plan-feature-wrap ul',
+      selector: '.plan-feature-col .plan-feature-wrap ul li > div',
       padding: 0
     }
   }
@@ -1460,7 +1460,8 @@ if (typeof jQuery === 'undefined') {
         .addClass(placement)
         .data('bs.' + this.type, this)
 
-      this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+      this.options.container ? $tip.appendTo(this.options.container) : $tip.appendTo(this.$element)
+      console.log(this.$element)
       this.$element.trigger('inserted.bs.' + this.type)
 
       var pos          = this.getPosition()
