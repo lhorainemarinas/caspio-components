@@ -1297,7 +1297,7 @@ if (typeof jQuery === 'undefined') {
     html: false,
     container: false,
     viewport: {
-      selector: 'body',
+      selector: '.plan-feature-col .plan-feature-wrap ul',
       padding: 0
     }
   }
