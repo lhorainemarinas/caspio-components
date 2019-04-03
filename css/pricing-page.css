@@ -224,10 +224,13 @@ section.plan-features {
 }
 .plan-feature-col {
 	padding: 0 7px;
-	position: static;
+	position: unset;
+	overflow: visible;
 }
 .plan-feature-col .plan-feature-wrap {
 	border:  1px solid #1195bb;
+	position: unset;
+	overflow: visible;
 }
 .plan-feature-col .plan-feature-wrap > p {
 	color: #015883;
@@ -271,8 +274,8 @@ section.plan-features {
 	display: inline-block;
 	position: relative;
 }
-.plan-feature-col .plan-feature-wrap ul li[data-toggle="popover"],
-.advance-plan-features ul li[data-toggle="popover"] {
+.plan-feature-col .plan-feature-wrap ul li div[data-toggle="tooltip"]:hover,
+.advance-plan-features ul li div[data-toggle="tooltip"]:hover {
 	cursor: pointer;
 }
 .plan-feature-col .plan-feature-wrap ul li:before,
@@ -818,6 +821,8 @@ section.compare-table {
 	-ms-transform: translateY(-50%) !important;
 	-o-transform: translateY(-50%) !important;
 	transform: translateY(-50%) !important;
+	-webkit-column-break-inside: avoid;
+	-webkit-backface-visibility: hidden;
 }
 .tooltip .tooltip-arrow {
 	top: 50% !important;
