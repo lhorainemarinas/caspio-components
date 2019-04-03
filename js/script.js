@@ -689,16 +689,16 @@ jQuery(function() {
 	==============================================*/
 	
 
-	// var pricePage = $("[data-toggle='tooltip']").length;
-	// if(pricePage >= 1) {
-	// 	$(window).on('resize', function() {
-	// 		var pos = (winWidth < 768) ? 'top' : 'right';
-	// 		$("[data-toggle='tooltip']").tooltip({
-	// 			'placement': pos,
-	// 			'viewport' :{selector: '.plan-feature-col .plan-feature-wrap ul li > div',}
-	// 		});
-	// 	}).trigger('resize');
-	// }
+	var pricePage = $("[data-toggle='tooltip']").length;
+	if(pricePage >= 1) {
+		$(window).on('resize', function() {
+			var pos = (winWidth < 768) ? 'top' : 'right';
+			$("[data-toggle='tooltip']").tooltip('destroy').tooltip({
+				'placement': pos,
+				'viewport' :{selector: '.plan-feature-col .plan-feature-wrap ul li > div',}
+			});
+		}).trigger('resize');
+	}
 
 
 	/*============================================
