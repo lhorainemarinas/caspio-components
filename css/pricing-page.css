@@ -219,6 +219,9 @@ section.plan-features {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.plan-features .container {
+	position: relative;
+}
 .plan-feature-col {
 	padding: 0 7px;
 	position: static;
