@@ -267,6 +267,10 @@ section.plan-features {
 	padding-left: 25px;
 	display: table;
 }
+.plan-feature-col .plan-feature-wrap ul li[data-toggle="popover"],
+.advance-plan-features ul li[data-toggle="popover"] {
+	cursor: pointer;
+}
 .plan-feature-col .plan-feature-wrap ul li:before,
 .advance-plan-features ul li:before {
 	content: '\e91e';
