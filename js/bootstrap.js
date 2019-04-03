@@ -1297,7 +1297,7 @@ if (typeof jQuery === 'undefined') {
     html: false,
     container: false,
     viewport: {
-      selector: '.plan-feature-col .plan-feature-wrap ul li > div',
+      selector: 'body',
       padding: 0
     }
   }
@@ -1456,11 +1456,11 @@ if (typeof jQuery === 'undefined') {
 
       $tip
         .detach()
-        .css({ top: 0, left: 0, display: 'inline-block' })
+        .css({ top: 0, left: 0, display: 'block' })
         .addClass(placement)
         .data('bs.' + this.type, this)
 
-      // this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+      // this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)   ===lhoraine marinas was here
       this.options.container ? $tip.appendTo(this.options.container) : $tip.appendTo(this.$element)
       this.$element.trigger('inserted.bs.' + this.type)
 

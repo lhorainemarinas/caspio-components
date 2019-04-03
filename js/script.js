@@ -37,6 +37,7 @@ jQuery(function() {
 		megamenu();
 		topPadding(); //this must be below megamenu()
 		subpageUrl();
+		pricingPage();
 	});
 
 	$document.on('ready', function () {
@@ -666,6 +667,41 @@ jQuery(function() {
 		// 	});
 		// }
 	}
+
+	/*============================================
+	  PRICING PAGE
+	==============================================*/
+	pricingPage();
+	function pricingPage() {
+		var pricePage = $("[data-toggle='tooltip']").length;
+		if(pricePage >= 1) {
+			if (winWidth <=767) {
+				console.log(1)
+				$("[data-toggle='tooltip']").tooltip('destroy')
+				$("[data-toggle='tooltip']").attr('data-placement','top');
+				$("[data-toggle='tooltip']").tooltip();
+			} else {
+				console.log(2)
+				$("[data-toggle='tooltip']").tooltip('destroy')
+				$("[data-toggle='tooltip']").attr('data-placement','right');
+				$("[data-toggle='tooltip']").tooltip();
+			}
+		}
+	}
+
+	// var pricePage = $("[data-toggle='tooltip']").length;
+	// if(pricePage >= 1) {
+	// 	$(window).on('resize', function() {
+	// 		var pos = (winWidth < 768) ? 'top' : 'right';
+	// 		$("[data-toggle='tooltip']").tooltip({
+	// 			'placement': pos,
+	// 			'viewport' :{selector: '.plan-feature-col .plan-feature-wrap ul li > div',}
+	// 		});
+	// 	}).trigger('resize');
+	// }
+
+
+
 
 	/*============================================
 	  FIXED BUTTON

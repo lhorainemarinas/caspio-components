@@ -269,11 +269,6 @@ section.plan-features {
 	position: relative;
 	padding-left: 25px;
 }
-.plan-feature-col .plan-feature-wrap ul li > div,
-.advance-plan-features ul li > div{
-	display: inline-block;
-	position: relative;
-}
 .plan-feature-col .plan-feature-wrap ul li div[data-toggle="tooltip"]:hover,
 .advance-plan-features ul li div[data-toggle="tooltip"]:hover {
 	cursor: pointer;
@@ -287,6 +282,10 @@ section.plan-features {
 	position: absolute;
 	left: 0;
 	top: 3px;
+}
+.plan-feature-col .plan-feature-wrap ul li > div,
+.advance-plan-features ul li > div{
+	display: inline-block;
 }
 .plan-features .container .row > div:nth-child(2) ul,
 .advance-plan-features ul{
@@ -823,17 +822,29 @@ section.compare-table {
 
 
 /* OVERRIDE TOOLTIP BOOTSTRAP JS INLINE STYLES */
-.tooltip {
-	left: 100% !important;
-	min-width: 180px;
-	top: 50% !important;
-	-webkit-transform: translateY(-50%) !important;
-	-ms-transform: translateY(-50%) !important;
-	-o-transform: translateY(-50%) !important;
-	transform: translateY(-50%) !important;
-	-webkit-column-break-inside: avoid;
-	-webkit-backface-visibility: hidden;
-}
-.tooltip .tooltip-arrow {
-	top: 50% !important;
-}
+/* @media (min-width: 768px) { */
+	.tooltip.right {
+		left: 100% !important;
+		min-width: 180px;
+		top: 50% !important;
+		-webkit-transform: translateY(-50%) !important;
+		-ms-transform: translateY(-50%) !important;
+		-o-transform: translateY(-50%) !important;
+		transform: translateY(-50%) !important;
+		-webkit-column-break-inside: avoid;
+		-webkit-backface-visibility: hidden;
+	}
+	.tooltip .tooltip-arrow {
+		top: 50% !important;
+		left: 0;
+		/* -webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg); */
+	}
+	.plan-feature-col .plan-feature-wrap ul li > div,
+	.advance-plan-features ul li > div{
+		display: inline-block;
+		position: relative;
+	}
+/* } */
