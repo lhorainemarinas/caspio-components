@@ -441,7 +441,8 @@ section.advance-plan-features-wrap {
 		font-size: 18px;
 	}
 	.plan-features .container .row > div  ul,
-	.advance-plan-features ul{
+	.advance-plan-features ul,
+	.plan-features .container .row > div:nth-child(2) ul{
 		-webkit-column-count: auto;
 		-moz-column-count: auto;
 		column-count: auto;
