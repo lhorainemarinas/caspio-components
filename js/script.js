@@ -688,7 +688,7 @@ jQuery(function() {
 	// }
 
 	function tip(){
-		var pos = (winWidth < 768) ? 'top' : 'right';
+		var pos = (winWidth < 768) ? 'bottom' : 'right';
 		$("[data-toggle='tooltip']").tooltip('destroy').tooltip({
 			'placement': pos,
 			'viewport' :{selector: 'body'}
