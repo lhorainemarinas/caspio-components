@@ -1090,6 +1090,10 @@ body.open-overlay .menu-overlay {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.phone-info:hover,
+.caspio-search-reveal:hover{
+	text-decoration: none;
+}
 .phone-info:hover:before,
 .caspio-search-reveal:hover:before,
 .caspio-search-reveal.active:before {
@@ -1186,7 +1190,7 @@ body.open-overlay .menu-overlay {
 .phone-info .phone-info-box > span:last-child {
 	/* margin-bottom: 0; */
 }
-.phone-info .phone-info-box > span > span.fa {
+.phone-info .phone-info-box > span > span[class^='icon-'] {
 	margin-right: 10px;
 }
 .search-box {
