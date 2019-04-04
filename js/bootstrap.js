@@ -1460,8 +1460,7 @@ if (typeof jQuery === 'undefined') {
         .addClass(placement)
         .data('bs.' + this.type, this)
 
-      // this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)   ===lhoraine marinas was here
-      this.options.container ? $tip.appendTo(this.options.container) : $tip.appendTo(this.$element)
+      this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
       this.$element.trigger('inserted.bs.' + this.type)
 
       var pos          = this.getPosition()
