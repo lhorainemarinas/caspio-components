@@ -1302,7 +1302,7 @@
 
 		$(window).on('resize', function() {
 			var pos = ($(window).width() < 768) ? 'top' : 'right';
-			$("[data-toggle='tooltip']").tooltip({
+			$("[data-toggle='tooltip']").tooltip('destroy').tooltip({
 				'placement': pos,
 				'viewport' :{selector: '.plan-feature-col .plan-feature-wrap ul li > div'}
 			});
