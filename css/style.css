@@ -26,6 +26,8 @@ pre[class*=language-] {
     padding: 0;
     margin: 0;
     overflow: auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 pre {
 	background: transparent;
@@ -276,7 +278,7 @@ section.image-bg {
 h1,h2,h3,h4,h5,h6 {
 	margin-top: 0;
 	margin-bottom: 32px;
-	font-weight: 700;
+	font-weight:600;
 	font-family:'Lato', sans-serif;
 }
 h2,
@@ -383,7 +385,7 @@ p {
 	margin: 0 auto 32px;
 }
 
-section p:last-child {
+section.subpage-banner p:last-child {
 	margin-bottom: 0;
 }
 
@@ -1788,7 +1790,6 @@ body.scrollable {
 }
 
 /* ----- LIST STYLE 2 ----- */
-
 .list-style2 p {
 	margin-bottom: 5px;
 }
@@ -1807,7 +1808,6 @@ body.scrollable {
 }
 
 /* ----- NUMBER LIST STYLE 1 ----- */
-
 .numlist-style1 {
 	padding: 0;
 	margin: 0;
@@ -1911,6 +1911,89 @@ body.scrollable {
 	.logo-long-line h2 {
 		font-size: 15px;
 	}
+}
+
+/* ----- NUMBER LIST STYLE 2 ----- */
+.numlist-style2 {
+	border-width: 2px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	padding: 25px 10px;
+	padding-top: 60px;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background: #fff;
+}
+.numlist-style2 p {
+	margin-bottom: 0;
+	line-height: 1.3;
+}
+.numlist-style2 .numlist-style2-counter {
+	padding: 5px 8px;
+	position: absolute;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	top: -26%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.numlist-style2 .numlist-style2-counter:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -6%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	-webkit-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	outline: 10px solid #FFFFFF;
+}
+.numlist-style2.border-darkblue .numlist-style2-counter:before {
+	background: #027FAA;
+}
+.numlist-style2.border-orange .numlist-style2-counter:before {
+	background: #FF7610;
+}
+.numlist-style2.border-lime .numlist-style2-counter:before {
+	background: #67B204;
+}
+.numlist-style2 .numlist-style2-counter span{
+	display: block;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 0.8;
+}
+.numlist-style2 .numlist-style2-counter small {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 600;
+}
+.numlist-style2:hover {
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	animation: pulse 5s infinite;
 }
 
 /* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
@@ -2790,7 +2873,17 @@ section.subpage-banner {
 	background-position: center center;
 	min-height: 300px;
 	position: relative;
-	z-index: -1;
+	/* z-index: -1; */
+}
+section.subpage-banner .container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 section.subpage-banner.fix {
 	background-attachment: fixed;
@@ -2801,7 +2894,10 @@ section.subpage-banner.b445 {
 section.subpage-banner.right-diamond {
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, auto 125%;
-	background-position: center center, 90% 30%;
+	background-position: center center, 100% 30%;
+}
+section.subpage-banner.right-diamond.font-white {
+	color: #fff;
 }
 section.subpage-banner.center-content {
 	text-align: center;
@@ -2894,12 +2990,17 @@ section.bottom-pointer.bottom-pointer-blue:after{
 
 @media (max-width:1733px) {
 	section.subpage-banner.right-diamond {
-		background-position: center center, 98% 30%;
+		background-position: center center, 106% 30%;
+	}
+}
+@media (max-width:1643px) {
+	section.subpage-banner.right-diamond {
+		background-position: center center, 112% 30%;
 	}
 }
 @media (max-width:1600px) {
 	section.subpage-banner.right-diamond {
-		background-position: 58% center, 98% 30%;
+		background-position: 58% center, 108% 30%;
 	}
 }
 @media (max-width: 1440px) {
@@ -2909,23 +3010,32 @@ section.bottom-pointer.bottom-pointer-blue:after{
 	section.subpage-banner.b445 {
 		min-height: 370px;
 	}
+	section.subpage-banner.right-diamond {
+		background-position: 66% center, 91% 30%;
+	}
 }
 @media (max-width:1410px) {
 	section.subpage-banner.right-diamond {
-		background-position: 66% center, 98% 30%;
+		background-position: 66% center, 94% 30%;
 	}
 }
 @media (max-width:1374px) {
 	section.subpage-banner.right-diamond {
-		background-position: 66% center, 98% 30%;
+		background-position: 66% center, 92% 30%;
 	}
 }
 @media (max-width:1260px) {
 	section.subpage-banner.right-diamond {
-		background-position: 66% center, 106% 30%;
+		background-position: 66% center, 98% 30%;
 	}
 }
 @media (max-width:1199px) {
+	section.subpage-banner.right-diamond {
+		background-position: 60% center, 128% 30%;
+		background-size: auto 100%, auto 125%;
+	}
+}
+@media (max-width:1146px) {
 	section.subpage-banner.right-diamond {
 		background-position: 60% center, 138% 30%;
 		background-size: auto 100%, auto 125%;
@@ -2933,7 +3043,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 }
 @media (max-width:1095px) {
 	section.subpage-banner.right-diamond {
-		background-position: 60% center, 160% 30%;
+		background-position: 60% center, 140% 30%;
 		background-size: auto 100%, auto 125%;
 	}
 }
@@ -2942,12 +3052,12 @@ section.bottom-pointer.bottom-pointer-blue:after{
 		min-height: 350px;
 	}
 	section.subpage-banner.right-diamond {
-		background-position: 60% center, 115% 30%;
+		background-position: 60% center, 145% 30%;
 	}
 }
 @media (max-width:1010px) {
 	section.subpage-banner.right-diamond {
-		background-position: 60% center, 120% 30%;
+		background-position: 60% center, 170% 30%;
 		background-size: auto 100%, auto 125%;
 	}
 }
@@ -3008,7 +3118,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 	border-top: 1px solid #dee2e6;
 }
 .table td a {
-	display: block;
+	/* display: block; */
 	text-decoration: none;
 }
 .table td ul {
@@ -3020,10 +3130,13 @@ section.bottom-pointer.bottom-pointer-blue:after{
 	border-bottom: 2px solid #dee2e6;
 	text-align: center;
 }
+.table thead.text-left th {
+	text-align: left;
+}
 .table tbody+tbody {
 	border-top: 2px solid #dee2e6;
 }
-.table-sm td,
+.table-sm td,f
 .table-sm th {
 	padding: .3rem;
 }
@@ -3408,6 +3521,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 
 
 /* ----- HELPERS CLASSES ----- */
+
 .float-left {float: left!important;}
 .float-right {float: right!important;}
 .float-none {float: none!important;}
@@ -3415,26 +3529,28 @@ section.bottom-pointer.bottom-pointer-blue:after{
     .float-sm-left {float:left!important;}
     .float-sm-right {float: right!important;}
     .float-sm-none {float: none!important;}
-
+}
 
 @media (min-width: 768px) {
     .float-md-left {float:left!important;}
     .float-md-right {float: right!important;}
     .float-md-none {float: none!important;}
-
+}
 
 @media (min-width: 992px) {
     .float-lg-left {float:left!important;}
     .float-lg-right {float: right!important;}
     .float-lg-none {float: none!important;}
-
+}
 
 @media (min-width: 1200px) {
     .float-xl-left {float:left!important;}
     .float-xl-right {float: right!important;}
     .float-xl-none {float: none!important;}
+}
 
-
+.db {display: block;}
+.dib {display: inline-block;}
 .m0 {margin: 0;}
 .p0 {padding: 0;}
 
@@ -3598,6 +3714,19 @@ section.bottom-pointer.bottom-pointer-blue:after{
 .op02 {opacity: 0.2;}
 .op01 {opacity: 0.1;}
 
+.border-white {border-color: #fff;border-style: solid;}
+.border-black {border-color: #484848;border-style: solid;}
+.border-darkestblue {border-color: #005883;border-style: solid;}
+.border-darkblue {border-color: #027FAA;border-style: solid;}
+.border-blue {border-color: #1196ba;border-style: solid;}
+.border-lightblue {border-color: #3fcaeb;border-style: solid;}
+.border-orange {border-color: #FF7610;border-style: solid;}
+.border-lightorange {border-color: #FF9750;border-style: solid;}
+.border-lime {border-color: #67B204;border-style: solid;}
+.border-lightlime {border-color: #96D32A;border-style: solid;}
+.border-darkgray {border-color: #20282B;border-style: solid;}
+.border-lightgray {border-color: #747D82;border-style: solid;}
+
 .font-white {color: #fff;}
 .font-black {color: #484848;}
 .font-darkestblue {color: #005883;}
@@ -3621,8 +3750,122 @@ section.bottom-pointer.bottom-pointer-blue:after{
 .font-800 {font-weight:800;}
 .font-900 {font-weight:900;}
 
+.font-85p {font-size: 85%;}
+.font-75p {font-size: 75%;}
+.font-125p {font-size: 125%;}
+.font-145p {font-size: 145%;}
+.font-200p {font-size: 200%;}
+.font-220p {font-size: 220%;}
+.font-250p {font-size: 250%;}
+.font-0-5em {font-size: 0.5em;}
+.font-0-6em {font-size: 0.6em;}
+.font-0-7em {font-size: 0.7em;}
+.font-0-8em {font-size: 0.8em;}
+.font-0-9em {font-size: 0.9em;}
+.font-1em {font-size: 1em;}
+.font-1-1em {font-size: 1.1em;}
+.font-1-2em {font-size: 1.2em;}
+.font-1-3em {font-size: 1.3em;}
+.font-1-4em {font-size: 1.4em;}
+.font-1-5em {font-size: 1.5em;}
+.font-1-6em {font-size: 1.6em;}
+.font-1-7em {font-size: 1.7em;}
+.font-1-8em {font-size: 1.8em;}
+.font-1-9em {font-size: 1.9em;}
+.font2em {font-size: 2em;}
+.font-2-2em {font-size: 2.2em;}
+.font-2-4em {font-size: 2.4em;}
+
+@media (max-width: 970px) {
+	.font-85p-sm {font-size: 85%;}
+	.font-75p-sm {font-size: 75%;}
+	.font-125p-sm {font-size: 125%;}
+	.font-145p-sm {font-size: 145%;}
+	.font-200p-sm {font-size: 200%;}
+	.font-220p-sm {font-size: 220%;}
+	.font-250p-sm {font-size: 250%;}
+	.font-0-5em-sm {font-size: 0.5em;}
+	.font-0-6em-sm {font-size: 0.6em;}
+	.font-0-7em-sm {font-size: 0.7em;}
+	.font-0-8em-sm {font-size: 0.8em;}
+	.font-0-9em-sm {font-size: 0.9em;}
+	.font-1em-sm {font-size: 1em;}
+	.font-1-1em-sm {font-size: 1.1em;}
+	.font-1-2em-sm {font-size: 1.2em;}
+	.font-1-3em-sm {font-size: 1.3em;}
+	.font-1-4em-sm {font-size: 1.4em;}
+	.font-1-5em-sm {font-size: 1.5em;}
+	.font-1-6em-sm {font-size: 1.6em;}
+	.font-1-7em-sm {font-size: 1.7em;}
+	.font-1-8em-sm {font-size: 1.8em;}
+	.font-1-9em-sm {font-size: 1.9em;}
+	.font2em-sm {font-size: 2em;}
+	.font-2-2em-sm {font-size: 2.2em;}
+	.font-2-4em-sm {font-size: 2.4em;}
+}
+
+@media (max-width: 720px) {
+	.font-85p-xs {font-size: 85%;}
+	.font-75p-xs {font-size: 75%;}
+	.font-125p-xs {font-size: 125%;}
+	.font-145p-xs {font-size: 145%;}
+	.font-200p-xs {font-size: 200%;}
+	.font-220p-xs {font-size: 220%;}
+	.font-250p-xs {font-size: 250%;}
+	.font-0-5em-xs {font-size: 0.5em;}
+	.font-0-6em-xs {font-size: 0.6em;}
+	.font-0-7em-xs {font-size: 0.7em;}
+	.font-0-8em-xs {font-size: 0.8em;}
+	.font-0-9em-xs {font-size: 0.9em;}
+	.font-1em-xs {font-size: 1em;}
+	.font-1-1em-xs {font-size: 1.1em;}
+	.font-1-2em-xs {font-size: 1.2em;}
+	.font-1-3em-xs {font-size: 1.3em;}
+	.font-1-4em-xs {font-size: 1.4em;}
+	.font-1-5em-xs {font-size: 1.5em;}
+	.font-1-6em-xs {font-size: 1.6em;}
+	.font-1-7em-xs {font-size: 1.7em;}
+	.font-1-8em-xs {font-size: 1.8em;}
+	.font-1-9em-xs {font-size: 1.9em;}
+	.font2em-xs {font-size: 2em;}
+	.font-2-2em-xs {font-size: 2.2em;}
+	.font-2-4em-xs {font-size: 2.4em;}
+}
+
+@media (max-width: 540px) {
+	.font-85p-xxs {font-size: 85%;}
+	.font-75p-xxs {font-size: 75%;}
+	.font-125p-xxs {font-size: 125%;}
+	.font-145p-xxs {font-size: 145%;}
+	.font-200p-xxs {font-size: 200%;}
+	.font-220p-xxs {font-size: 220%;}
+	.font-250p-xxs {font-size: 250%;}
+	.font-0-5em-xxs {font-size: 0.5em;}
+	.font-0-6em-xxs {font-size: 0.6em;}
+	.font-0-7em-xxs {font-size: 0.7em;}
+	.font-0-8em-xxs {font-size: 0.8em;}
+	.font-0-9em-xxs {font-size: 0.9em;}
+	.font-1em-xxs {font-size: 1em;}
+	.font-1-1em-xxs {font-size: 1.1em;}
+	.font-1-2em-xxs {font-size: 1.2em;}
+	.font-1-3em-xxs {font-size: 1.3em;}
+	.font-1-4em-xxs {font-size: 1.4em;}
+	.font-1-5em-xxs {font-size: 1.5em;}
+	.font-1-6em-xxs {font-size: 1.6em;}
+	.font-1-7em-xxs {font-size: 1.7em;}
+	.font-1-8em-xxs {font-size: 1.8em;}
+	.font-1-9em-xxs {font-size: 1.9em;}
+	.font2em-xxs {font-size: 2em;}
+	.font-2-2em-xxs {font-size: 2.2em;}
+	.font-2-4em-xxs {font-size: 2.4em;}
+}
+
 .font-italic {font-style:italic;}
 .font-strike {text-decoration: line-through;}
+.font-underline {text-decoration: underline;}
+
+.text-left {text-align:left;}
+.text-right {text-align:right;}
 
 section.bg-white, .bg-white {background-color: #fff;}
 section.bg-black, .bg-black {background-color: #484848;}

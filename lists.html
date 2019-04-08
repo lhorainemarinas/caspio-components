@@ -5,19 +5,18 @@
 	<title>Caspio Buttons</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/files.css">
+	<link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
 	<div class="menu-overlay hidden-sm hidden-xs"></div>
 	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
 
-
-	<section>
+	<section class="subpage-banner b445 center-content font-white fix overlay-darkest-blue" style="background-image: url('img/banner-5.jpg')">
 		<div class="container">
 			<div class="row">
-				<p class="desc">&lt;h1 tag with description&gt;</p>
-				<div class="col-md-12 title-desc text-center">
-					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-					<p class="w960">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae placeat dignissimos reprehenderit earum repudiandae, maiores adipisci ipsum quisquam fugiat explicabo debitis cupiditate perferendis, corporis aut vero dolores. Natus sapiente dignissimos explicabo earum. Architecto excepturi quis fugit unde eos est fuga, repellat voluptatem. Ratione quam inventore optio, minima, doloribus fugiat obcaecati quaerat ea possimus veniam quod nemo voluptate, voluptates. Tempore debitis nisi similique cupiditate ad minima, fugit iste eligendi perspiciatis, quos officia nostrum dignissimos delectus, blanditiis. Cupiditate laboriosam eligendi quia debitis id neque quae amet nihil deserunt consequuntur itaque enim, labore porro at non voluptates numquam autem. Nostrum eligendi, asperiores officia!</p>
+				<div class="col-md-12">
+					<h1>List layouts</h1>
+					<p class="w960 mb0">All designs below are mobile friendly already</p>
 				</div>
 			</div>
 		</div>
@@ -25,10 +24,7 @@
 
 	<section>
 		<div class="container">
-			<div class="row">
-				<p class="desc">&lt;Unordered list STYLE 1 in 3 columns&gt;</p>
-			</div>
-			<div class="row">
+			<div class="row mb30">
 				<div class="col-md-4 col-sm-4 col-xs-4 col-xxs-12 list-style1-wrap">
 					<div class="list-style1 ">
 						<p>Two-Word Only</p>
@@ -72,18 +68,129 @@
 					</div>
 				</div>
 			</div>
+			<div class="row mb30">
+				<div class="col-md-12">
+					<div class="code-wrap w100p">
+						<div class="code-wrap-tabs">
+							<ul>
+								<li class="active"><a href="#list1Html" data-toggle="tab" role="tab">html</a></li>
+								<li><a href="#list1Css" data-toggle="tab" role="tab">css</a></li>
+								<!-- <li><a href="#codeJquery" data-toggle="tab" role="tab">jquery</a></li> -->
+							</ul>
+							<a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a>
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content fade in tab-pane active" id="list1Html" role="tabpanel">
+								<pre class="language-html">
+									<code class="language-html">
+&lt;section>
+	&lt;div class="container">
+		&lt;div class="row">
+			&lt;div class="col-md-4 col-sm-4 col-xs-4 col-xxs-12 list-style1-wrap">
+				&lt;div class="list-style1 ">
+					&lt;p>Two-Word Only&lt;/p>
+					&lt;ul>
+						&lt;li>sample content&lt;/li>	
+					&lt;/ul>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="col-md-4 col-sm-4 col-xs-4 col-xxs-12 list-style1-wrap">
+				&lt;div class="list-style1">
+					&lt;p>Two-Word Only&lt;/p>
+					&lt;ul>
+						&lt;li>sample content&lt;/li>	
+					&lt;/ul>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="col-md-4 col-sm-4 col-xs-4 col-xxs-12 list-style1-wrap">
+				&lt;div class="list-style1">
+					&lt;p>Two-Word Only&lt;/p>
+					&lt;ul>
+						&lt;li>sample content&lt;/li>	
+					&lt;/ul>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>
+									</code>
+								</pre>
+							</div>
+							<div class="code-wrap-content fade tab-pane" id="list1Css" role="tabpanel">
+								<pre class="language-css">
+									<code class="language-css">
+.list-style1 p {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 18px;
+	color: #1197ba;
+}
+
+.list-style1 ul {
+	border-left: 4px solid #1197ba;
+	list-style:  none;
+	padding-left: 20px;
+}
+
+.list-style1 ul li {
+	font-size: 19px;
+	margin-bottom: 5px;
+}
+
+.list-style1 ul li:hover {
+	color: #1197ba;
+}
+
+
+@media (max-width: 991px) {
+	.list-style1 ul li {
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+	.list-style1 p {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 767px) {
+	.list-style1 ul {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width:576px) {
+	.list-style1 {
+		text-align: center;
+	}
+	.list-style1 ul {
+		display: inline-block;
+		text-align: left;
+	}
+}
+@media (max-width: 540px) {
+	.list-style1 ul
+	.list-style1 ul li {
+		margin-bottom: 5px;
+	}
+}
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section class="image-bg text-center" style="background-image: url(https://4erff29jo03b8uhp4b94vxhq-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Forrester-Block_BG-min.jpg)">
 		<div class="container">
 			<div class="row">
-				<div class="logo-long-line text-center">
-					<h2><span class="icon-forrester-line"></span></h2>
+				<div class="logo-long-line text-center mb10">
+					<span class="icon-forrester-line font-white font-220p"></span>
 				</div>
 				<div class="text-center font-white">
-					<h3>The Forrester New Wave&#8482;: Low-Code Platforms for Business Developers, Q4 2017</h3>
-					<h4 class="mb20 op08">Caspio received a differentiated rating in six of ten criteria:</h4>
+					<p class="font-700 font-145p mb10">Low-Code Platforms for Business Developers, Q4 2017</p>
+					<p class="mb20 op08 font-700 font-125p">Caspio received a differentiated rating in six of ten criteria:</p>
 				</div>
 				<ul class="numlist-style1">
 					<li>
@@ -115,6 +222,347 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="bg-lightergray">
+		<div class="container">
+			<div class="row mb30">
+				<div class="col-md-12">
+					<div class="code-wrap w100p">
+						<div class="code-wrap-tabs">
+							<ul>
+								<li class="active"><a href="#list2Html" data-toggle="tab" role="tab">html</a></li>
+								<li><a href="#list2Css" data-toggle="tab" role="tab">css</a></li>
+								<!-- <li><a href="#list2Jquery" data-toggle="tab" role="tab">jquery</a></li> -->
+							</ul>
+							<a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a>
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content fade in tab-pane active" id="list2Html" role="tabpanel">
+								<pre class="language-html">
+									<code class="language-html">
+&lt;section>
+	&lt;div class="container">
+		&lt;div class="row">
+			&lt;div class="logo-long-line text-center mb10">
+				&lt;span class="icon-forrester-line font-white font-220p">&lt;/span>
+			&lt;/div>
+			&lt;div class="text-center font-white">
+				&lt;p class="font-700 font-145p mb10">Low-Code Platforms for Business Developers, Q4 2017&lt;/p>
+				&lt;p class="mb20 op08 font-700 font-125p">Caspio received a differentiated rating in six of ten criteria:&lt;/p>
+			&lt;/div>
+			&lt;ul class="numlist-style1">
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='1' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>user interface&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='2' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>data management&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='3' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>reporting & analysis&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='4' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>cloud platform&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='5' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>market approach&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span class='numscroller op08' data-min='0' data-max='6' data-delay="1" data-increment='1'>0&lt;/span>
+					&lt;span>product roadmap&lt;/span>
+				&lt;/li>
+			&lt;/ul>
+			&lt;a href="#" class="btn btn-xl">Try Caspio for Free&lt;/a>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>
+									</code>
+								</pre>
+							</div>
+							<div class="code-wrap-content fade tab-pane" id="list2Css" role="tabpanel">
+								<pre class="language-css">
+									<code class="language-css">
+.numlist-style1 {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: table;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.numlist-style1 li {
+	display: inline-block;
+	color: #fff;
+	background: #015883;
+	border-top: 2px solid #85c3d3;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+.numlist-style1 li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: #85c3d3;
+	z-index: 0;
+	height: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.numlist-style1 li:hover:before {
+	bottom: 0;
+	height: 100%;
+}
+
+.numlist-style1 li span {
+	display: block;
+	z-index: 1;
+	position: relative;
+}
+
+.numlist-style1 li span.numscroller {
+	font-size: 40px;
+	font-weight: 900;
+}
+
+.numlist-style1 li span:last-child {
+	text-transform: uppercase;
+}
+
+@media (max-width:991px) {
+	.numlist-style1 {
+		display: block;
+	}
+	.numlist-style1 li {
+		display: inline-block;
+		width: 160px;
+		margin: 0 20px 20px 0;
+	}
+}
+@media (max-width:767px) {
+	.numlist-style1 li {
+		width: 140px;
+	}
+}
+@media (max-width: 640px) {
+	.numlist-style1 li:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+@media (max-width:464px) {
+	.numlist-style1 li:nth-child(3n) {
+		margin-right: 20px;
+	}
+	.numlist-style1 li:nth-child(2n) {
+		margin-right: 0;
+	}
+	.logo-long-line h2 {
+		font-size: 20px;
+	}
+}
+@media (max-width: 413px) {
+	.logo-long-line h2 {
+		font-size: 18px;
+	}
+}
+@media (max-width: 380px) {
+	.logo-long-line h2 {
+		font-size: 16px;
+	}
+}
+@media (max-width: 320px) {
+	.logo-long-line h2 {
+		font-size: 15px;
+	}
+}
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="pt80">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="numlist-style2 border-darkblue">
+						<div class="numlist-style2-counter">
+							<span class='numscroller' data-min='0' data-max='1' data-delay="1" data-increment='1'>0</span>
+							<small>million</small>
+						</div>
+						<p>Applications powered by Caspio</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="numlist-style2 border-orange">
+						<div class="numlist-style2-counter">
+							<span class='numscroller' data-min='0' data-max='10' data-delay="1" data-increment='1'>0</span>
+							<small>minutes</small>
+						</div>
+						<p>To create a simple web app</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="numlist-style2 border-lime">
+						<div class="numlist-style2-counter">
+							<span class='numscroller' data-min='0' data-max='19' data-delay="1" data-increment='1'>0</span>
+							<small>years</small>
+						</div>
+						<p>Perfecting the Caspio platform</p>
+					</div>
+				</div>
+			</div>
+			<div class="row mb30">
+				<div class="col-md-12">
+					<div class="code-wrap w100p">
+						<div class="code-wrap-tabs">
+							<ul>
+								<li class="active"><a href="#list3Html" data-toggle="tab" role="tab">html</a></li>
+								<li><a href="#list3Css" data-toggle="tab" role="tab">css</a></li>
+								<!-- <li><a href="#list2Jquery" data-toggle="tab" role="tab">jquery</a></li> -->
+							</ul>
+							<a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a>
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content fade in tab-pane active" id="list3Html" role="tabpanel">
+								<pre class="language-html">
+									<code class="language-html">
+&lt;section>
+	&lt;div class="container">
+		&lt;div class="row">
+			&lt;div class="col-md-4">
+				&lt;div class="numlist-style2 border-darkblue">
+					&lt;div class="numlist-style2-counter">
+						&lt;span class='numscroller' data-min='0' data-max='1' data-delay="1" data-increment='1'>0&lt;/span>
+						&lt;small>million&lt;/small>
+					&lt;/div>
+					&lt;p>Applications powered by Caspio&lt;/p>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="col-md-4">
+				&lt;div class="numlist-style2 border-orange">
+					&lt;div class="numlist-style2-counter">
+						&lt;span class='numscroller' data-min='0' data-max='10' data-delay="1" data-increment='1'>0&lt;/span>
+						&lt;small>minutes&lt;/small>
+					&lt;/div>
+					&lt;p>To create a simple web app&lt;/p>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="col-md-4">
+				&lt;div class="numlist-style2 border-lime">
+					&lt;div class="numlist-style2-counter">
+						&lt;span class='numscroller' data-min='0' data-max='19' data-delay="1" data-increment='1'>0&lt;/span>
+						&lt;small>years&lt;/small>
+					&lt;/div>
+					&lt;p>Perfecting the Caspio platform&lt;/p>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>
+									</code>
+								</pre>
+							</div>
+							<div class="code-wrap-content fade tab-pane" id="list3Css" role="tabpanel">
+								<pre class="language-css">
+									<code class="language-css">
+.numlist-style2 {
+	border-width: 2px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	padding: 25px 10px;
+	padding-top: 60px;
+	position: relative;
+}
+.numlist-style2 p {
+	margin-bottom: 0;
+	line-height: 1.3;
+}
+.numlist-style2 .numlist-style2-counter {
+	padding: 5px 8px;
+	position: absolute;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	top: -26%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.numlist-style2 .numlist-style2-counter:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -6%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	-webkit-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.numlist-style2.border-darkblue .numlist-style2-counter:before {
+	background: #027FAA;
+}
+.numlist-style2.border-orange .numlist-style2-counter:before {
+	background: #FF7610;
+}
+.numlist-style2.border-lime .numlist-style2-counter:before {
+	background: #67B204;
+}
+.numlist-style2 .numlist-style2-counter span{
+	display: block;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 0.8;
+}
+.numlist-style2 .numlist-style2-counter small {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 600;
+}
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 
 	<link rel='dns-prefetch' href='//fast.wistia.net' />
@@ -122,8 +570,9 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type='text/javascript' src='https://fast.wistia.net/assets/external/E-v1.js?ver=1'></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-	<!-- <script type="text/javascript" src="/js/numscroll.js"></script> -->
+	<script type="text/javascript" src="/js/numscroll.js"></script>
 	<script type="text/javascript" src="js/autoheight.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

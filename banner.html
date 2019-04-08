@@ -11,7 +11,7 @@
 	<div class="menu-overlay hidden-sm hidden-xs"></div>
 	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
 	
-	<section class="subpage-banner b445 center-content ptb100 font-white fix" style="background-image: url('img/banner-7.jpg')">
+	<section class="subpage-banner b445 center-content font-white fix" style="background-image: url('img/banner-7.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -40,12 +40,13 @@
 							<div class="code-wrap-content fade in tab-pane active" id="bannerCodeHtml" role="tabpanel">
 								<pre class="language-html">
 									<code class="language-html">
-&lt;section class="subpage-banner b445 center-content overlay-black ptb100 font-white fix" style="background-image: url('image/path/here/banner.jpg')">
+&lt;section class="subpage-banner b445 center-content overlay-black ptb100 font-white fix w960" style="background-image: url('image/path/here/banner.jpg')">
 	&lt;div class="container">
 		&lt;div class="row">
 			&lt;div class="col-md-12">
 				&lt;h1>Banner Layouts&lt;/h1>
 				&lt;p class="w960">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores sequi ullam tempora! Ea a eius deleniti temporibus quidem. Non.&lt;/p>
+				&lt;a href="" class="btn btn-l orange">SAMPLE BUTTON&lt;/a>
 			&lt;/div>
 		&lt;/div>
 	&lt;/div>
@@ -275,7 +276,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 					</div>
 					 <ul>
 						<li>Make sure to design the banner in <strong>445px</strong> or download the PSD file <a href="psd/banner1.psd" class="link font-700" title="Click the link to download PSD file"><em>here</em></a>.</li>
-						<li>Image should be in minimum of Aspect Ratio of <strong>16:9</strong>. <br>Calculate the aspect ratio <a href="https://andrew.hedges.name/experiments/aspect_ratio/" class="link font-700"><em>here</em>.</a></li>
+						<li>Image should be in minimum of Aspect Ratio of <strong>16:9</strong> (1920 x 1080). <br>Calculate the aspect ratio <a href="https://andrew.hedges.name/experiments/aspect_ratio/" class="link font-700"><em>here</em>.</a></li>
 						<li>Image file size should not exceed to <strong>150KB</strong>.</li>
 						<li>If the image has overlay, apply an overlay (in your design) with an opacity of <strong>50%</strong>. Also please use the colors within our palette. But export the image without the overlay.</li>
 					 </ul>
@@ -298,56 +299,92 @@ section.bottom-pointer.bottom-pointer-blue:after{
 			<div class="row">
 				<div class="col-md-12">
 					<table class="table">
-						<thead class="bg-lightorange font-white table-border">
+						<thead class="bg-lightorange font-white table-border text-left">
 							<tr>
-								<th scope="col"></th>
-								<th scope="col">Courses</th>
-								<th scope="col">Topics</th>
-								<th scope="col">Select a Session</th>
+								<th scope="col">Tag</th>
+								<th scope="col">Class Names</th>
+								<th scope="col">Description</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Introduction to App Building<br>(Basic)</td>
-								<td>
-									<ul>
-										<li>Caspio Interface Overview</li>
-										<li>Importing Data</li>
-										<li>Table Design</li>
-										<li>Searchable Reports</li>
-										<li>Submission Forms</li>
-										<li>Deployment</li>
-									</ul>
-								</td>
-								<td><a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=35&CourseName=Introduction to App Building (Basic)&sid=1822&DateTime=Tuesday, March 26 at 10AM PDT&Date=03/26/2019 10:00:00'; return false;">Tuesday, March 26 at 10AM PDT</a></td>
+								<td>&lt;section&gt;</td>
+								<td>.subpage-banner</td>
+								<td>A mandatory class name for all subpage banners.</td>
 							</tr>
 							<tr>
-								<td>Creating Feature-Rich Apps<br>(Intermediate)</td>
-								<td>
-									<ul>
-										<li>Application Planning</li>
-										<li>Setting Up User Permissions</li>
-										<li>Creating Authentications</li>
-										<li>Access Based on User Role</li>
-										<li>Stamping Records with User ID </li>
-									</ul>
-								</td>
-								<td><a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=36&CourseName=Creating Feature-Rich Apps (Intermediate)&sid=1823&DateTime=Wednesday, March 27 at 10AM PDT&Date=03/27/2019 10:00:00'; return false;">Wednesday, March 27 at 10AM PDT</a></td>
+								<td>&nbsp;</td>
+								<td>.b445</td>
+								<td>Sets the height of into 445px</td>
 							</tr>
 							<tr>
-								<td>Taking Your App to New Heights<br>(Advanced)</td>
-								<td>
-									<ul>
-										<li>Managing Table Relationships</li>
-										<li>Using Views to Join Tables</li>
-										<li>Introduction to Parameters</li>
-										<li>Passing and Receiving Parameters</li>
-									</ul>
-								</td>
-								<td>
-									<a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=37&amp;CourseName=Taking Your App to New Heights (Advanced)&amp;sid=1821&amp;DateTime=Thursday, March 21 at 10AM PDT&amp;Date=03/21/2019 10:00:00'; return false;">Thursday, March 21 at 10AM PDT</a>
-									<a href="" onclick="window.parent.location ='https://www.caspio.com/training-signup?cid=37&amp;CourseName=Taking Your App to New Heights (Advanced)&amp;sid=1824&amp;DateTime=Thursday, March 28 at 10AM PDT&amp;Date=03/28/2019 10:00:00'; return false;">Thursday, March 28 at 10AM PDT</a>
-								</td>
+								<td>&nbsp;</td>
+								<td>.center-content</td>
+								<td>Sets the position of the texts inside the banner into <span class="font-darkblue font-700">Center</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.left-content</td>
+								<td>Sets the position of the texts inside the banner into <span class="font-darkblue font-700">Left</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.right-content</td>
+								<td>Sets the position of the texts inside the banner into <span class="font-darkblue font-700">Right</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-black</td>
+								<td>Adds a <span class="font-dark-gray font-700">black overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-darkest-blue</td>
+								<td>Adds a <span class="font-darkestblue font-700">very dark blue overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-dark-blue</td>
+								<td>Adds a <span class="font-darkblue font-700">dark blue overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-blue</td>
+								<td>Adds a <span class="font-blue font-700">blue overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-orange</td>
+								<td>Adds a <span class="font-orange font-700">orange overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.overlay-green</td>
+								<td>Adds a <span class="font-lime font-700">green overlay</span> with 50% opacity to make the text readable.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.fix</td>
+								<td>Sets the subpage banner into a <span class="font-darkblue font-700">parallax</span> effect.</td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td>
+								<td>.w960</td>
+								<td>Sets the width of the sub description into <span class="font-darkblue font-700">960px</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.w920</td>
+								<td>Sets the width of the sub description into <span class="font-darkblue font-700">920px</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>.w900</td>
+								<td>Sets the width of the sub description into <span class="font-darkblue font-700">900px</span></td>
+							</tr>
+							<tr>
+								<td>&lt;a&gt;</td>
+								<td colspan="2">See <a class="font-darkblue font-700" href="buttons.html">Buttons page</a> for the complete list of class names</td>.
 							</tr>
 						</tbody>
 					</table>

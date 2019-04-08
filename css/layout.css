@@ -1,5 +1,6 @@
 .h50 {height: 60px;}
 .h100 {height: 100px;}
+.h-auto {height: auto;}
 
 .layout-blocks {
 	width: 100%;
@@ -46,6 +47,7 @@
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .code-wrap-tabs ul {
+	display: inline-block;
 	list-style: none;
 	margin: 0;
 	padding: 0;

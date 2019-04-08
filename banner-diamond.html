@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caspio Diamond Banner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/files.css">
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<div class="menu-overlay hidden-sm hidden-xs"></div>
+	<nav class="navbar navbar-top navbar-fixed-top" id="includeNav"></nav>
+
+	<section class="subpage-banner font-white left-content right-diamond b445 ptb100" style="background-image: url('../img/subpage-banner-right-diamond.png'), url(../img/training-banner.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-xs-12 col-xxs-12">
+					<h1>Diamond Banner Layout</h1>
+					<p>The default height of all sub page banner is 445px.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row mb30">
+				<div class="col-md-12">
+					<div class="code-wrap w100p">
+						<div class="code-wrap-tabs">
+							<ul>
+								<li class="active"><a href="#bannerCodeHtml" data-toggle="tab" role="tab">html</a></li>
+								<!-- <li><a href="#bannerCodeCss" data-toggle="tab" role="tab">css</a></li> -->
+								<!-- <li><a href="#codeJquery" data-toggle="tab" role="tab">jquery</a></li> -->
+							</ul>
+							<!-- <a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a> -->
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content fade in tab-pane active" id="bannerCodeHtml" role="tabpanel">
+								<pre class="language-html">
+									<code class="language-html">
+&lt;section class="subpage-banner font-white left-content right-diamond b445 ptb100" style="background-image: url('../img/subpage-banner-right-diamond.png'), url(../img/training-banner.jpg)">
+	&lt;div class="container">
+		&lt;div class="row">
+			&lt;div class="col-md-5 col-xs-12 col-xxs-12">
+				&lt;h1>Diamond Banner Layout&lt;/h1>
+				&lt;p>The default height of all sub page banner is 445px.&lt;/p>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="alert alert-primary" role="alert">
+						Note to all <strong>Designers</strong>
+					</div>
+					 <ul>
+						<li>Make sure to design the banner in <strong>445px</strong> or download the PSD file <a href="psd/banner1.psd" class="link font-700" title="Click the link to download PSD file"><em>here</em></a>.</li>
+						<li>Image should be in minimum of Aspect Ratio of <strong>16:9</strong> (1920 x 1080). <br>Calculate the aspect ratio <a href="https://andrew.hedges.name/experiments/aspect_ratio/" class="link font-700"><em>here</em>.</a></li>
+						<li>Image file size should not exceed to <strong>150KB</strong>.</li>
+						<li>If the image has overlay, apply an overlay (in your design) with an opacity of <strong>50%</strong>. Also please use the colors within our palette. But export the image without the overlay.</li>
+					 </ul>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="alert alert-primary" role="alert">
+						Note to all <strong>Developers</strong>
+					</div>
+					<ul>
+						<li>Please maximize our class names provided <strong>below</strong>.</li>
+						<li>If there are styles that is not within the provided styles, you can over-ride with your own styles on the <strong>custom stylesheet</strong> that is dedicated only on the page you are working on.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<small class="mb db text-center">Note: To view the basic class names to be added on subpages please see <a class="font-700 font-darkblue" href="banner.html">Banner Page</a>.</small>
+					<table class="table">
+						<thead class="bg-lightorange font-white table-border text-left">
+							<tr>
+								<th scope="col">Tag</th>
+								<th scope="col">Class Names</th>
+								<th scope="col">Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>&lt;section&gt;</td>
+								<td>.right-diamond</td>
+								<td>Activates the styles specific for this layout.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>style="background-image: url('../img/subpage-banner-right-diamond.png'), url(../img/training-banner.jpg)"</td>
+								<td>This is inline since this is supposed to be dynamic. <br>The <span class="font-700 font-darkblue">first image</span> is the blue background and must remain as the first image (this cannot be changed). <br>The <span class="font-700 font-orange">second image</span> is the one supposed to be dynamic.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<link rel='dns-prefetch' href='//fast.wistia.net' />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src='https://fast.wistia.net/assets/external/E-v1.js?ver=1'></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+	<!-- <script type="text/javascript" src="../js/numscroll.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
+	<script type="text/javascript" src="js/autoheight.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

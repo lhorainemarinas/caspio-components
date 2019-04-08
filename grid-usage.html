@@ -322,33 +322,160 @@
 		<div class="container">
 			<div class="row text-center mb40">
 				<h2>Offsetting columns</h2>
-				<p>Move columns to the right using <span class="font-orange">.col-md-offset-*</span> classes. These classes increase the left margin of a column by <span class="font-orange">*</span> columns. <br>For example, <span class="font-orange">.col-md-offset-4</span> moves <span class="font-orange">.col-md-4</span> over four columns.</p>
+				<p class="mb0">Move columns to the right using <span class="font-orange">.col-md-offset-*</span> classes. These classes increase the left margin of a column by <span class="font-orange">*</span> columns. <br>For example, <span class="font-orange">.col-md-offset-4</span> moves <span class="font-orange">.col-md-4</span> over four columns.</p>
+				<p><em>**Note: You can also override offsets from lower grid tiers with <span class="font-orange">.col-*-offset-0</span> classes.**</em></p>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-4">
+					<div class="layout-blocks ptb20 bg-lightlime h50 font-white"><p>.col-md-4</p></div>
+				</div>
+				<div class="col-md-4 col-md-offset-4">
+				<div class="layout-blocks ptb20 bg-lightlime h50 font-white"><p>.col-md-4 .col-md-offset-4</p></div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-3 col-md-offset-3">
+					<div class="layout-blocks ptb20 bg-blue h50 font-white"><p>.col-md-3 .col-md-offset-3</p></div>
+				</div>
+				<div class="col-md-3 col-md-offset-3">
+					<div class="layout-blocks ptb20 bg-darkblue h50 font-white"><p>.col-md-3 .col-md-offset-3</p></div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="layout-blocks ptb20 bg-orange h50 font-white"><p>.col-md-6 .col-md-offset-3</p></div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="code-wrap">
 						<div class="code-wrap-tabs">
-							<a href="#responsiveCodeCss" data-toggle="tab" role="tab" class="active">CSS</a>
+							<a href="#responsiveCodeHtml" data-toggle="tab" role="tab" class="active">HTML</a>
 							<!-- <a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a> -->
 						</div>
 						<div class="tab-content">
-							<div class="code-wrap-content tab-pane active" id="responsiveCodeCss" role="tabpanel">
+							<div class="code-wrap-content tab-pane active" id="responsiveCodeHtml" role="tabpanel">
 								<pre>
-									<code class="language-css">
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
+									<code class="language-html">
+&lt;div class="row text-center">
+	&lt;div class="col-md-4">
+		&lt;!-- content here -->
+	&lt;/div>
+	&lt;div class="col-md-4 col-md-offset-4">
+	&lt;!-- content here -->
+	&lt;/div>
+&lt;/div>
+&lt;div class="row text-center">
+	&lt;div class="col-md-3 col-md-offset-3">
+		&lt;!-- content here -->
+	&lt;/div>
+	&lt;div class="col-md-3 col-md-offset-3">
+		&lt;!-- content here -->
+	&lt;/div>
+&lt;/div>
+&lt;div class="row text-center">
+	&lt;div class="col-md-6 col-md-offset-3">
+		&lt;!-- content here -->
+	&lt;/div>
+&lt;/div>
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+	<section>
+		<div class="container">
+			<div class="row text-center mb40">
+				<h2>Nesting columns</h2>
+				<p>To nest your content with the default grid, add a new <span class="font-orange">.row</span> and set of <span class="font-orange">.col-sm-*</span> columns within an existing <span class="font-orange">.col-sm-*</span> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+			</div>
+			<div class="row text-center">
+				<div class="col-sm-12">
+					<div class="layout-blocks ptb20 bg-blue font-white">
+						<p><span class="font-900">Level 1:</span><br> .col-sm-9</p>
+						<div class="row text-center">
+							<div class="col-xs-8 col-sm-6">
+								<div class="layout-blocks ptb20 bg-lightorange font-white"><p><span class="font-900">Level 2:</span><br> .col-xs-8 .col-sm-6</p></div>
+							</div>
+							<div class="col-xs-4 col-sm-6">
+								<div class="layout-blocks ptb20 bg-lightlime font-white"><p><span class="font-900">Level 2:</span><br> .col-xs-4 .col-sm-6</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="code-wrap">
+						<div class="code-wrap-tabs">
+							<a href="#responsiveCodeHtml" data-toggle="tab" role="tab" class="active">HTML</a>
+							<!-- <a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a> -->
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content tab-pane active" id="responsiveCodeHtml" role="tabpanel">
+								<pre>
+									<code class="language-html">
+&lt;div class="row">
+	&lt;div class="col-sm-9">
+		&lt;!-- content here -->
+		&lt;div class="row">
+			&lt;div class="col-xs-8 col-sm-6">
+				&lt;!-- content here -->
+			&lt;/div>
+			&lt;div class="col-xs-4 col-sm-6">
+				&lt;!-- content here -->
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+	<section class="bg-lightergray">
+		<div class="container">
+			<div class="row text-center mb40">
+				<h2>Column ordering</h2>
+				<p>Easily change the order of our built-in grid columns with <span class="font-orange">.col-md-push-*</span> and <span class="font-orange">.col-md-pull-*</span> modifier classes.</p>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-9 col-md-push-3">
+					<div class="layout-blocks ptb20 bg-lightlime h50 font-white"><p>.col-md-9 .col-md-push-3</p></div>
+				</div>
+				<div class="col-md-3 col-md-pull-9">
+					<div class="layout-blocks ptb20 bg-lime h50 font-white"><p>.col-md-3 .col-md-pull-9</p></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="code-wrap">
+						<div class="code-wrap-tabs">
+							<a href="#responsiveCodeHtml" data-toggle="tab" role="tab" class="active">HTML</a>
+							<!-- <a class="btn orange pull-right" href="img/logo/caspio-logo-black.svg" download>Download psd</a> -->
+						</div>
+						<div class="tab-content">
+							<div class="code-wrap-content tab-pane active" id="responsiveCodeHtml" role="tabpanel">
+								<pre>
+									<code class="language-html">
+&lt;div class="row">
+  &lt;div class="col-md-9 col-md-push-3">
+  	&lt;!-- content here -->
+  &lt;/div>
+  &lt;div class="col-md-3 col-md-pull-9">
+  	&lt;!-- content here -->
+  &lt;/div>
+&lt;/div>
 									</code>
 								</pre>
 							</div>
