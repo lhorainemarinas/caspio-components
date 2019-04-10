@@ -38,7 +38,7 @@ section.home-banner:after {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-size: auto 100%;
+	background-size: auto 90%;
 	background-image: url('../img/home-bg.svg');
 	background-repeat: no-repeat;
 	z-index: -1;
@@ -61,7 +61,7 @@ section.home-banner .title-desc {
 	transform: translateY(-50%);
 }
 section.home-banner.bg-right:after {
-	background-position: 50vw top;
+	background-position: 100% top;
 }
 .home-img {
 	position: relative;
@@ -73,17 +73,17 @@ section.home-banner.bg-right:after {
 }
 .home-img img {
 	display: inline-block;
-	width: 140%;
+	width: 100%;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center 10px;
 }
 /* BANNER DESKTOP RESPONSIVE */
-@media (max-width: 1920px) {
+/* @media (max-width: 1920px) {
 	section.home-banner.bg-right:after {
 		background-position: 30vw top;
 	}
-}
+} 
 @media (max-width: 1657px) {
 	.home-img img {
 		width: 120%;
@@ -91,14 +91,14 @@ section.home-banner.bg-right:after {
 }
 @media (max-width: 1600px) {
 	section.home-banner.bg-right:after {
-		background-position: 30vw top;
+		background-position: 100% top;
 	}
 }
 @media (max-width: 1440px) {
 	.home-img img {
-		width: 110%;
+		width: 100%;
 	}
-}
+}*/
 @media (max-width: 1377px) {
 	.home-img {
 		margin-top: 40%;
@@ -113,6 +113,11 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner p {
 		font-size: 22px;
+	}
+}
+@media (max-width: 1199px) {
+	section.home-banner:after {
+		background-size: auto 77%;
 	}
 }
 @media (max-height: 1080px) {
@@ -131,12 +136,22 @@ section.home-banner.bg-right:after {
 		margin-top: 60%;
 	}
 }
+@media (max-height: 900px) {
+	section.home-banner:after {
+		background-size:  auto 83%;
+	}
+}
+@media (max-height: 850px) {
+	section.home-banner:after {
+		background-size: auto 86%;
+	}
+}
 @media (max-height: 768px) {
 	.home-img {
-		margin-top: 40%;
+		margin-top: 60%;
 	}
 	section.home-banner .title-desc {
-		margin-top: 50%;
+		margin-top: 70%;
 	}
 }
 @media (max-height: 655px) {
@@ -145,10 +160,15 @@ section.home-banner.bg-right:after {
 	}
 }
 /* BANNER MOBILE RESPONSIVE */
-@media (max-width: 1280px) and (max-height: 850px) and (orientation: landscape) {
-	section.home-banner.bg-right:after {
-		background-position: 35vw top;
+@media (max-width: 1280px) and (max-height: 950px) and (orientation: landscape) {
+	section.home-banner:after {
+		background-size: auto 77%;
 	}
+}
+@media (max-width: 1280px) and (max-height: 850px) and (orientation: landscape) {
+	/* section.home-banner.bg-right:after {
+		background-position: 35vw top;
+	} */
 	section.subpage-banner.font-black p {
 		font-size: 26px;
 	}
@@ -161,12 +181,12 @@ section.home-banner.bg-right:after {
 		left: auto;
 		right: auto;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: scaleX(-1);
 		-ms-transform: scaleX(-1);
 		-o-transform: scaleX(-1);
 		transform: scaleX(-1);
-	}
+	} */
 	.home-img {
 		margin-top: 26%;
 		margin-bottom: 30px;
@@ -186,11 +206,14 @@ section.home-banner.bg-right:after {
 	}
 }
 @media (max-width: 991px) {
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: scaleX(-1);
 		-ms-transform: scaleX(-1);
 		-o-transform: scaleX(-1);
 		transform: scaleX(-1);
+	} */
+	section.home-banner:after {
+		background-size: auto 56%;
 	}
 	.home-img {
 		margin-top: 22%;
@@ -202,6 +225,11 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner .title-desc {
 		margin-top: 0;
+	}
+}
+@media (max-width: 960px) and (max-height: 600px) and (orientation: landscape) {
+	section.home-banner:after {
+		background-size: auto 77%;
 	}
 }
 @media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
@@ -243,7 +271,7 @@ section.home-banner.bg-right:after {
 	section.subpage-banner.font-black p {
 		font-size: 20px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: none;
 		-ms-transform: none;
 		-o-transform: none;
@@ -251,7 +279,7 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner.bg-right:after {
 		background-position: 50vw top;
-	}
+	} */
 }
 @media (max-width: 896px) and (max-height: 414px) and (orientation: landscape) {
 	section.home-banner .title-desc {
@@ -284,7 +312,7 @@ section.home-banner.bg-right:after {
 	section.subpage-banner.font-black p {
 		font-size: 20px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: none;
 		-ms-transform: none;
 		-o-transform: none;
@@ -292,12 +320,12 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner.bg-right:after {
 		background-position: 50vw top;
-	}
+	} */
 }
 @media (max-width:850px) and (max-height:1280px) and (orientation: portrait) {
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		background-position: -5vw top;
-	}
+	} */
 	section.home-banner .title-desc {
 		margin: 7rem 7rem 0;
 	}
@@ -309,6 +337,11 @@ section.home-banner.bg-right:after {
 	}
 	.home-img img {
 		width: 80%;
+	}
+}
+@media (max-width: 835px) {
+	.home-img img {
+		width: 60%;
 	}
 }
 @media (max-width: 823px) and (max-height: 411px) and (orientation: landscape) {
@@ -334,7 +367,7 @@ section.home-banner.bg-right:after {
 	section.subpage-banner.font-black p {
 		font-size: 17px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: none;
 		-ms-transform: none;
 		-o-transform: none;
@@ -342,7 +375,7 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner.bg-right:after {
 		background-position: 50vw top;
-	}
+	} */
 }
 @media (max-width: 812px) and (max-height: 375px) and (orientation: landscape) {
 	.home-img-wrap, .home-text-wrap {
@@ -367,7 +400,7 @@ section.home-banner.bg-right:after {
 	section.subpage-banner.font-black p {
 		font-size: 17px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: none;
 		-ms-transform: none;
 		-o-transform: none;
@@ -375,7 +408,7 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner.bg-right:after {
 		background-position: 50vw top;
-	}
+	} */
 }
 @media (max-width: 800px) and (max-height: 1280px) and (orientation: portrait) {
 	.home-img {
@@ -384,13 +417,16 @@ section.home-banner.bg-right:after {
 	.home-img img {
 		width: 80%;
 	}
-	section.home-banner .title-desc {
-		margin: 12rem 10rem 0;
+/*	section.home-banner .title-desc {
+ 		margin: 12rem 10rem 0;
+	} */
+	section.home-banner:after {
+		background-size: auto 53%;
 	}
 }
 @media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
 	section.home-banner .title-desc {
-		margin: 12rem 10rem 0;
+		margin: 7rem 2rem 0;
 	}
 }
 @media (max-width: 768px) {
@@ -407,14 +443,14 @@ section.home-banner.bg-right:after {
 }
 @media (max-width: 767px) {
 	.home-img {
-		margin-top: 26%;
+		margin-top: 40%;
 	}
 	.home-img img {
 		width: 80%;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		background-position:  20vw top;
-	}
+	} */
 	section.home-banner p {
 		font-size: 20px;
 		margin-bottom: 30px;
@@ -422,9 +458,9 @@ section.home-banner.bg-right:after {
 	}
 }
 @media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		background-position:  50vw top;
-	}
+	} */
 	.home-img {
 		margin-top: 33%;
 	}
@@ -453,16 +489,16 @@ section.home-banner.bg-right:after {
 		right: 50%;
 	}
 	.home-img {
-		margin-top: 38%;
+		margin-top: 70%;
 	}
 	section.home-banner .title-desc {
-		margin-top: 54%;
+		margin-top: 94%;
 	}
 	section.subpage-banner.font-black p {
 		font-size: 16px;
 		margin-bottom: 20px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		-webkit-transform: none;
 		-ms-transform: none;
 		-o-transform: none;
@@ -470,14 +506,24 @@ section.home-banner.bg-right:after {
 	}
 	section.home-banner.bg-right:after {
 		background-position: 50vw top;
+	} */
+}
+@media (max-width: 732px) and (max-height: 412px) and (orientation: landscape) {
+	section.home-banner:after {
+		background-size: auto 84%;
+	}
+}
+@media (max-width:714px) {
+	section.home-banner:after {
+		background-size: auto 90%;
 	}
 }
 @media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
 	section.home-banner .title-desc {
-		margin-top: 47%;
+		margin-top: 101%;
 	}
 	.home-img {
-		margin-top: 33%;
+		margin-top: 85%;
 	}
 	.home-img img {
 		width: 120%;
@@ -485,20 +531,32 @@ section.home-banner.bg-right:after {
 }
 @media (max-width: 640px) and (max-height: 384px) and (orientation: landscape) {
 	.home-img img {
-		width: 120%;
+		width: 110%;
+	}
+	.home-img {
+		margin-top: 78%;
+	}
+}
+@media (max-width: 630px) {
+	section.home-banner.bg-right:after {
+		background-position:  60% top;
 	}
 }
 @media (max-width: 600px) and (max-height: 1024px) and (orientation: portrait) {
 	section.home-banner .title-desc {
-		margin: 5rem 5rem 0;
+		margin: 9rem 5rem 0;
 	}
 	.home-img {
 		margin-top: 33%;
 	}
+	section.home-banner.bg-right:after {
+		background-position:  100% top;
+		background-size: auto 48%;
+	}
 }
 @media (max-width: 600px) and (max-height: 960px) and (orientation: portrait) {
 	.home-img {
-		margin-top: 34%;
+		margin-top: 24%;
 	}
 	section.home-banner .title-desc {
 		margin: 7rem 6rem 0;
@@ -527,9 +585,9 @@ section.home-banner.bg-right:after {
 	}
 }
 @media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		background-position: -20vw top;
-	}
+	} */
 	section.home-banner .title-desc {
 		margin: 10rem 6rem 0;
 	}
@@ -554,14 +612,14 @@ section.home-banner.bg-right:after {
 }
 @media (max-width: 384px) and (max-height: 640px) and (orientation: portrait) {
 	.home-img {
-		margin-top: 26%;
+		margin-top: 50%;
 	}
 	section.home-banner .title-desc p {
 		font-size: 20px;
 	}
-	section.home-banner.bg-right:after {
+	/* section.home-banner.bg-right:after {
 		background-position: 0vw top;
-	}
+	} */
 }
 @media (max-width: 375px) and (max-height: 812px) and (orientation: portrait) {
 	section.home-banner .title-desc {
@@ -580,7 +638,7 @@ section.home-banner.bg-right:after {
 }
 @media (max-width: 360px) and (max-height: 640px) and (orientation: portrait) {
 	.home-img {
-		margin-top:  25%;
+		margin-top:  55%;
 	}
 	section.home-banner .title-desc {
 		margin: 7rem 2rem 0;
@@ -599,7 +657,7 @@ section.home-banner.bg-right:after {
 		font-size: 16px;
 	}
 	.home-img {
-		margin-top: 24%;
+		margin-top: 62%;
 	}
 	section.subpage-banner.font-black p {
 		margin-bottom: 25px;

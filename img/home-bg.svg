@@ -3,9 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="741px" height="382px" viewBox="0 0 741 382" style="enable-background:new 0 0 741 382;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#006090;}
-	.st1{fill:#007EAA;}
+	.st0{fill:#007EAA;}
 </style>
-<polygon class="st0" points="463,382 741,211 741,382 "/>
-<polygon class="st1" points="0,0 408,382 473,382 741,221 741,0 "/>
+<path class="st0" d="M741,0L166.9,0l437.5,327.6c42.2,31.6,101.5,33,136.6-15"/>
 </svg>

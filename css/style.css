@@ -463,11 +463,6 @@ section.subpage-banner p:last-child {
   animation: ripple .75s ease-out;
 }
 
-@-ms-keyframes ripple {
-  from {opacity:0.25;}
-  to {-webkit-transform: scale(2);-ms-transform: scale(2);-o-transform: scale(2);transform: scale(2); opacity: 0;}
-}
-
 @-webkit-keyframes ripple {
   from {opacity:0.25;}
   to {-webkit-transform: scale(2);-ms-transform: scale(2);-o-transform: scale(2);transform: scale(2); opacity: 0;}
@@ -1993,7 +1988,10 @@ body.scrollable {
 .numlist-style2:hover {
 	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-	animation: pulse 5s infinite;
+	/* animation: pulse 5s infinite; */
+}
+.numlist-style2 {
+
 }
 
 /* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
