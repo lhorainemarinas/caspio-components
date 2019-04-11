@@ -166,6 +166,11 @@ section.home-banner.bg-right:after {
 	.home-img {
 		margin-top: 50%;
 	}
+	.index2 .home-img {
+		margin-top: 0;
+		bottom: -23vh;
+		transform: none;
+	}
 }
 /* BANNER MOBILE RESPONSIVE */
 @media (max-width: 1280px) and (max-height: 950px) and (orientation: landscape) {
@@ -429,7 +434,7 @@ section.home-banner.bg-right:after {
 		width: 80%;
 	}
 /*	section.home-banner .title-desc {
- 		margin: 12rem 10rem 0;
+		margin: 12rem 10rem 0;
 	} */
 	section.home-banner:after {
 		background-size: auto 53%;
