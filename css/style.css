@@ -1990,8 +1990,30 @@ body.scrollable {
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 	/* animation: pulse 5s infinite; */
 }
-.numlist-style2 {
+.numlist-style2:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	z-index: 2;
+	border:  2px solid transparent;
+}
+.border-darkblue:before {
 
+}
+.numlist-style2:before
+.numlist-style2:after {
+	content: '';
+	width: 2px;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	z-index: 2;
 }
 
 /* ----- SLICK OVERRIDE GENERAL STYLE FOR ALL ----- */
@@ -3718,6 +3740,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 .border-darkblue {border-color: #027FAA;border-style: solid;}
 .border-blue {border-color: #1196ba;border-style: solid;}
 .border-lightblue {border-color: #3fcaeb;border-style: solid;}
+.border-lighterblue {border-color: #b3fbff;border-style: solid;}
 .border-orange {border-color: #FF7610;border-style: solid;}
 .border-lightorange {border-color: #FF9750;border-style: solid;}
 .border-lime {border-color: #67B204;border-style: solid;}
@@ -3731,6 +3754,7 @@ section.bottom-pointer.bottom-pointer-blue:after{
 .font-darkblue {color: #027FAA;}
 .font-blue {color: #1196ba;}
 .font-lightblue {color: #3fcaeb;}
+.font-lighterblue {color: #b3fbff;}
 .font-orange {color: #FF7610;}
 .font-lightorange {color: #FF9750;}
 .font-lime {color: #67B204;}
@@ -3871,6 +3895,7 @@ section.bg-darkestblue, .bg-darkestblue {background-color: #005883;}
 section.bg-darkblue, .bg-darkblue {background-color: #027FAA;}
 section.bg-blue, .bg-blue {background-color: #1196ba;}
 section.bg-lightblue, .bg-lightblue {background-color: #3fcaeb;}
+section.bg-lighterblue, .bg-lighterblue {background-color: #b3fbff;}
 section.bg-orange, .bg-orange {background-color: #FF7610;}
 section.bg-lightorange, .bg-lightorange {background-color: #FF9750;}
 section.bg-lime, .bg-lime {background-color: #67B204;}
